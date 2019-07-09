@@ -13,13 +13,13 @@ Now let's start the rescue process, and suppose our working directory is /home/d
 
 * Step1: create the rescue folder by running the following command in bash:
 
-    cd /home/data/Thalaproject
-    mkdir Rescue_Phase
+      cd /home/data/Thalaproject
+      mkdir Rescue_Phase
 
 * Step2: upload this folder to /home/data/WESprojec/Rescue_Phase, or run the following commands:
 
-    cd /home/data/Thalaproject/Rescue_Phase
-    git clone https://github.com/JavenCao/Thala_Rescue_workflow.git
+      cd /home/data/Thalaproject/Rescue_Phase
+      git clone https://github.com/JavenCao/Thala_Rescue_workflow.git
 
 now you should have the follwing structure:
 
@@ -47,11 +47,11 @@ now you should have the follwing structure:
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
-    Thala_rescue_configuration.txt
+      Thala_rescue_configuration.txt
 
 * Step4: run the following commands in bash:
 
-    python rescue_thala.py
+      python rescue_thala.py
 
 And after you should have the following structure:
 
@@ -92,7 +92,7 @@ And after you should have the following structure:
 
 * Step5: submit PBS files step-by-step by changing and running the following commands:
 
-    vi submit.sh(change the target PBS scripts)
-    sh submit.sh
+      vi submit.sh(change the target PBS scripts)
+      sh submit.sh
 
 This workflow is designed on clusters managed by PBS, for non-PBS servers, users are suggested to combine the PBS scritps into a single bash script before running the commands.
