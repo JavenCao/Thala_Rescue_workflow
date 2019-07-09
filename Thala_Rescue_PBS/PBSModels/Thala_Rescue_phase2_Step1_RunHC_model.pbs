@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -N cyj_BQSR_16
+#PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
+#PBS -q paedwy
+#PBS -m abe -M boxyjcao@connect.hku.hk
+#PBS -o my.out
+#PBS -e my.err
+#PBS -V
+
+#sample name
+i=1
+
+#including folder
+wkd=/home/data/thala_project/Rescue_Phase
+bamf=$wkd/Bam_file
+GATK_Bundle=/home/datacenter/reference/GATKbundle/hg19
+vcff=$wkd/VCF_file
+
+#software
+BWA=/path/to/bwa
+SAMTOOLS=/path/to/samtools
+PICARD=/path/to/picard.jar
+GATK=/path/to/GenomeAnalysisTK.jar
+
+java -jar $GATK \
+    -T HaplotypeCaller \
+	-R $GATK_Bundle/ucsc.hg19.fasta \
+    -I $bamf/"$i"/modified_good_"$i".bam \
+    --emitRefConfidence GVCF \
+    --dbsnp $GATK_Bundle/dbsnp_138.hg19.vcf \
+    -o $vcff/"$i"/"$i"_RawVariants.g.vcf

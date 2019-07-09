@@ -1,0 +1,38 @@
+#!/bin/bash
+#PBS -N TestRescue
+#PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
+#PBS -q paedwy
+#PBS -m abe -M boxyjcao@connect.hku.hk
+#PBS -o my.out
+#PBS -e my.err
+#PBS -V
+
+#--------------------------------------------------------
+#including folder
+wkd=/home/data/thala_project/Rescue_Phase
+Raw_Bam_file_folder=/home/data/thala_project/Bam_file
+THALA_Rescue_code=/home/data/thala_project/Tailored_thalassaemia/Thalassemia.py
+Rescue_Bam_file_folder=$wkd/Bam_file
+
+i=16H0060040
+
+echo "Begin "$i
+raw_bam_file="$Raw_Bam_file_folder"/"$i"/good_"$i".bam
+rescue_bam_file="$Rescue_Bam_file_folder"/"$i"/modified_good_"$i".bam
+python $THALA_Rescue_code --bamfile $raw_bam_file --output $rescue_bam_file
+mid_file1="$rescue_bam_file".R1.bam
+mid_file2="$mid_file1"_sort.bam
+mid_file3="$mid_file2".R2.bam
+mid_file4="$mid_file3"_sort.bam
+mid_file5=$rescue_bam_file
+mid_file1_index="$mid_file1".bai
+mid_file2_index="$mid_file2".bai
+mid_file3_index="$mid_file3".bai
+mid_file4_index="$mid_file4".bai
+mid_file5_index="$mid_file5".bai
+
+rm -rf $mid_file1 $mid_file2 $mid_file3 $mid_file4 $mid_file5 $mid_file1_index $mid_file2_index $mid_file3_index $mid_file4_index $mid_file5_index
+mv "$rescue_bam_file"_sort.bam $rescue_bam_file
+mv "$rescue_bam_file"_sort.bam.bai "$rescue_bam_file".bai
+
+echo "Finish "$i

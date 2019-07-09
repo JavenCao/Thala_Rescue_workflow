@@ -1,0 +1,94 @@
+#!/bin/bash
+#PBS -N tThala_Rescue_phase2_Step3_HardFiltering
+#PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
+#PBS -q paedwy
+#PBS -m abe -M test@test.com
+#PBS -o my.out
+#PBS -e my.err
+#PBS -V
+
+i=1
+
+#including folder
+wkd=/home/data/thala_project/Rescue_Phase
+bamf=$wkd/Bam_file
+GATK_Bundle=/home/datacenter/reference/GATKbundle/hg19
+vcff=$wkd/VCF_file
+
+#software
+BWA=/path/to/bwa
+SAMTOOLS=/path/to/samtools
+PICARD=/path/to/picard.jar
+GATK=/path/to/GenomeAnalysisTK.jar
+
+#SNP
+java -jar $GATK \
+    -T SelectVariants\
+    -R $GATK_Bundle/ucsc.hg19.fasta \
+    -V $vcff/Joint/All_Genotyping.vcf \
+	-o $vcff/Joint/All_SNP.vcf \
+	-selectType SNP \
+	-selectType MNP \
+    -nt 10
+
+java -jar $GATK \
+	-T VariantFiltration \
+	-R $GATK_Bundle/ucsc.hg19.fasta \
+	-V $vcff/Joint/All_SNP.vcf \
+	-o $vcff/Joint/HardFiltering_SNP.vcf \
+	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+	--filterName "FAILED"\
+	--logging_level ERROR
+
+#INDEL
+java -jar $GATK \
+    -T SelectVariants\
+	-R $GATK_Bundle/ucsc.hg19.fasta \
+	-V $vcff/Joint/All_Genotyping.vcf\
+	-o $vcff/Joint/All_INDEL.vcf \
+	-selectType INDEL \
+	-nt 10
+
+java -jar $GATK \
+    -T VariantFiltration \
+    -R $GATK_Bundle/ucsc.hg19.fasta \
+    -V $vcff/Joint/All_INDEL.vcf \
+    -o $vcff/Joint/HardFiltering_INDEL.vcf \
+	--filterExpression "QD < 2.0 || ReadPosRankSum < -8.0 || FS > 200.0 || SOR > 10.0" \
+	--filterName "FAILED"\
+	--logging_level ERROR
+
+#########################Refine genotype for SNP and indel seperately
+#SNP
+java -jar $GATK \
+	-T CalculateGenotypePosteriors \
+	-R $GATK_Bundle/ucsc.hg19.fasta \
+	-V $vcff/Joint/HardFiltering_SNP.vcf \
+    --supporting $GATK_Bundle/CHR_ALL.wgs.phase3_shapeit2_mvncall_integrated_v5b.20130502.sites.vcf \
+	-ped $vcff/Joint/ped.txt\
+	-o $vcff/Joint/HardF_SNP_postCGP.vcf
+
+java -jar $GATK \
+    -T VariantFiltration \
+    -R $GATK_Bundle/ucsc.hg19.fasta \
+    -V $vcff/Joint/HardF_SNP_postCGP.vcf \
+    -o $vcff/Joint/HardF_SNP_postCGP_Gfiltered.vcf\
+	-G_filter "GQ < 20.0" \
+	-G_filterName lowGQ
+
+#INDEL
+java -jar $GATK \
+    -T CalculateGenotypePosteriors \
+    -R $GATK_Bundle/ucsc.hg19.fasta \
+    -V $vcff/Joint/HardFiltering_INDEL.vcf \
+    --supporting $GATK_Bundle/CHR_ALL.wgs.phase3_shapeit2_mvncall_integrated_v5b.20130502.sites.vcf \
+	-ped $vcff/Joint/ped.txt\
+	-o $vcff/Joint/HardF_INDEL_postCGP.vcf
+
+java -jar $GATK \
+    -T VariantFiltration \
+    -R $GATK_Bundle/ucsc.hg19.fasta \
+    -V $vcff/Joint/HardF_INDEL_postCGP.vcf \
+	-o $vcff/Joint/HardF_INDEL_postCGP_Gfiltered.vcf \
+	-G_filter "GQ < 20.0" \
+	-G_filterName lowGQ

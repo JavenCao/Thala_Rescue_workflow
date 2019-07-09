@@ -1,0 +1,38 @@
+### Configuration file for Thala_rescue_PBS.py ###
+
+########################### Users must manually set-up the below information for using EasyWES! ####################################
+
+##rescue folder##
+recuse_folder=/home/data/thala_project/Rescue_Phase
+##original bam folder##
+Raw_Bam_file_folder=/home/data/thala_project/Bam_file
+
+## Path to Thalassemia.py and commonly used software##
+THALA_Rescue_code=/home/data/thala_project/Tailored_thalassaemia/Thalassemia.py
+BWA_path=/home/yjcao/software/bwa-0.7.15/bwa
+samtools_path=/home/yjcao/software/samtools-1.4/samtools
+picard_path=/home/yjcao/software/picard.jar
+GATK_path=/home/yjcao/software/GenomeAnalysisTK.jar
+GATK_bundle_path=/home/yjcao/reference/GATKbundle/hg19
+ANNO_path=/home/yjcao/software/annovar/table_annovar.pl
+
+##Your email to get data processing information from cluster root##########
+Email=test@test.com
+
+#######Sample Name List(with each line corresponding to one sample)##############
+sample1=Thala_sample1
+sample2=Thala_sample2
+sample3=Thala_sample3
+sample4=Thala_sample4
+sample5=Thala_sample5
+sample6=Thala_sample6
+sample7=Tha_WD
+sample8=PID17-121
+sample9=PID17-122
+sample10=PID18-020
+
+#######PBSfile Name List##############
+PBSfile1=Thala_Rescue_Bam_model.pbs
+PBSfile2=Thala_Rescue_phase2_Step1_RunHC_model.pbs
+PBSfile3=Thala_Rescue_phase2_Step2_GTing_model.pbs
+PBSfile4=Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
