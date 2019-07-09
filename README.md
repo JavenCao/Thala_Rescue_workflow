@@ -44,6 +44,9 @@ now you should have the follwing structure:
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
     |    |    |    |    | -- README.md
+    |    |    |    |-- Known_Causal_Mutation
+    |    |    |    |    | -- substitution.query_vars3.bed
+    |    |    |    |    | -- indel.query_vars3.bed
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
