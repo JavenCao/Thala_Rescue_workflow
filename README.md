@@ -1,10 +1,13 @@
 # Thala_Rescue_workflow
 
-This workflow describes how to rescue the Bam files for thalassaemia mutation detecton in a batch mode on clusters managed by PBS.
+This workflow describes how to rescue the Bam files for thalassaemia mutation detecion on clusters managed by PBS.
 
-Pre-request:
+## Pre-request:
 
-(!) Run workflow of Easy_WES_By_PBS(at least get Bam file in each sample folder).
+(1) Bam files in each sample folders, and the folder structure is illustrated [here](https://github.com/JavenCao/Easy_WES_By_PBS)
+
+(2) Python module dependency: pysam, numpy
+
 
 Now let's start the rescue process, and suppose our working directory is /home/data/Thalaproject.
 
@@ -37,6 +40,10 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs 
+    |    |    |    |-- Tailored_thalassaemia-master
+    |    |    |    |    | -- Thalassemia.py
+    |    |    |    |    | -- BamOPR.py
+    |    |    |    |    | -- README.md
 
 Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
