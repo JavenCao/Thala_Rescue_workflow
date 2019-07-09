@@ -1,9 +1,9 @@
 ### Configuration file for Thala_rescue_PBS.py ###
 
-########################### Users must manually set-up the below information for using EasyWES! ####################################
+########################### Users must manually set-up the below information for using Thala_rescue_PBS.py ####################################
 
 ##rescue folder##
-recuse_folder=/home/data/thala_project/Rescue_Phase
+rescue_folder=/home/data/thala_project/Rescue_Phase
 ##original bam folder##
 Raw_Bam_file_folder=/home/data/thala_project/Bam_file
 

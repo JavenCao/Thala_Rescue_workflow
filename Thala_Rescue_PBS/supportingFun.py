@@ -4,8 +4,8 @@ import os
 def load_config_file(config_name):
     """ load config values from config file"""
     #
-    config_var = ['project_folder', 'BWA_path', 'samtools_path', 'picard_path', 'GATK_path', 'GATK_bundle_path',
-                  'ANNO_path', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4', 'PBSfile5', 'PBSfile6', 'PBSfile7', 'PBSfile8']
+    config_var = ['rescue_folder', 'Raw_Bam_file_folder', 'THALA_Rescue_code', 'BWA_path', 'samtools_path', 'picard_path', 'GATK_path', 'GATK_bundle_path',
+                  'ANNO_path', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4']
 
     config_dict = {}
 
@@ -105,7 +105,7 @@ def ModifyAndCreate_v2(modelfile, Path_dict, TargetFolder, SampleList, prefix):
                 l[i] = "#PBS -m abe -M " + Path_dict.get('Email') + '\n'
 
             elif(l[i].startswith("wkd=")):
-                l[i] = "wkd=" + Path_dict.get('project_folder') + '\n'
+                l[i] = "wkd=" + Path_dict.get('rescue_folder') + '\n'
 
             elif(l[i].startswith("GATK_Bundle")):
                 l[i] = "GATK_Bundle=" + \
