@@ -28,12 +28,19 @@ now you should have the follwing structure:
     |    | -- VCF_file
     |    | .... ignore here
     |    | -- Rescue_Phase
-    |    |    | -- Rescue_code
-    |    |    |    | -- file1.pbs
-    |    |    |    | -- file2.pbs
-    |    |    |    | -- file3.pbs
+    |    |    | -- Thala_Rescue_workflow
+    |    |    |    | -- Thala_rescue_PBS.py
+    |    |    |    | -- Thala_rescue_configuration.txt
+    |    |    |    | -- supportingFun.py
+    |    |    |    |    | -- Thala_Rescue_PBS
+    |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs 
 
-Step3: go into the Rescue_code, and set parameters for the rescue process.
+Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
+
+    Thala_rescue_configuration.txt
 
 Step4: run the following commands in bash:
 
@@ -49,29 +56,36 @@ And after you should have the following structure:
     |    | -- VCF_file
     |    | .... ignore here
     |    | -- Rescue_Phase
-    |    |    | -- Rescue_code
-    |    |    |    | -- file1.pbs
-    |    |    |    | -- file2.pbs
-    |    |    |    | -- file3.pbs
+    |    |    | -- Thala_Rescue_workflow
+    |    |    |    | -- Thala_rescue_PBS.py
+    |    |    |    | -- Thala_rescue_configuration.txt
+    |    |    |    | -- supportingFun.py
+    |    |    |    |    | -- Thala_Rescue_PBS
+    |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs 
     |    |    | -- Bam_file
     |    |    |    | -- Sample1
-    |    |    |    |    | -- Sample1.rescue.pbs
+    |    |    |    |    | -- Rescue_phase_Sample1.pbs
     |    |    |    | -- Sample2
-    |    |    |    |    | -- Sample2.rescue.pbs
+    |    |    |    |    | -- Rescue_phase_Sample2.pbs
     |    |    |    | -- Sample3
-    |    |    |    |    | -- Sample3.rescue.pbs
+    |    |    |    |    | -- Rescue_phase_Sample3.pbs
     |    |    | -- VCF_file
     |    |    |    | -- Sample1
-    |    |    |    |    | -- Thala_Rescue_RunHC_Sample1.pbs
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample1.pbs
     |    |    |    | -- Sample2
-    |    |    |    |    | -- Thala_Rescue_RunHC_Sample2.pbs
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample2.pbs
     |    |    |    | -- Sample3
-    |    |    |    |    | -- Thala_Rescue_RunHC_Sample3.pbs
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample3.pbs
     |    |    |    | -- Joint
-    |    |    | -- Easy_WES_jointGT.pbs
+    |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs
     |    | -- submit.sh
 
 Step5: submit PBS files step-by-step by changing and running the following commands:
 
     vi submit.sh(change the target PBS scripts)
     sh submit.sh
+
+This workflow is designed on clusters managed by PBS, for non-PBS servers, users are suggested to combine the PBS scritps into a single bash script before running the commands.
