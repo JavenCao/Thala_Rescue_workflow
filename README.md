@@ -4,9 +4,9 @@ This workflow describes how to rescue the Bam files for thalassaemia mutation de
 
 ## Pre-request:
 
-(1) Bam files in each sample folders, and the folder structure is illustrated [here](https://github.com/JavenCao/Easy_WES_By_PBS)
+* Bam files in each sample folders, and the folder structure is illustrated [here](https://github.com/JavenCao/Easy_WES_By_PBS)
 
-(2) Python module dependency: pysam, numpy
+* Python module dependency: pysam, numpy
 
 
 Now let's start the rescue process, and suppose our working directory is /home/data/Thalaproject.
