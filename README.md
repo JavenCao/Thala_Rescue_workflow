@@ -4,7 +4,7 @@ This workflow describes how to rescue the Bam files for thalassaemia mutation de
 
 Pre-request:
 
-Run workflow of Easy_WES_By_PBS(at least get bam files in each sample folder).
+(!) Run workflow of Easy_WES_By_PBS(at least get Bam file in each sample folder).
 
 Now let's start the rescue process, and suppose our working directory is /home/data/Thalaproject.
 
