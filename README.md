@@ -16,7 +16,7 @@ Step1: create the rescue folder by running the following command in bash:
 Step2: upload this folder to /home/data/WESprojec/Rescue_Phase, or run the following commands:
 
     cd /home/data/Thalaproject/Rescue_Phase
-    git clone URL.....
+    git clone https://github.com/JavenCao/Thala_Rescue_workflow.git
 
 now you should have the follwing structure:
 
