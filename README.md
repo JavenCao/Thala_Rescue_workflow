@@ -2,6 +2,10 @@
 
 This workflow describes how to rescue the Bam files for thalassaemia mutation detecion on clusters managed by PBS.
 
+If you start with large files such as whole genome sequencing BAM, you are suggested to only extract hemoglobin regions from the BAM by running the following commands:
+
+      samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
+
 ## Pre-request:
 
 * Bam files in each sample folders, and the folder structure is illustrated [here](https://github.com/JavenCao/Easy_WES_By_PBS)(Step7)
@@ -39,7 +43,7 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs 
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs
     |    |    |    |-- Tailored_thalassaemia-master
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
@@ -74,7 +78,7 @@ And after you should have the following structure:
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs 
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs
     |    |    | -- Bam_file
     |    |    |    | -- Sample1
     |    |    |    |    | -- Rescue_phase_Sample1.pbs
