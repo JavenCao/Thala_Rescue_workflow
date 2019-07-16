@@ -8,7 +8,7 @@ First of all, if you start with large files such as whole genome sequencing BAM,
 
 ## Prerequisite:
 
-* Step0: Order your raw Bam files by sample names in the following strucure:
+* Step0: Order your raw Bam files by **sample names** in the following strucure:
 
         | -- Bam_file_folder
         |   | -- Sample1
@@ -17,6 +17,8 @@ First of all, if you start with large files such as whole genome sequencing BAM,
         |   |   | -- Thala_2.bam
         |   | -- TJLE
         |   |   | -- TJLE.bam
+
+Folder names and Bam file names should be same, which should be the sample names.
 
 And Python module dependency: pysam, numpy
 ____________________________________________________________________________________________________________
