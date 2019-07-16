@@ -6,7 +6,7 @@ First of all, if you start with large files such as whole genome sequencing BAM,
 
       samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
 
-## Pre-request:
+## Prerequisite:
 
 * Step0: Order your raw Bam files by sample names in the following strucure:
 
