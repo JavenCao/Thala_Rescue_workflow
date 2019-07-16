@@ -8,7 +8,6 @@ rescue_folder=/home/data/thala_project/Rescue_Phase
 Raw_Bam_file_folder=/home/data/thala_project/Bam_file
 
 ## Path to Thalassemia.py and commonly used software##
-THALA_Rescue_code=/home/data/thala_project/Tailored_thalassaemia/Thalassemia.py
 BWA_path=/home/yjcao/software/bwa-0.7.15/bwa
 samtools_path=/home/yjcao/software/samtools-1.4/samtools
 picard_path=/home/yjcao/software/picard.jar
@@ -31,7 +30,7 @@ sample8=PID17-121
 sample9=PID17-122
 sample10=PID18-020
 
-#######PBSfile Name List##############
+#######PBSfile Name List(Just leave them here)##############
 PBSfile1=Thala_Rescue_Bam_model.pbs
 PBSfile2=Thala_Rescue_phase2_Step1_RunHC_model.pbs
 PBSfile3=Thala_Rescue_phase2_Step2_GTing_model.pbs

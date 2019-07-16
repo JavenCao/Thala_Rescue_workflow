@@ -11,8 +11,8 @@
 #including folder
 wkd=/home/data/thala_project/Rescue_Phase
 Raw_Bam_file_folder=/home/data/thala_project/Bam_file
-THALA_Rescue_code=/home/data/thala_project/Tailored_thalassaemia/Thalassemia.py
-Rescue_Bam_file_folder=$wkd/Bam_file
+THALA_Rescue_code="$wkd"/Thala_Rescue_workflow/Poor_reads_rescue/Thalassemia.py
+Rescue_Bam_file_folder="$wkd"/Bam_file
 
 i=16H0060040
 
