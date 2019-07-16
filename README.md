@@ -43,12 +43,12 @@ now you should have the follwing structure:
     |    |    |    | -- Thala_rescue_PBS.py
     |    |    |    | -- Thala_rescue_configuration.txt
     |    |    |    | -- supportingFun.py
-    |    |    |    |    | -- Thala_Rescue_PBS
+    |    |    |    |    | -- PBSModels
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs
-    |    |    |    |-- Tailored_thalassaemia-master
+    |    |    |    |-- Poor_reads_rescue
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
     |    |    |    |    | -- README.md
