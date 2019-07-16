@@ -25,7 +25,7 @@ GATK=/path/to/GenomeAnalysisTK.jar
 java -jar $GATK \
     -T HaplotypeCaller \
 	-R $GATK_Bundle/ucsc.hg19.fasta \
-    -I $bamf/"$i"/modified_good_"$i".bam \
+    -I $bamf/"$i"/modified_"$i".bam \
     --emitRefConfidence GVCF \
     --dbsnp $GATK_Bundle/dbsnp_138.hg19.vcf \
     -o $vcff/"$i"/"$i"_RawVariants.g.vcf

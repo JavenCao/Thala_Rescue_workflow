@@ -17,8 +17,8 @@ Rescue_Bam_file_folder="$wkd"/Bam_file
 i=16H0060040
 
 echo "Begin "$i
-raw_bam_file="$Raw_Bam_file_folder"/"$i"/good_"$i".bam
-rescue_bam_file="$Rescue_Bam_file_folder"/"$i"/modified_good_"$i".bam
+raw_bam_file="$Raw_Bam_file_folder"/"$i"/"$i".bam
+rescue_bam_file="$Rescue_Bam_file_folder"/"$i"/modified_"$i".bam
 python $THALA_Rescue_code --bamfile $raw_bam_file --output $rescue_bam_file
 mid_file1="$rescue_bam_file".R1.bam
 mid_file2="$mid_file1"_sort.bam
