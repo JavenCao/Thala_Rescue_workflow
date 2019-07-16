@@ -1,39 +1,41 @@
-# Thala_Rescue_workflow
+# Thalassaemia point mutation/small InDel detection
 
-This workflow describes how to rescue the Bam files for thalassaemia mutation detecion on clusters managed by PBS.
+This workflow describes: **(1)**how to rescue the poorly aligned NGS reads in Bam files, and **(2)** workflow for thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
 
-If you start with large files such as whole genome sequencing BAM, you are suggested to only extract hemoglobin regions from the BAM by running the following commands:
+First of all, if you start with large files such as whole genome sequencing BAM, you are suggested to only extract hemoglobin regions from BAM files by running the following commands:
 
       samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
 
 ## Pre-request:
 
-* Bam files in each sample folders, and the folder structure is illustrated [here](https://github.com/JavenCao/Easy_WES_By_PBS)(Step7)
+* Step0: Order your raw Bam files by sample names in the following strucure:
 
-* Python module dependency: pysam, numpy
+        | -- Bam_file_folder
+        |   | -- Sample1
+        |   |   | -- Sample1.bam
+        |   | -- Thala_2
+        |   |   | -- Thala_2.bam
+        |   | -- TJLE
+        |   |   | -- TJLE.bam
 
+And Python module dependency: pysam, numpy
+____________________________________________________________________________________________________________
 
-Now let's start the rescue process, and suppose our working directory is /home/data/Thalaproject.
+Now let's start, and suppose our working directory is /home/data/Thalaproject.
 
 * Step1: create the rescue folder by running the following command in bash:
 
       cd /home/data/Thalaproject
       mkdir Rescue_Phase
 
-* Step2: upload this folder to /home/data/WESprojec/Rescue_Phase, or run the following commands:
+* Step2: download this repository to the Rescue_Phase folder by running the following commands:
 
       cd /home/data/Thalaproject/Rescue_Phase
       git clone https://github.com/JavenCao/Thala_Rescue_workflow.git
 
 now you should have the follwing structure:
 
-    |    |/home/data/Thalaproject/
-    |    | -- Raw_data
-    |    | .... ignore here
-    |    | -- Bam_file
-    |    | .... ignore here
-    |    | -- VCF_file
-    |    | .... ignore here
+    | -- /home/data/Thalaproject/
     |    | -- Rescue_Phase
     |    |    | -- Thala_Rescue_workflow
     |    |    |    | -- Thala_rescue_PBS.py
@@ -54,21 +56,15 @@ now you should have the follwing structure:
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
-      Thala_rescue_configuration.txt
+      vi Thala_rescue_configuration.txt
 
 * Step4: run the following commands in bash:
 
       python rescue_thala.py
 
-And after you should have the following structure:
+And after that you should have the following structure:
 
-    |    |/home/data/Thalaproject/
-    |    | -- Raw_data
-    |    | .... ignore here
-    |    | -- Bam_file
-    |    | .... ignore here
-    |    | -- VCF_file
-    |    | .... ignore here
+    | -- /home/data/Thalaproject/
     |    | -- Rescue_Phase
     |    |    | -- Thala_Rescue_workflow
     |    |    |    | -- Thala_rescue_PBS.py
@@ -102,4 +98,7 @@ And after you should have the following structure:
       vi submit.sh(change the target PBS scripts)
       sh submit.sh
 
-This workflow is designed on clusters managed by PBS, for non-PBS servers, users are suggested to combine the PBS scritps into a single bash script before running the commands.
+This workflow is designed for clusters managed by PBS, for non-PBS servers, users can still run these scripts in bash(sh):
+
+    cd Bam_file/Sample1
+    sh Rescue_phase_Sample1.pbs
