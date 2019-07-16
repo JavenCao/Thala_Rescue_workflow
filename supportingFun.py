@@ -28,10 +28,18 @@ def load_config_file(config_name):
 
 def Create_Folders(OuterSide, InnerListNames):
     """First create OuterSide folder, then Within the OuterSide, create each Inner folder in the order of InnerListNanes"""
-    os.mkdir(OuterSide)
-    for i in InnerListNames:
-        subfolder = OuterSide + '/' + i
-        os.mkdir(subfolder)
+    try:
+        os.mkdir(OuterSide)
+        for i in InnerListNames:
+            subfolder = OuterSide + '/' + i
+            os.mkdir(subfolder)
+    except OSError:
+        print """
+        |---------------------------------------|
+        | Please delete all the newly created   |
+        | folders and re-run the program again !|
+        |---------------------------------------|
+        """
     return 1
 
 
@@ -40,7 +48,7 @@ def ModifyAndCreate(modelfile, Path_dict, Outer_folder, SampleList, prefix):
     with open(modelfile) as file:
         l = file.readlines()
         # strip the tailing '\n' of each l element
-        #l = [ l[i].strip('\n') for i in range(len(l))]
+        # l = [ l[i].strip('\n') for i in range(len(l))]
         for sample in SampleList:
 
             for i in range(len(l)):
