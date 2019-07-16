@@ -1,6 +1,6 @@
 # Thalassaemia point mutation/small InDel detection
 
-This workflow describes: **(1)**how to rescue the poorly aligned NGS reads in Bam files, and **(2)** workflow for thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
+This workflow describes: **(1)** how to rescue the poorly aligned NGS reads in Bam files, and **(2)** workflow for thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
 
 First of all, if you start with large files such as whole genome sequencing BAM, you are suggested to only extract hemoglobin regions from BAM files by running the following commands:
 
