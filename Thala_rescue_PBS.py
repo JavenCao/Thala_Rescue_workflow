@@ -51,7 +51,7 @@ for sample in SampleList:
     t = t + sample + ' '
 line1 = "for i in " + t + '\n'
 otherlines = "do\n" + "\tcd " + wkd + "/Bam_file/$i" + '\n' + \
-    "\tqsub Easy_WES_phase1_pre_processing_" + "$i" + ".pbs\n" + "done\n"
+    "\tqsub Rescue_phase_" + "$i" + ".pbs\n" + "done\n"
 
 with open(submitFile, "w") as subF:
     subF.write(line1)
