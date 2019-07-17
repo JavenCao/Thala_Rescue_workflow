@@ -108,11 +108,12 @@ This workflow is designed for clusters managed by PBS, for PBS-free servers, use
     cd Bam_file/Sample1
     sh Rescue_phase_Sample1.pbs
 
-* Step6: Find curren known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET]((https://www.ithanet.eu/). We have created collections from the above databases, and you just running the follwing commands to find causal mutations.
+* Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these above databases, and you just running the follwing commands to pick these mutation out.
 
+      cd ./VCF_file/Joint/
       python find_causals.py
 
-After this, you will find report for each individuals and coresponding IGV snapshot for the mutation.
+After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for the mutations.
 
 
 
