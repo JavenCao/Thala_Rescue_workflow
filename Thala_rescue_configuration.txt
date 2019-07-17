@@ -18,6 +18,7 @@ ANNO_path=/home/yjcao/software/annovar/table_annovar.pl
 ##PBS system parameters(if your server is PBS-free, please just ignore this part)##########
 ##The resource request must specify the queue name(q), job walltime (hours:minutes:seconds), number of nodes(nodes), and processor cores per node (ppn) and the required total memory (mem).
 ##Also, specifies the email address that should be used when the PBS system sends message emails when the job aborts, begins, or ends(abe).
+##Suggestions: walltime=18:00:00, ppn=10, mem=40g
 queue=medium
 walltime=10:00:00
 nodes=1
