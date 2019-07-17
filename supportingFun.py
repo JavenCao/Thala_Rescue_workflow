@@ -60,7 +60,7 @@ def ModifyAndCreate(modelfile, Path_dict, Outer_folder, SampleList, prefix):
                     l[i] = """#PBS -l mem={0},nodes={1}:ppn={2},walltime={3}{4}""".format(Path_dict.get('mem'), Path_dict.get('nodes'), Path_dict.get('ppn'), Path_dict.get('walltime'), '\n')
 
                 elif(l[i].startswith("#PBS -q")):
-                    l[i] = """#PBS -q {0}{1}".format(Path_dict.get('queue'), '\n')
+                    l[i] = """#PBS -q {0}{1}""".format(Path_dict.get('queue'), '\n')
 
                 elif(l[i].startswith("#PBS -m abe -M")):
                     l[i] = "#PBS -m abe -M " + Path_dict.get('Email') + '\n'
