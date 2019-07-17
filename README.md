@@ -38,7 +38,7 @@ Now let's start, and suppose our working directory is /home/data/Thalaproject.
 now you should have the follwing structure:
 
     | -- /home/data/Thalaproject/
-    |    | -- **Rescue_Phase**
+    |    | -- Rescue_Phase
     |    |    | -- Thala_Rescue_workflow
     |    |    |    | -- Thala_rescue_PBS.py
     |    |    |    | -- Thala_rescue_configuration.txt
