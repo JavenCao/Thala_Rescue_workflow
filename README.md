@@ -100,10 +100,19 @@ And after that you should have the following structure:
       vi submit.sh(change the target PBS scripts)
       sh submit.sh
 
-And for the Hard filtering steps, we suggested to set cut-offs based on the emprical distribution of each annotation.
+And for the **Hard filtering steps**, we suggested to set cut-offs based on the emprical distribution of each annotation.
 Here, we provide scripts to plot the emprical distribution for each annotation.
 
-This workflow is designed for clusters managed by PBS, for non-PBS servers, users can still run these scripts in bash(sh):
+This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
     cd Bam_file/Sample1
     sh Rescue_phase_Sample1.pbs
+
+* Step6: Find curren known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET]((https://www.ithanet.eu/). We have created collections from the above databases, and you just running the follwing commands to find causal mutations.
+
+      python find_causals.py
+
+After this, you will find report for each individuals and coresponding IGV snapshot for the mutation.
+
+
+
