@@ -37,7 +37,7 @@ def EstimateInsertSize(path2bam, chromosome="chr16", start_pos=135000, stop_pos=
 
     samfile = pysam.AlignmentFile(path2bam, "rb")
     chr_sam = samfile.fetch(chromosome, start=start_pos, end=stop_pos)
-    if chr_sam.count() < 100:
+    if samfile.count(contig=chromosome, start=start_pos, end=stop_pos) < 100:
         return int(300), int(80)
     else:
         isize = []
