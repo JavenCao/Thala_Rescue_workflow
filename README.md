@@ -47,7 +47,7 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
     |    |    |    |-- Poor_reads_rescue
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
@@ -76,7 +76,7 @@ And after that you should have the following structure:
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_v1_HardFiltering_model.pbs
+    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
     |    |    | -- Bam_file
     |    |    |    | -- Sample1
     |    |    |    |    | -- Rescue_phase_Sample1.pbs
