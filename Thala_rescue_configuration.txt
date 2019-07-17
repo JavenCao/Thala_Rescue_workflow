@@ -15,7 +15,14 @@ GATK_path=/home/yjcao/software/GenomeAnalysisTK.jar
 GATK_bundle_path=/home/yjcao/reference/GATKbundle/hg19
 ANNO_path=/home/yjcao/software/annovar/table_annovar.pl
 
-##Your email to get data processing information from cluster root##########
+##PBS system parameters(if your server is PBS-free, please just ignore this part)##########
+##The resource request must specify the queue name(q), job walltime (hours:minutes:seconds), number of nodes(nodes), and processor cores per node (ppn) and the required total memory (mem).
+##Also, specifies the email address that should be used when the PBS system sends message emails when the job aborts, begins, or ends(abe).
+queue=medium
+walltime=10:00:00
+nodes=1
+ppn=5
+mem=10g
 Email=test@test.com
 
 #######Sample Name List(with each line corresponding to one sample)##############

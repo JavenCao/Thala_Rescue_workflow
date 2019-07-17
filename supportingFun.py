@@ -5,7 +5,7 @@ def load_config_file(config_name):
     """ load config values from config file"""
     #
     config_var = ['rescue_folder', 'Raw_Bam_file_folder', 'BWA_path', 'samtools_path', 'picard_path', 'GATK_path', 'GATK_bundle_path',
-                  'ANNO_path', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4']
+                  'ANNO_path', 'queue', 'walltime', 'nodes', 'ppn', 'mem', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4']
 
     config_dict = {}
 
@@ -52,11 +52,16 @@ def ModifyAndCreate(modelfile, Path_dict, Outer_folder, SampleList, prefix):
         for sample in SampleList:
 
             for i in range(len(l)):
-                # Set the job name
+
                 if(l[i].startswith("#PBS -N")):
                     l[i] = "#PBS -N " + sample + '_' + prefix + '\n'
 
-                # Send mail when the job (a)borts, (b)egins or terminat(e)
+                elif(l[i].startswith("#PBS -l")):
+                    l[i] = """#PBS -l mem={0},nodes={1}:ppn={2},walltime={3}""".format(Path_dict.get('mem'), Path_dict.get('nodes'), Path_dict.get('ppn'), Path_dict.get('walltime'))
+
+                elif(l[i].startswith("#PBS -q")):
+                    l[i] = """#PBS -q {}""".format(Path_dict.get('queue'))
+
                 elif(l[i].startswith("#PBS -m abe -M")):
                     l[i] = "#PBS -m abe -M " + Path_dict.get('Email') + '\n'
 
