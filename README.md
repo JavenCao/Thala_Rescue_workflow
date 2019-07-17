@@ -62,7 +62,7 @@ now you should have the follwing structure:
 
 * Step4: run the following commands in bash:
 
-      python rescue_thala.py
+      python Thala_rescue_PBS.py
 
 And after that you should have the following structure:
 
