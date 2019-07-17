@@ -113,7 +113,7 @@ This workflow is designed for clusters managed by PBS, for PBS-free servers, use
       cd ./VCF_file/Joint/
       python find_causals.py
 
-After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for the mutations.
+After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for these mutations.
 
 
 
