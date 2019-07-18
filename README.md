@@ -20,7 +20,7 @@ First of all, if you start with large files such as whole genome sequencing BAM,
 
 Folder names and Bam file names should be same, which should be the sample names.
 
-And Python module dependency: pysam, numpy
+Python module dependency: pysam, numpy, and commonly used software such as [GATK](https://software.broadinstitute.org/gatk/) and [GATK_Bundle](https://software.broadinstitute.org/gatk/download/bundle) and [Picard](https://broadinstitute.github.io/picard/).
 ____________________________________________________________________________________________________________
 
 Now let's start, and suppose our working directory is /home/data/Thalaproject.
