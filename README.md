@@ -48,6 +48,7 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
+    |    |    |    |    |    | -- Select_Annotation.pbs
     |    |    |    |-- Poor_reads_rescue
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
@@ -92,6 +93,8 @@ And after that you should have the following structure:
     |    |    |    | -- Sample3
     |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample3.pbs
     |    |    |    | -- Joint
+    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering.pbs
+    |    |    |    |    | -- Select_Annotation.pbs
     |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs
     |    | -- submit.sh
 
@@ -101,7 +104,9 @@ And after that you should have the following structure:
       sh submit.sh
 
 And for the **Hard filtering steps**, we suggested to set cut-offs based on the emprical distribution of each annotation.
-Here, we provide scripts to plot the emprical distribution for each annotation.
+Here, we provide scripts to select the emprical distribution for each annotation.
+
+    Select_Annotation.pbs
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
