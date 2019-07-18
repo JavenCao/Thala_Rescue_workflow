@@ -43,3 +43,4 @@ PBSfile1=Thala_Rescue_Bam_model.pbs
 PBSfile2=Thala_Rescue_phase2_Step1_RunHC_model.pbs
 PBSfile3=Thala_Rescue_phase2_Step2_GTing_model.pbs
 PBSfile4=Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
+PBSfile5=Select_Annotation.pbs

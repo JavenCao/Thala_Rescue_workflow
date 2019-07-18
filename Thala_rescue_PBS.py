@@ -32,6 +32,10 @@ ModifyAndCreate(phase2_RunHC_model_file, Path_dict,
 # For Jointing Genotyping
 Joint_folder = VCF_file_folder + '/Joint'
 os.mkdir(Joint_folder)
+# copy plot.R for annotation plotting purpose
+plot_R_file = PBSModel_folder + '/plot.R'
+command_line = """cp {0} {1}""".format(plot_R_file, Joint_folder)
+os.system(command_line)
 phase2_GTing_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile3')
 ModifyAndCreate_v2(phase2_GTing_model_file, Path_dict,
                    VCF_file_folder, SampleList, 'Thala_Rescue_phase2_Step2_GTing')
@@ -40,6 +44,11 @@ ModifyAndCreate_v2(phase2_GTing_model_file, Path_dict,
 phase2_HardF_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile4')
 ModifyAndCreate_v2(phase2_HardF_model_file, Path_dict, Joint_folder,
                    SampleList, 'Thala_Rescue_phase2_Step3_HardFiltering')
+
+# Selection Annotation
+select_ann_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile5')
+ModifyAndCreate_v2(select_ann_model_file, Path_dict, Joint_folder,
+                   SampleList, 'Select_Annotation')
 
 #-------------------------------------end GATK process----------------------------------------
 

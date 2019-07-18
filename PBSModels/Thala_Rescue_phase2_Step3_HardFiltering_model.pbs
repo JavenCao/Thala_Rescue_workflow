@@ -65,7 +65,6 @@ java -jar $GATK \
 	-R $GATK_Bundle/ucsc.hg19.fasta \
 	-V $vcff/Joint/HardFiltering_SNP.vcf \
     --supporting $GATK_Bundle/CHR_ALL.wgs.phase3_shapeit2_mvncall_integrated_v5b.20130502.sites.vcf \
-	-ped $vcff/Joint/ped.txt\
 	-o $vcff/Joint/HardF_SNP_postCGP.vcf
 
 java -jar $GATK \
@@ -82,7 +81,6 @@ java -jar $GATK \
     -R $GATK_Bundle/ucsc.hg19.fasta \
     -V $vcff/Joint/HardFiltering_INDEL.vcf \
     --supporting $GATK_Bundle/CHR_ALL.wgs.phase3_shapeit2_mvncall_integrated_v5b.20130502.sites.vcf \
-	-ped $vcff/Joint/ped.txt\
 	-o $vcff/Joint/HardF_INDEL_postCGP.vcf
 
 java -jar $GATK \

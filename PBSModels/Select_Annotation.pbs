@@ -1,0 +1,32 @@
+#!/bin/bash
+#PBS -N Thala_Rescue_phase2_Step3_HardFiltering
+#PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
+#PBS -q paedwy
+#PBS -m abe -M test@test.com
+#PBS -o my.out
+#PBS -e my.err
+#PBS -V
+
+# select annotation for SNPs
+vcftools --vcf input.SNP.recode.vcf \
+		 --get-INFO AN \
+		 --get-INFO DP \
+		 --get-INFO QD \
+		 --get-INFO MQ \
+		 --get-INFO FS \
+		 --get-INFO SOR \
+		 --get-INFO MQRankSum \
+		 --get-INFO ReadPosRankSum \
+         --out out.ANN.SNP
+		 
+
+# select annotation for INDELS
+vcftools --vcf input.INDEL.recode.vcf \
+		 --get-INFO AN \
+		 --get-INFO DP \
+		 --get-INFO QD \
+		 --get-INFO ReadPosRankSum \
+		 --get-INFO InbreedingCoeff \
+		 --get-INFO FS \
+		 --get-INFO SOR \
+		 --out out.ANN_INDEL
