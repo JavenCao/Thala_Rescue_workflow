@@ -115,5 +115,12 @@ This workflow is designed for clusters managed by PBS, for PBS-free servers, use
 
 After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for these mutations.
 
+## License
+
+This project is licensed under GNU GPL v3.
+
+## Authors
+
+Cao Yujie(The University of Hong Kong)
 
 
