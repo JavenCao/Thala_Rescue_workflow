@@ -104,21 +104,22 @@ And after that you should have the following structure:
       sh submit.sh
 
 And for the **Hard filtering steps**, we suggested to set cut-offs based on the emprical distribution of each annotation.
-Here, we provide scripts to select the emprical distribution for each annotation.
+Here, we provide scripts to select and plot the emprical distribution for each annotation.
 
     Select_Annotation.pbs
+    plot.R
 
-This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
-
-    cd Bam_file/Sample1
-    sh Rescue_phase_Sample1.pbs
-
-* Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these above databases, and you just running the follwing commands to pick these mutation out.
+* Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutation out.
 
       cd ./VCF_file/Joint/
       python find_causals.py
 
 After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for these mutations.
+
+This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
+
+    cd Bam_file/Sample1
+    sh Rescue_phase_Sample1.pbs
 
 ## License
 
