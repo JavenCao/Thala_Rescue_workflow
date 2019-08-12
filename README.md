@@ -109,12 +109,21 @@ Here, we provide scripts to select and plot the emprical distribution for each a
     Select_Annotation.pbs
     plot.R
 
+To increase sensitivity, the default cut-offs are as follows:
+
+      SNP:"QD<2.0 || FS>60 || MQ<40 || MQRankSum<-12.5 || ReadPosRankSum<-8.0"
+      INDEL:"QD < 2.0 || FS > 200 || ReadPosRankSum < -20 || SOR > 10.0"
+
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutation out.
 
       cd ./VCF_file/Joint/
-      python find_causals.py
+      python Find_causal.py -db 5_substitution.vcf --bulkvcf HardFiltering_SNP.vcf --bulkbamf /home/data/project/Bam_file/ -o VN424.causal.txt
 
-After this, you will find report for each tested samples with poteintial causal mutation found and coresponding IGV snapshots for these mutations.
+After this, you will find a newly generated folder named Report_thala, Positive samples are in Positve subfolders, and Negative samples are in Negative subfolders.
+
+    | -- | ./VCF_file/Joint/
+    | -- | -- | -- Positve
+    | -- | -- | -- Negative
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
