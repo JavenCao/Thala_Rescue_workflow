@@ -36,6 +36,11 @@ os.mkdir(Joint_folder)
 plot_R_file = PBSModel_folder + '/plot.R'
 command_line = """cp {0} {1}""".format(plot_R_file, Joint_folder)
 os.system(command_line)
+# copy Find_causal.py for finding causal mutation purpose
+Find_causal_file = PBSModel_folder + '/Find_causal.py'
+command_line = """cp {0} {1}""".format(Find_causal_file, Joint_folder)
+os.system(command_line)
+
 phase2_GTing_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile3')
 ModifyAndCreate_v2(phase2_GTing_model_file, Path_dict,
                    VCF_file_folder, SampleList, 'Thala_Rescue_phase2_Step2_GTing')
@@ -50,6 +55,10 @@ select_ann_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile5')
 ModifyAndCreate_v2(select_ann_model_file, Path_dict, Joint_folder,
                    SampleList, 'Select_Annotation')
 
+# Find causal mutation
+find_causal_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile6')
+ModifyAndCreate_v2(find_causal_model_file, Path_dict, Joint_folder,
+                   SampleList, 'Find_Causal')
 #-------------------------------------end GATK process----------------------------------------
 
 
@@ -57,11 +66,11 @@ ModifyAndCreate_v2(select_ann_model_file, Path_dict, Joint_folder,
 submitFile = wkd + '/submit.sh'
 t = ''
 for sample in SampleList:
-    t = t + sample + ' '
+  t = t + sample + ' '
 line1 = "for i in " + t + '\n'
 otherlines = "do\n" + "\tcd " + wkd + "/Bam_file/$i" + '\n' + \
     "\tqsub Rescue_phase_" + "$i" + ".pbs\n" + "done\n"
 
 with open(submitFile, "w") as subF:
-    subF.write(line1)
-    subF.write(otherlines)
+  subF.write(line1)
+  subF.write(otherlines)

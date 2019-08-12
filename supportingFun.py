@@ -4,8 +4,8 @@ import os
 def load_config_file(config_name):
     """ load config values from config file"""
     #
-    config_var = ['rescue_folder', 'Raw_Bam_file_folder', 'BWA_path', 'samtools_path', 'picard_path', 'GATK_path', 'GATK_bundle_path',
-                  'ANNO_path', 'queue', 'walltime', 'nodes', 'ppn', 'mem', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4', 'PBSfile5']
+    config_var = ['rescue_folder', 'Raw_Bam_file_folder', 'BWA_path', 'samtools_path', 'picard_path', 'GATK_path', 'GATK_bundle_path', 'vcftools_path',
+                  'ANNO_path', 'queue', 'walltime', 'nodes', 'ppn', 'mem', 'Email', 'PBSfile1', 'PBSfile2', 'PBSfile3', 'PBSfile4', 'PBSfile5', 'PBSfile6']
 
     config_dict = {}
 
@@ -96,6 +96,8 @@ def ModifyAndCreate(modelfile, Path_dict, Outer_folder, SampleList, prefix):
                 elif(l[i].startswith("ANNO")):
                     l[i] = "ANNO=" + Path_dict.get('ANNO_path')
 
+                elif(l[i].startswith("VCFTOOLS=")):
+                    l[i] = "VCFTOOLS=" + Path_dict.get('vcftools_path')
             newFileName = Outer_folder + '/' + sample + '/' + prefix + '_' + sample + '.pbs'
             # test
             with open(newFileName, 'wt') as newFile:
@@ -136,6 +138,17 @@ def ModifyAndCreate_v2(modelfile, Path_dict, TargetFolder, SampleList, prefix):
 
             elif(l[i].startswith("ANNO")):
                 l[i] = "ANNO=" + Path_dict.get("ANNO_path") + '\n'
+
+            elif(l[i].startswith("VCFTOOLS=")):
+                l[i] = "VCFTOOLS=" + Path_dict.get('vcftools_path')
+
+            elif(l[i].startswith("for i in all_samples")):
+                l[i] = None
+                t = ''
+                for sample in SampleList:
+                    t = t + sample + ' '
+                newline = 'for i in ' + t + '\n'
+                l[i] = newline
 
             elif(l[i].startswith("#replace this line by all samples")):
                 l[i] = None

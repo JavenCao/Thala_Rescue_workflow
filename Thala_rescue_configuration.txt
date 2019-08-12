@@ -13,6 +13,7 @@ samtools_path=/home/yjcao/software/samtools-1.4/samtools
 picard_path=/home/yjcao/software/picard.jar
 GATK_path=/home/yjcao/software/GenomeAnalysisTK.jar
 GATK_bundle_path=/home/yjcao/reference/GATKbundle/hg19
+vcftools_path=/home/yjcao/software/vcftools
 ANNO_path=/home/yjcao/software/annovar/table_annovar.pl
 
 ##PBS system parameters(if your server is PBS-free, please just ignore this part)##########
@@ -44,3 +45,4 @@ PBSfile2=Thala_Rescue_phase2_Step1_RunHC_model.pbs
 PBSfile3=Thala_Rescue_phase2_Step2_GTing_model.pbs
 PBSfile4=Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
 PBSfile5=Select_Annotation.pbs
+PBSfile6=Thala_Find_Causal_model.pbs
