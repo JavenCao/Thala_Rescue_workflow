@@ -117,6 +117,10 @@ To increase sensitivity, the default cut-offs are as follows:
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutation out.
 
       cd ./VCF_file/Joint/
+      # get vcf for each individual in temp folder
+      sh split_vcf.sh
+      #
+
       python Find_causal.py -db 5_substitution.vcf --bulkvcf HardFiltering_SNP.vcf --bulkbamf /home/data/project/Bam_file/ -o VN424.causal.txt
 
 After this, you will find a newly generated folder named Report_thala, Positive samples are in Positve subfolders, and Negative samples are in Negative subfolders.
