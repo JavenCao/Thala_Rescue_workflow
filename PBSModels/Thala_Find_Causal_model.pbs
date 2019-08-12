@@ -45,7 +45,7 @@ mkdir Prediction
 
 for i in all_samples
 do
-    python Find_causal.py -db known_substitution.vcf \
+    python Find_causal.py -db "$wkd"/Thala_Rescue_workflow/Know_Causal_Mutation/Known_substitution.vcf \
                           -ind $vcff/Joint/temp/SNP/"$i".SNP.mid.recode.vcf \
                           -o "$vcff"/Joint/Prediction/SNP_"$i".causal.txt
 done
