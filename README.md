@@ -129,7 +129,14 @@ And after that you should have the following structure:
       vi submit.sh(step-by-step, change the target PBS scripts)
       sh submit.sh
 
-And for the **Hard filtering steps**, we suggest to set cut-offs based on the emprical distribution of each annotation.
+After get gVCF for each sample, go to the VCF_file folder, and do Joint Genotyping and hard filtering by running the following command:
+
+    cd ./VCF_file
+    qsub Thala_Rescue_phase2_Step2_GTing.pbs
+    cd ./Joint
+    qsub Thala_Rescue_phase2_Step3_HardFiltering.pbs
+
+For the **Hard filtering steps**, we suggest to set cut-offs based on the emprical distribution of each annotation.
 Here, we provide scripts to select and plot the emprical distribution for each annotation.
 
     Select_Annotation.pbs
@@ -139,6 +146,8 @@ To increase sensitivity, the default cut-offs are as follows:
 
       SNP:"QD<2.0 || FS>60 || MQ<40 || MQRankSum<-12.5 || ReadPosRankSum<-8.0"
       INDEL:"QD < 2.0 || FS > 200 || ReadPosRankSum < -20 || SOR > 10.0"
+
+After Step5, in Joint folder, you should get SNP and INDEL vcf files for further process.
 
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutations out.
 
