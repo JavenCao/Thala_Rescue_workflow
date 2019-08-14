@@ -32,7 +32,7 @@ mkdir SNP
 
 for i in all_samples
 do
-    $VCFTOOLS --vcf "$vcff"/Joint/HardFiltering_SNP.vcf \
+    $VCFTOOLS --vcf "$vcff"/Joint/HardF_SNP_postCGP_Gfiltered.vcf \
 	          --indv "$i" \
 	          --recode \
 	          --recode-INFO-all \
@@ -43,9 +43,10 @@ done
 cd "$vcff"/Joint
 mkdir Prediction
 
+cd "$vcff"/Joint/
 for i in all_samples
 do
-    python Find_causal.py -db "$wkd"/Thala_Rescue_workflow/Know_Causal_Mutation/Known_substitution.vcf \
+    python Find_causal.py -db "$wkd"/Thala_Rescue_workflow/Known_Causal_Mutation/Known_substitution.vcf \
                           -ind $vcff/Joint/temp/SNP/"$i".SNP.mid.recode.vcf \
                           -o "$vcff"/Joint/Prediction/SNP_"$i".causal.txt
 done
@@ -60,7 +61,7 @@ mkdir INDEL
 
 for i in all_samples
 do
-    $VCFTOOLS --vcf "$vcff"/Joint/HardFiltering_INDEL.vcf \
+    $VCFTOOLS --vcf "$vcff"/Joint/HardF_INDEL_postCGP_Gfiltered.vcf \
 	          --indv "$i" \
 	          --recode \
 	          --recode-INFO-all \
@@ -70,11 +71,18 @@ done
 # -------------------------------------------------------------------------------------------
 cd "$vcff"/Joint/Prediction
 
+cd "$vcff"/Joint/
 for i in all_samples
 do
-    python Find_causal.py -db known_substitution.vcf \
+    python Find_causal.py -db "$wkd"/Thala_Rescue_workflow/Known_Causal_Mutation/Known_InDel.vcf \
                           -ind $vcff/Joint/temp/INDEL/"$i".INDEL.mid.recode.vcf \
                           -o "$vcff"/Joint/Prediction/INDEL_"$i".causal.txt
 done
 # -------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------
+
+cd "$vcff"/Joint/
+rm -rf temp
+
+cd "$vcff"/Joint/Prediction
+find ./ -size  0 -print0 |xargs -0 rm -rf --

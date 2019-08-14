@@ -1,13 +1,13 @@
-### Configuration file for Thala_rescue_PBS.py ###
+### Configuration file for Thala_Rescue_workflow ###
 
-########################### Users must manually set-up the below information for using Thala_rescue_PBS.py ####################################
+########################### Users must manually set-up the below information ####################################
 
-##rescue folder##
+## rescue folder: working folders for thalassaemia mutation detection##
 rescue_folder=/home/data/thala_project/Rescue_Phase
-##original bam folder##
+## original Bam folder ##
 Raw_Bam_file_folder=/home/data/thala_project/Bam_file
 
-## Path to Thalassemia.py and commonly used software##
+## Path to commonly used software and their dependency ##
 BWA_path=/home/yjcao/software/bwa-0.7.15/bwa
 samtools_path=/home/yjcao/software/samtools-1.4/samtools
 picard_path=/home/yjcao/software/picard.jar
@@ -27,7 +27,7 @@ ppn=5
 mem=10g
 Email=test@test.com
 
-#######Sample Name List(with each line corresponding to one sample)##############
+#######Sample Name List(each line corresponding to one sample)##############
 sample1=Thala_sample1
 sample2=Thala_sample2
 sample3=Thala_sample3
