@@ -1,8 +1,14 @@
 # Thalassaemia point mutation/small InDel detection
 
-This workflow describes: **(1)** how to rescue the poorly aligned NGS reads in Bam files, and **(2)** workflow for thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
+This workflow describes: **(1)** how to rescue the poorly aligned NGS reads in Bam files, and **(2)** how to pick out thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
 
-First of all, if you start with large files such as whole genome sequencing BAM, you are suggested to only extract hemoglobin regions from BAM files by running the following commands:
+For PBS-free servers, users can still run these scripts in bash(sh) like:
+
+    cd Bam_file/Sample1
+    sh Rescue_phase_Sample1.pbs
+
+
+First of all, if you start with large files such as whole genome sequencing BAM, you are strongly suggested to only extract hemoglobin regions from BAM files by running the following commands:
 
       samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
 
@@ -20,10 +26,12 @@ First of all, if you start with large files such as whole genome sequencing BAM,
 
 Folder names and Bam file names should be same, which should be the sample names.
 
-Python module dependency: pysam, numpy, and commonly used software and their resources such as [GATK](https://software.broadinstitute.org/gatk/) and [GATK_Bundle](https://software.broadinstitute.org/gatk/download/bundle) and [Picard](https://broadinstitute.github.io/picard/).
+Python module dependency: pysam, numpy, and commonly used software and their resources such as [GATK](https://software.broadinstitute.org/gatk/), [GATK_Bundle](https://software.broadinstitute.org/gatk/download/bundle), [Picard](https://broadinstitute.github.io/picard/) and [vcftools](https://vcftools.github.io/examples.html)
 ____________________________________________________________________________________________________________
 
-Now let's start, and suppose our working directory is /home/data/Thalaproject.
+Now let's start.
+
+Suppose our working directory is **/home/data/Thalaproject**.
 
 * Step1: create the rescue folder by running the following command in bash:
 
@@ -49,13 +57,16 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
     |    |    |    |    |    | -- Select_Annotation.pbs
+    |    |    |    |    |    | -- plot.R    
+    |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
+    |    |    |    |    |    | -- Find_causal.py
     |    |    |    |-- Poor_reads_rescue
     |    |    |    |    | -- Thalassemia.py
     |    |    |    |    | -- BamOPR.py
     |    |    |    |    | -- README.md
     |    |    |    |-- Known_Causal_Mutation
-    |    |    |    |    | -- substitution.query_vars3.bed
-    |    |    |    |    | -- indel.query_vars3.bed
+    |    |    |    |    | -- Known_InDel.vcf
+    |    |    |    |    | -- Known_substitution.vcf
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
@@ -73,37 +84,52 @@ And after that you should have the following structure:
     |    |    |    | -- Thala_rescue_PBS.py
     |    |    |    | -- Thala_rescue_configuration.txt
     |    |    |    | -- supportingFun.py
-    |    |    |    |    | -- Thala_Rescue_PBS
+    |    |    |    |    | -- PBSModels
     |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
-    |    |    | -- Bam_file
-    |    |    |    | -- Sample1
-    |    |    |    |    | -- Rescue_phase_Sample1.pbs
-    |    |    |    | -- Sample2
-    |    |    |    |    | -- Rescue_phase_Sample2.pbs
-    |    |    |    | -- Sample3
-    |    |    |    |    | -- Rescue_phase_Sample3.pbs
-    |    |    | -- VCF_file
-    |    |    |    | -- Sample1
-    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample1.pbs
-    |    |    |    | -- Sample2
-    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample2.pbs
-    |    |    |    | -- Sample3
-    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample3.pbs
-    |    |    |    | -- Joint
-    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering.pbs
-    |    |    |    |    | -- Select_Annotation.pbs
-    |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs
-    |    | -- submit.sh
-
+    |    |    |    |    |    | -- Select_Annotation.pbs
+    |    |    |    |    |    | -- plot.R    
+    |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
+    |    |    |    |    |    | -- Find_causal.py
+    |    |    |    |-- Poor_reads_rescue
+    |    |    |    |    | -- Thalassemia.py
+    |    |    |    |    | -- BamOPR.py
+    |    |    |    |    | -- README.md
+    |    |    |    |-- Known_Causal_Mutation
+    |    |    |    |    | -- Known_InDel.vcf
+    |    |    |    |    | -- Known_substitution.vcf
+    --------------------------------------------------------------------------
+    |    |    | -- Bam_file                                                  |
+    |    |    |    | -- Sample1                                              |
+    |    |    |    |    | -- Rescue_phase_Sample1.pbs                        |
+    |    |    |    | -- Sample2                                              |
+    |    |    |    |    | -- Rescue_phase_Sample2.pbs                        |
+    |    |    |    | -- Sample3                                              |
+    |    |    |    |    | -- Rescue_phase_Sample3.pbs                        |
+    |    |    | -- VCF_file                                                  |
+    |    |    |    | -- Sample1                                              |
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample1.pbs     |
+    |    |    |    | -- Sample2                                              |
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample2.pbs     |
+    |    |    |    | -- Sample3                                              |
+    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample3.pbs     |
+    |    |    |    | -- Joint                                                |
+    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering.pbs     |
+    |    |    |    |    | -- Select_Annotation.pbs                           |
+    |    |    |    |    | -- plot.R                                          |
+    |    |    |    |    | -- Find_Causal.pbs                                 |
+    |    |    |    |    | -- Find_causal.py                                  |
+    |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs                       |
+    |    | -- submit.sh                                                      |
+    --------------------------------------------------------------------------
 * Step5: submit PBS files step-by-step by changing and running the following commands:
 
-      vi submit.sh(change the target PBS scripts)
+      vi submit.sh(step-by-step, change the target PBS scripts)
       sh submit.sh
 
-And for the **Hard filtering steps**, we suggested to set cut-offs based on the emprical distribution of each annotation.
+And for the **Hard filtering steps**, we suggest to set cut-offs based on the emprical distribution of each annotation.
 Here, we provide scripts to select and plot the emprical distribution for each annotation.
 
     Select_Annotation.pbs
@@ -114,20 +140,12 @@ To increase sensitivity, the default cut-offs are as follows:
       SNP:"QD<2.0 || FS>60 || MQ<40 || MQRankSum<-12.5 || ReadPosRankSum<-8.0"
       INDEL:"QD < 2.0 || FS > 200 || ReadPosRankSum < -20 || SOR > 10.0"
 
-* Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutation out.
+* Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutations out.
 
       cd ./VCF_file/Joint/
-      # get vcf for each individual in temp folder
-      sh split_vcf.sh
-      #
+      qsub Find_Causal.pbs (or sh Find_causal.pbs for non-PBS servers)
 
-      python Find_causal.py -db 5_substitution.vcf --bulkvcf HardFiltering_SNP.vcf --bulkbamf /home/data/project/Bam_file/ -o VN424.causal.txt
-
-After this, you will find a newly generated folder named Report_thala, Positive samples are in Positve subfolders, and Negative samples are in Negative subfolders.
-
-    | -- | ./VCF_file/Joint/
-    | -- | -- | -- Positve
-    | -- | -- | -- Negative
+After this, you will find a newly generated folder named **Prediction**, only Positive samples are reported with mutation details.
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
