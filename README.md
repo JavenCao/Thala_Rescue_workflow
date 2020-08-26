@@ -1,14 +1,16 @@
 # Thalassaemia point mutation/small InDel detection
 
-This workflow describes: **(1)** how to rescue the poorly aligned NGS reads in Bam files, and **(2)** how to pick out thalassaemia point mutation/small InDel detection on clusters managed by Portable Batch System(PBS).
+This workflow describes: **(1)** how to recover and re-align the Reads with Mulitiple Alignments(RMAs) from homologous haemoglobin regions in BAM files; and **(2)** how to do variant callings under GATK framework for determing pathogenic thalassaemia point mutations and small InDels.
 
-For PBS-free servers, users can still run these scripts in bash(sh) like:
+Related scripts are generated for users working on high performance clusters(HPC), managed by Portable Batch System(PBS).
+
+However, for PBS-free servers or PCs, users can still run these scripts in bash(sh) like:
 
     cd Bam_file/Sample1
     sh Rescue_phase_Sample1.pbs
 
 
-First of all, if you start with large files such as whole genome sequencing BAM, you are strongly suggested to only extract hemoglobin regions from BAM files by running the following commands:
+First of all, if you start with large files such as whole genome sequencing BAM, you are strongly suggested to extract hemoglobin regions records from BAM files by running the following commands:
 
       samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
 
@@ -57,7 +59,7 @@ now you should have the follwing structure:
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
     |    |    |    |    |    | -- Select_Annotation.pbs
-    |    |    |    |    |    | -- plot.R    
+    |    |    |    |    |    | -- plot.R
     |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
     |    |    |    |    |    | -- Find_causal.py
     |    |    |    |-- Poor_reads_rescue
@@ -90,7 +92,7 @@ And after that you should have the following structure:
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
     |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
     |    |    |    |    |    | -- Select_Annotation.pbs
-    |    |    |    |    |    | -- plot.R    
+    |    |    |    |    |    | -- plot.R
     |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
     |    |    |    |    |    | -- Find_causal.py
     |    |    |    |-- Poor_reads_rescue
