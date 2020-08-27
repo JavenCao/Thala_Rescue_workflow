@@ -1,32 +1,29 @@
 #!/bin/bash
-#PBS -N test_Thala_Rescue_phase2_Step2_GTing
+#PBS -N GATK_Genotyping
 #PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
-#PBS -q paedwy
-#PBS -m abe -M test@test.com
-#PBS -o my.out
-#PBS -e my.err
+#PBS -q queue_name_here
+#PBS -m abe -M youremail_address_here
+#PBS -o GATK_GT.out
+#PBS -e GATK_GT.err
 #PBS -V
 
+#sample name
 i=1
 
-#including folder
 wkd=/home/data/thala_project/Rescue_Phase
 bamf=$wkd/Bam_file
 GATK_Bundle=/home/datacenter/reference/GATKbundle/hg19
 vcff=$wkd/VCF_file
 
-#software
 BWA=/path/to/bwa
 SAMTOOLS=/path/to/samtools
 PICARD=/path/to/picard.jar
 GATK=/path/to/GenomeAnalysisTK.jar
 
-#Joint Genotyping:replace --variant line with all the sample lines###
 java -jar $GATK \
     -T GenotypeGVCFs \
     -R $GATK_Bundle/ucsc.hg19.fasta \
-#replace this line by all samples    --variant $vcff/S9/S9_RawVariants.g.vcf \#
+#replace this line by all samples    --variant $vcff/Sample_1/Sample_1_RawVariants.g.vcf \#
     --dbsnp $GATK_Bundle/dbsnp_138.hg19.vcf \
     -o $vcff/Joint/All_Genotyping.vcf \
     -nt 1
-

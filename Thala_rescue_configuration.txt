@@ -8,13 +8,13 @@ rescue_folder=/home/data/thala_project/Rescue_Phase
 Raw_Bam_file_folder=/home/data/thala_project/Bam_file
 
 ## Path to commonly used software and their dependency ##
-BWA_path=/home/yjcao/software/bwa-0.7.15/bwa
-samtools_path=/home/yjcao/software/samtools-1.4/samtools
-picard_path=/home/yjcao/software/picard.jar
-GATK_path=/home/yjcao/software/GenomeAnalysisTK.jar
-GATK_bundle_path=/home/yjcao/reference/GATKbundle/hg19
-vcftools_path=/home/yjcao/software/vcftools
-ANNO_path=/home/yjcao/software/annovar/table_annovar.pl
+BWA_path=/home/software/bwa-0.7.15/bwa
+samtools_path=/home/software/samtools-1.4/samtools
+picard_path=/home/software/picard.jar
+GATK_path=/home/software/GenomeAnalysisTK.jar
+GATK_bundle_path=/home/reference/GATKbundle/hg19
+vcftools_path=/home/software/vcftools
+
 
 ##PBS system parameters(if your server is PBS-free, please just ignore this part)##########
 ##The resource request must specify the queue name(q), job walltime (hours:minutes:seconds), number of nodes(nodes), and processor cores per node (ppn) and the required total memory (mem).
@@ -25,7 +25,7 @@ walltime=10:00:00
 nodes=1
 ppn=5
 mem=10g
-Email=test@test.com
+Email=your email is used to allow the server send you notificaitons
 
 #######Sample Name List(each line corresponding to one sample)##############
 sample1=Thala_sample1
@@ -39,10 +39,9 @@ sample8=PID17-121
 sample9=PID17-122
 sample10=PID18-020
 
-#######PBSfile Name List(Just leave them here)##############
+#######PBSfile Name List(Just leave them here. Don't touch)##############
 PBSfile1=Thala_Rescue_Bam_model.pbs
 PBSfile2=Thala_Rescue_phase2_Step1_RunHC_model.pbs
 PBSfile3=Thala_Rescue_phase2_Step2_GTing_model.pbs
 PBSfile4=Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
-PBSfile5=Select_Annotation.pbs
-PBSfile6=Thala_Find_Causal_model.pbs
+

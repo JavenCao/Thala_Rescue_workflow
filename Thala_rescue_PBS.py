@@ -50,15 +50,6 @@ phase2_HardF_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile4')
 ModifyAndCreate_v2(phase2_HardF_model_file, Path_dict, Joint_folder,
                    SampleList, 'Thala_Rescue_phase2_Step3_HardFiltering')
 
-# Selection Annotation
-select_ann_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile5')
-ModifyAndCreate_v2(select_ann_model_file, Path_dict, Joint_folder,
-                   SampleList, 'Select_Annotation')
-
-# Find causal mutation
-find_causal_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile6')
-ModifyAndCreate_v2(find_causal_model_file, Path_dict, Joint_folder,
-                   SampleList, 'Find_Causal')
 #-------------------------------------end GATK process----------------------------------------
 
 

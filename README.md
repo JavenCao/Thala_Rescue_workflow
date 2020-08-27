@@ -13,12 +13,13 @@ However, for PBS-free servers or PCs, users can still run these scripts in bash(
 First of all, if you start with large files such as whole genome sequencing BAM, you are strongly suggested to extract hemoglobin regions records from BAM files by running the following commands:
 
       samtools view -h -L Thalassaemia_hg19_genome.bed -b -o output.bam input.bam
+      samtools index output.bam
 
 ## Prerequisite:
 
 * Step0: Order your raw Bam files by **sample names** in the following strucure:
 
-        | -- Bam_file_folder
+        | -- Bam_file
         |   | -- Sample1
         |   |   | -- Sample1.bam
         |   | -- Thala_2
@@ -26,7 +27,7 @@ First of all, if you start with large files such as whole genome sequencing BAM,
         |   | -- TJLE
         |   |   | -- TJLE.bam
 
-Folder names and Bam file names should be same, which should be the sample names.
+Folder names and Bam file names are suggested to be the same, which should be the sample names.
 
 Python module dependency: pysam, numpy, and commonly used software and their resources such as [GATK](https://software.broadinstitute.org/gatk/), [GATK_Bundle](https://software.broadinstitute.org/gatk/download/bundle), [Picard](https://broadinstitute.github.io/picard/) and [vcftools](https://vcftools.github.io/examples.html)
 ____________________________________________________________________________________________________________
