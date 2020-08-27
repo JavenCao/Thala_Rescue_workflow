@@ -75,7 +75,7 @@ And after that you should have the following structure:
     |    |    |       .......
     |    |    |       .......
     |    |    |
-    --------------------------------------------------------------------------
+------------------------------------------------------------------------------
     |    |    | -- Bam_file                                                  |
     |    |    |    | -- Sample1                                              |
     |    |    |    |    | -- Rescue_phase_Sample1.pbs                        |
@@ -98,7 +98,7 @@ And after that you should have the following structure:
     |    |    |    |    | -- Find_causal.py                                  |
     |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs                       |
     |    | -- submit.sh                                                      |
-    --------------------------------------------------------------------------
+------------------------------------------------------------------------------
 * Step5: submit PBS files step-by-step by changing and running the following commands:
 
       vi submit.sh(step-by-step, change the target PBS scripts)
