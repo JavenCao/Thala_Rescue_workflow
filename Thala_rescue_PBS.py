@@ -54,9 +54,9 @@ line1 = "for i in " + t + '\n'
 otherlines = "do\n" + "\tcd " + wkd + "/Bam_file/$i" + '\n' + \
     "\tqsub Rescue_phase_" + "$i" + ".pbs\n" + \
     "#\tcd " + wkd + "/VCF_file/$i" + '\n' + \
-    "#\tqsub Thala_Rescue_phase2_Step1_RunHC_" + "$i" + ".pbs\n" + "done\n" +
-  "#\tcd " + wkd + "/VCF_file/Joint" + '\n' + \
-      "#\tqsub Thala_Rescue_phase2_Step3_HardFiltering.pbs"
+    "#\tqsub Thala_Rescue_phase2_Step1_RunHC_" + "$i" + ".pbs\n" + "done\n" + \
+    "#\tcd " + wkd + "/VCF_file/Joint" + '\n' + \
+    "#\tqsub Thala_Rescue_phase2_Step3_HardFiltering.pbs"
 
 with open(submitFile, "w") as subF:
   subF.write(line1)
