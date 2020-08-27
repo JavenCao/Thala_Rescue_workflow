@@ -32,14 +32,6 @@ ModifyAndCreate(phase2_RunHC_model_file, Path_dict,
 # For Jointing Genotyping
 Joint_folder = VCF_file_folder + '/Joint'
 os.mkdir(Joint_folder)
-# copy plot.R for annotation plotting purpose
-plot_R_file = PBSModel_folder + '/plot.R'
-command_line = """cp {0} {1}""".format(plot_R_file, Joint_folder)
-os.system(command_line)
-# copy Find_causal.py for finding causal mutation purpose
-Find_causal_file = PBSModel_folder + '/Find_causal.py'
-command_line = """cp {0} {1}""".format(Find_causal_file, Joint_folder)
-os.system(command_line)
 
 phase2_GTing_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile3')
 ModifyAndCreate_v2(phase2_GTing_model_file, Path_dict,
