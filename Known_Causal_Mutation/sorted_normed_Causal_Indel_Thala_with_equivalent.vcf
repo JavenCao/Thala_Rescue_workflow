@@ -1,0 +1,288 @@
+##fileformat=VCFv4.2
+##INFO=<ID=Hbvar_num,Number=1,Type=String,Description="HbVar_database_entry_ID">
+##INFO=<ID=Hb_name,Number=1,Type=String,Description="Hb_names_for_this_mutation">
+##INFO=<ID=HGVS,Number=1,Type=String,Description="HGVS">
+##INFO=<ID=type,Number=1,Type=String,Description="mutation_types">
+##contig=<ID=chrM,length=16571,assembly=hg19>
+##contig=<ID=chr1,length=249250621,assembly=hg19>
+##contig=<ID=chr2,length=243199373,assembly=hg19>
+##contig=<ID=chr3,length=198022430,assembly=hg19>
+##contig=<ID=chr4,length=191154276,assembly=hg19>
+##contig=<ID=chr5,length=180915260,assembly=hg19>
+##contig=<ID=chr6,length=171115067,assembly=hg19>
+##contig=<ID=chr7,length=159138663,assembly=hg19>
+##contig=<ID=chr8,length=146364022,assembly=hg19>
+##contig=<ID=chr9,length=141213431,assembly=hg19>
+##contig=<ID=chr10,length=135534747,assembly=hg19>
+##contig=<ID=chr11,length=135006516,assembly=hg19>
+##contig=<ID=chr12,length=133851895,assembly=hg19>
+##contig=<ID=chr13,length=115169878,assembly=hg19>
+##contig=<ID=chr14,length=107349540,assembly=hg19>
+##contig=<ID=chr15,length=102531392,assembly=hg19>
+##contig=<ID=chr16,length=90354753,assembly=hg19>
+##contig=<ID=chr17,length=81195210,assembly=hg19>
+##contig=<ID=chr18,length=78077248,assembly=hg19>
+##contig=<ID=chr19,length=59128983,assembly=hg19>
+##contig=<ID=chr20,length=63025520,assembly=hg19>
+##contig=<ID=chr21,length=48129895,assembly=hg19>
+##contig=<ID=chr22,length=51304566,assembly=hg19>
+##contig=<ID=chrX,length=155270560,assembly=hg19>
+##contig=<ID=chrY,length=59373566,assembly=hg19>
+##contig=<ID=chr1_gl000191_random,length=106433,assembly=hg19>
+##contig=<ID=chr1_gl000192_random,length=547496,assembly=hg19>
+##contig=<ID=chr4_ctg9_hap1,length=590426,assembly=hg19>
+##contig=<ID=chr4_gl000193_random,length=189789,assembly=hg19>
+##contig=<ID=chr4_gl000194_random,length=191469,assembly=hg19>
+##contig=<ID=chr6_apd_hap1,length=4622290,assembly=hg19>
+##contig=<ID=chr6_cox_hap2,length=4795371,assembly=hg19>
+##contig=<ID=chr6_dbb_hap3,length=4610396,assembly=hg19>
+##contig=<ID=chr6_mann_hap4,length=4683263,assembly=hg19>
+##contig=<ID=chr6_mcf_hap5,length=4833398,assembly=hg19>
+##contig=<ID=chr6_qbl_hap6,length=4611984,assembly=hg19>
+##contig=<ID=chr6_ssto_hap7,length=4928567,assembly=hg19>
+##contig=<ID=chr7_gl000195_random,length=182896,assembly=hg19>
+##contig=<ID=chr8_gl000196_random,length=38914,assembly=hg19>
+##contig=<ID=chr8_gl000197_random,length=37175,assembly=hg19>
+##contig=<ID=chr9_gl000198_random,length=90085,assembly=hg19>
+##contig=<ID=chr9_gl000199_random,length=169874,assembly=hg19>
+##contig=<ID=chr9_gl000200_random,length=187035,assembly=hg19>
+##contig=<ID=chr9_gl000201_random,length=36148,assembly=hg19>
+##contig=<ID=chr11_gl000202_random,length=40103,assembly=hg19>
+##contig=<ID=chr17_ctg5_hap1,length=1680828,assembly=hg19>
+##contig=<ID=chr17_gl000203_random,length=37498,assembly=hg19>
+##contig=<ID=chr17_gl000204_random,length=81310,assembly=hg19>
+##contig=<ID=chr17_gl000205_random,length=174588,assembly=hg19>
+##contig=<ID=chr17_gl000206_random,length=41001,assembly=hg19>
+##contig=<ID=chr18_gl000207_random,length=4262,assembly=hg19>
+##contig=<ID=chr19_gl000208_random,length=92689,assembly=hg19>
+##contig=<ID=chr19_gl000209_random,length=159169,assembly=hg19>
+##contig=<ID=chr21_gl000210_random,length=27682,assembly=hg19>
+##contig=<ID=chrUn_gl000211,length=166566,assembly=hg19>
+##contig=<ID=chrUn_gl000212,length=186858,assembly=hg19>
+##contig=<ID=chrUn_gl000213,length=164239,assembly=hg19>
+##contig=<ID=chrUn_gl000214,length=137718,assembly=hg19>
+##contig=<ID=chrUn_gl000215,length=172545,assembly=hg19>
+##contig=<ID=chrUn_gl000216,length=172294,assembly=hg19>
+##contig=<ID=chrUn_gl000217,length=172149,assembly=hg19>
+##contig=<ID=chrUn_gl000218,length=161147,assembly=hg19>
+##contig=<ID=chrUn_gl000219,length=179198,assembly=hg19>
+##contig=<ID=chrUn_gl000220,length=161802,assembly=hg19>
+##contig=<ID=chrUn_gl000221,length=155397,assembly=hg19>
+##contig=<ID=chrUn_gl000222,length=186861,assembly=hg19>
+##contig=<ID=chrUn_gl000223,length=180455,assembly=hg19>
+##contig=<ID=chrUn_gl000224,length=179693,assembly=hg19>
+##contig=<ID=chrUn_gl000225,length=211173,assembly=hg19>
+##contig=<ID=chrUn_gl000226,length=15008,assembly=hg19>
+##contig=<ID=chrUn_gl000227,length=128374,assembly=hg19>
+##contig=<ID=chrUn_gl000228,length=129120,assembly=hg19>
+##contig=<ID=chrUn_gl000229,length=19913,assembly=hg19>
+##contig=<ID=chrUn_gl000230,length=43691,assembly=hg19>
+##contig=<ID=chrUn_gl000231,length=27386,assembly=hg19>
+##contig=<ID=chrUn_gl000232,length=40652,assembly=hg19>
+##contig=<ID=chrUn_gl000233,length=45941,assembly=hg19>
+##contig=<ID=chrUn_gl000234,length=40531,assembly=hg19>
+##contig=<ID=chrUn_gl000235,length=34474,assembly=hg19>
+##contig=<ID=chrUn_gl000236,length=41934,assembly=hg19>
+##contig=<ID=chrUn_gl000237,length=45867,assembly=hg19>
+##contig=<ID=chrUn_gl000238,length=39939,assembly=hg19>
+##contig=<ID=chrUn_gl000239,length=33824,assembly=hg19>
+##contig=<ID=chrUn_gl000240,length=41933,assembly=hg19>
+##contig=<ID=chrUn_gl000241,length=42152,assembly=hg19>
+##contig=<ID=chrUn_gl000242,length=43523,assembly=hg19>
+##contig=<ID=chrUn_gl000243,length=43341,assembly=hg19>
+##contig=<ID=chrUn_gl000244,length=39929,assembly=hg19>
+##contig=<ID=chrUn_gl000245,length=36651,assembly=hg19>
+##contig=<ID=chrUn_gl000246,length=38154,assembly=hg19>
+##contig=<ID=chrUn_gl000247,length=36422,assembly=hg19>
+##contig=<ID=chrUn_gl000248,length=39786,assembly=hg19>
+##contig=<ID=chrUn_gl000249,length=38502,assembly=hg19>
+##reference=file:ucsc.hg19.fasta
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr11	5246711	HbVar.2721	GTT	G	.	.	HbVar_num=HbVar.2721;Hb_name=Poly_A_(-AA);HGVS=HBB:c.*111_*112delAA;type=deletions
+chr11	5246713	HbVar.973	TTTTTA	T	.	.	HbVar_num=HbVar.973;Hb_name=Poly_A_(-AATAA);HGVS=HBB:c.*108_*112delAATAA;type=deletions
+chr11	5246716	HbVar.972	TTA	T	.	.	HbVar_num=HbVar.972;Hb_name=Poly_A_(-AT_or_-TA);HGVS=HBB:c.[*109_*110delAT_or_*110_*111delTA];type=deletions
+chr11	5246716	HbVar.972	TTA	T	.	.	HbVar_num=HbVar.972;Hb_name=Poly_A_(-AT_or_-TA);HGVS=HBB:c.[*109_*110delAT_or_*110_*111delTA];type=deletions
+chr11	5246847	HbVar.1213	AG	A	.	.	HbVar_num=HbVar.1213;Hb_name=Hb_Florida;HGVS=HBB:c.424delC;type=deletions
+chr11	5246853	HbVar.1237	TTAGCCA	T	.	.	HbVar_num=HbVar.1237;Hb_name=Hb_Stara_Zagora;HGVS=HBB:c.413_418delTGGCTA;type=deletions
+chr11	5246874	HbVar.2510	TTC	T	.	.	HbVar_num=HbVar.2510;Hb_name=Codons_131/132_(-GA);HGVS=HBB:c.396_397delGA;type=deletions
+chr11	5246875	HbVar.958	TCTGATAGGCAGCCTGCA	T	.	.	HbVar_num=HbVar.958;Hb_name=Codons_126-131_(Val-Gln-Ala-Ala-Thr-Gln)_(-17_bp);HGVS=HBB:c.380_396delTGCAGGCTGCCTATCAG;type=deletions
+chr11	5246876	HbVar.2718	C	CT	.	.	HbVar_num=HbVar.2718;Hb_name=Codon_131_(+A);HGVS=HBB:c.394_395insA;type=insertions
+chr11	5246884	HbVar.963	CAGC	TGTGG	.	.	Hbvar_num=HbVar.963;Hb_name=Codons_128/129_(-4,_-GCTG_&_+5,_+CCACA)_Codons_132-135_(-11,_-AAAGTGGTGGC);HGVS=HBB:c.[385_388delinsCCACA&397_407delAAAGTGGTGGC];type=insertions,deletions
+chr11	5246884	HbVar.963	CAGC	TGTGG	.	.	Hbvar_num=HbVar.963;Hb_name=Codons_128/129_(-4,_-GCTG_&_+5,_+CCACA)_Codons_132-135_(-11,_-AAAGTGGTGGC);HGVS=HBB:c.[385_388delinsCCACA&397_407delAAAGTGGTGGC];type=insertions,deletions
+chr11	5246886	HbVar.962	GCCT	G	.	.	HbVar_num=HbVar.962;Hb_name=Codons_127/128_(-AGG);HGVS=HBB:c.383_385delAGG;type=deletions
+chr11	5246889	HbVar.2716	TGCACTG	T	.	.	HbVar_num=HbVar.2716;Hb_name=Codon_125_(-CCAGTG);HGVS=HBB:c.376_381delCCAGTG;type=deletions
+chr11	5246891	HbVar.957	CA	C	.	.	HbVar_num=HbVar.957;Hb_name=Hb_Vercelli;HGVS=HBB:c.380delT;type=deletions
+chr11	5246893	HbVar.953	CTGGTGGGGT	C	.	.	HbVar_num=HbVar.953;Hb_name=Codons_123/124/125_(-ACCCCACC);HGVS=HBB:c.370_378delACCCCACCA;type=deletions
+chr11	5246893	HbVar.955	CT	C	.	.	HbVar_num=HbVar.955;Hb_name=Codon_125_(-A);HGVS=HBB:c.378delA;type=deletions
+chr11	5246893	HbVar.956	C	CTGG	.	.	HbVar_num=HbVar.956;Hb_name=Codons_124-126_(+CCA);HGVS=HBB:c.378_379insCCA;type=insertions
+chr11	5246896	HbVar.2735	G	GT	.	.	HbVar_num=HbVar.2735;Hb_name=Codon_124/125(+A);HGVS=HBB:c.375_376insA;type=insertions
+chr11	5246896	HbVar.954	GT	G	.	.	HbVar_num=HbVar.954;Hb_name=Codon_124_(-A);HGVS=HBB:c.375delA;type=deletions
+chr11	5246901	HbVar.952	GT	G	.	.	HbVar_num=HbVar.952;Hb_name=Hb_Makabe;HGVS=HBB:c.370delA;type=deletions
+chr11	5246908	HbVar.950	C	CT	.	.	HbVar_num=HbVar.950;Hb_name=Codons_120/121_(+A);HGVS=HBB:c.363_364insA;type=insertions
+chr11	5246914	HbVar.1221	CA	C	.	.	HbVar_num=HbVar.1221;Hb_name=Hb_Sainte_Seve;HGVS=HBB:c.357delT;type=deletions
+chr11	5246917	HbVar.2715	AG	A	.	.	HbVar_num=HbVar.2715;Hb_name=Codon_117_(-C);HGVS=HBB:c.354delC;type=deletions
+chr11	5246922	HbVar.1200	T	TATCA	.	.	HbVar_num=HbVar.1200;Hb_name=Codon_116_(+TGAT);HGVS=HBB:c.349_350insTGAT;type=insertions
+chr11	5246926	HbVar.2714	C	CCAGCACA	.	.	HbVar_num=HbVar.2714;Hb_name=Codon_114_(+TGTGCTG);HGVS=HBB:c.345_346insTGTGCTG;type=insertions
+chr11	5246928	HbVar.949	AG	C	.	.	HbVar_num=HbVar.949;Hb_name=Hb_Geneva;HGVS=HBB:c.343_344delinsG;type=insertions,deletions
+chr11	5246934	HbVar.946	CAGACCAGCACGT	C	.	.	HbVar_num=HbVar.946;Hb_name=Codons_108/109/110/111/112_(-12_bp);HGVS=HBB:c.326_337delACGTGCTGGTCT;type=deletions
+chr11	5246937	HbVar.2713	ACCAGCACGTTGC	A	.	.	HbVar_num=HbVar.2713;Hb_name=Codon_106_(-CTGGGCAACGTG);HGVS=HBB:c.319_330delCTGGGCAACGTG;type=deletions
+chr11	5246943	HbVar.947	AC	A	.	.	HbVar_num=HbVar.947;Hb_name=Hb_Manhattan;HGVS=HBB:c.328delG;type=deletions
+chr11	5246948	HbVar.3163	G	GC	.	.	HbVar_num=HbVar.3163;Hb_name=beta_107(+G);HGVS=HBB:c.323dupG;type=insertions
+chr11	5246948	HbVar.945	G	GC	.	.	HbVar_num=HbVar.945;Hb_name=Codons_106/107_(+G);HGVS=HBB:c.321_322insG;type=insertions
+chr11	5246956	HbVar.941	GC	G	.	.	HbVar_num=HbVar.941;Hb_name=IVS-II-850_(-G);HGVS=HBB:c.316-1delG;type=deletions
+chr11	5247041	HbVar.2892	T	TAAAATAAAAGCAG	.	.	HbVar_num=HbVar.2892;Hb_name=IVS-II-765_L1;HGVS=HBB:c.316-86_316-85insCTGCTTTTATTTT;type=insertions
+chr11	5247271	HbVar.2545	A	AAAAAAGTATATTAAAAATATATT	.	.	HbVar_num=HbVar.2545;Hb_name=Hb_Jambol;HGVS=HBB:c.[316-300_327delinsCAGGTGCCATCTGTCACCCTTTTCTTTG&316-316_316-315insAATATATTTTTAATATACTTTTT];type=insertions
+chr11	5247793	HbVar.2706	TCCCATAGACTCA	T	.	.	HbVar_num=HbVar.2706;Hb_name=IVS2-2_(-TGAGTCTATGGG);HGVS=HBB:c.315+2_315+13delTGAGTCTATGGG;type=deletions
+chr11	5247801	HbVar.887	ACT	A	.	.	HbVar_num=HbVar.887;Hb_name=IVS-II-4,5_(-AG);HGVS=HBB:c.315+4_315+5delAG;type=deletions
+chr11	5247804	HbVar.886	CA	TCAGAGAACGT	.	.	HbVar_num=HbVar.886;Hb_name=IVS-II-2,3_(+11,_-2);HGVS=HBB:c.315+2_315+3delinsACGTTCTCTGA;type=insertions,deletions
+chr11	5247804	HbVar.886	CA	TCAGAGAACGT	.	.	HbVar_num=HbVar.886;Hb_name=IVS-II-2,3_(+11,_-2);HGVS=HBB:c.315+2_315+3delinsACGTTCTCTGA;type=insertions,deletions
+chr11	5247805	HbVar.2574	AC	A	.	.	HbVar_num=HbVar.2574;Hb_name=Codon_104_(-G);HGVS=HBB:c.314delG;type=deletions
+chr11	5247818	HbVar.883	CGG	CAGTTCTCAGA	.	.	HbVar_num=HbVar.883;Hb_name=Codon_100_-CTT,_+TCTGAGAACTT_beta0_(dominant_type);HGVS=HBB:c.301_303delinsTCTGAGAACTT;type=insertions,deletions
+chr11	5247834	HbVar.882	C	CT	.	.	HbVar_num=HbVar.882;Hb_name=Codon_95_(+A)_AAG(Lys)->AAAG_beta0;HGVS=HBB:c.287_288insA;type=insertions
+chr11	5247838	HbVar.881	T	TCA	.	.	HbVar_num=HbVar.881;Hb_name=Hb_Agnana;HGVS=HBB:c.283_284insTG;type=insertions
+chr11	5247846	HbVar.2511	CA	C	.	.	HbVar_num=HbVar.2511;Hb_name=Hb_MorganTown;HGVS=HBB:c.275delT;type=deletions
+chr11	5247850	HbVar.879	TCA	T	.	.	HbVar_num=HbVar.879;Hb_name=Codons_89/90_(-GT)_AGT_GAG(Ser_Glu)->A--_GAG_beta0;HGVS=HBB:c.270_271delTG;type=deletions
+chr11	5247855	HbVar.3092	CAG	C	.	.	HbVar_num=HbVar.3092;Hb_name=beta_88_(-CT)_modified_C-terminal_sequence;HGVS=HBB:c.265_266delCT;type=deletions
+chr11	5247855	HbVar.878	C	CA	.	.	HbVar_num=HbVar.878;Hb_name=Codon_88_(+T)_CTG(Leu)->CTTG_beta0;HGVS=HBB:c.266_267insT;type=insertions
+chr11	5247863	HbVar.877	C	CA	.	.	HbVar_num=HbVar.877;Hb_name=Codons_84/85/86_(+T)_ACC_TTT_GCC(Thr_Phe_Ala)->ACC_TTT_T_GCC_beta0;HGVS=HBB:c.258_259insT;type=insertions
+chr11	5247866	HbVar.876	A	AG	.	.	HbVar_num=HbVar.876;Hb_name=Codons_84/85_(+C)_ACC_TTT(Thr_Phe)->ACC_C_TTT_beta0;HGVS=HBB:c.255_256insC;type=insertions
+chr11	5247870	HbVar.875	GC	G	.	.	HbVar_num=HbVar.875;Hb_name=Codons_82/83_(-G)_AAG_GGC(Lys_Gly)->AAG_-GC_beta0;HGVS=HBB:c.251delG;type=deletions
+chr11	5247889	HbVar.2533	TG	T	.	.	HbVar_num=HbVar.2533;Hb_name=Cd77/78_(-C);HGVS=HBB:c.232delC;type=deletions
+chr11	5247891	HbVar.2538	AGC	A	.	.	HbVar_num=HbVar.2538;Hb_name=Cd76_(-GC);HGVS=HBB:c.229_230delGC;type=deletions
+chr11	5247891	HbVar.874	AG	A	.	.	HbVar_num=HbVar.874;Hb_name=Codon_76_(-C)_GCT(Ala)->G-T_beta0;HGVS=HBB:c.230delC;type=deletions
+chr11	5247895	HbVar.873	AG	A	.	.	HbVar_num=HbVar.873;Hb_name=Codons_74/75_(-C)_GGC_CTG(Gly_Leu)->GG-_CTG_beta0;HGVS=HBB:c.226delC;type=deletions
+chr11	5247901	HbVar.871	TCACT	A	.	.	HbVar_num=HbVar.871;Hb_name=Codons_72/73_-AGTGA,_+T_AGT_GAT(Ser-Asp)->----_TT_beta0;HGVS=HBB:c.217_221delinsT;type=insertions,deletions
+chr11	5247902	HbVar.2705	C	CA	.	.	HbVar_num=HbVar.2705;Hb_name=Codon_72/73_(+T);HGVS=HBB:c.219_220insT;type=insertions
+chr11	5247904	HbVar.869	C	CT	.	.	HbVar_num=HbVar.869;Hb_name=Codons_71/72_(+A)_TTT_AGT(Phe_Ser)->TTT_A_AGT_beta0;HGVS=HBB:c.216_217insA;type=insertions
+chr11	5247905	HbVar.2886	TA	T	.	.	HbVar_num=HbVar.2886;Hb_name=HBB:c.216delT;HGVS=HBB:c.216delT;type=deletions
+chr11	5247905	HbVar.870	T	TA	.	.	HbVar_num=HbVar.870;Hb_name=Codons_71/72_(+T)_TTT_AGT(Phe_Ser)->TTT_T_AGT_beta0;HGVS=HBB:c.216_217insT;type=insertions
+chr11	5247917	HbVar.868	GCA	G	.	.	HbVar_num=HbVar.868;Hb_name=Codon_67_(-TG)_GTG(Val)->--G_beta0;HGVS=HBB:c.203_204delTG;type=deletions
+chr11	5247926	HbVar.3080	TGCCATGA	T	.	.	HbVar_num=HbVar.3080;Hb_name=HBB:c.189_195delTCATGGC;HGVS=HBB:c.189_195delTCATGGC;type=deletions
+chr11	5247927	HbVar.867	GC	G	.	.	HbVar_num=HbVar.867;Hb_name=Codon_64_(-G)_GGC(Gly)->-GC_beta0;HGVS=HBB:c.194delG;type=deletions
+chr11	5247934	HbVar.2910	G	GCCCTTGAGGTTGTCCAGGTGAGCCAGGCCATCACTAAAGGCACCGAGCACTTTCTTGCCATGAGC	.	.	HbVar_num=HbVar.2910;Hb_name=HBB:c.187_251dup;HGVS=HBB:c.187_251dup;type=insertions
+chr11	5247942	HbVar.865	CT	C	.	.	HbVar_num=HbVar.865;Hb_name=Codon_59_(-A)_AAG(Lys)->-AG_beta0;HGVS=HBB:c.179delA;type=deletions
+chr11	5247945	HbVar.3065	AG	A	.	.	HbVar_num=HbVar.3065;Hb_name=Beta_Codon_58_(-C);HGVS=HBB:c.176delC;type=deletions
+chr11	5247945	HbVar.864	A	AG	.	.	HbVar_num=HbVar.864;Hb_name=Codons_57/58_(+C)_AAC_CCT(Asn_Pro)->AAC_C_CCT_beta0;HGVS=HBB:c.174_175insC;type=insertions
+chr11	5247951	HbVar.863	G	GCACCTTAGGGTTGC	.	.	HbVar_num=HbVar.863;Hb_name=Codons_56/57/58/59/60_(GGC_AAC_CCT_AAG_GTG)_duplication_of_14_bp_beta0;HGVS=HBB:c.170_183dup;type=insertions
+chr11	5247955	HbVar.862	A	AT	.	.	HbVar_num=HbVar.862;Hb_name=Codons_54/55_(+A)_GTT_ATG(Val_Met)->GTT_A_ATG_beta0;HGVS=HBB:c.165_166insA;type=insertions
+chr11	5247956	HbVar.861	TA	T	.	.	HbVar_num=HbVar.861;Hb_name=Codon_54_(-T)_GTT(Val)->GT-_beta0;HGVS=HBB:c.165delT;type=deletions
+chr11	5247958	HbVar.860	A	AC	.	.	HbVar_num=HbVar.860;Hb_name=53/54_(+G)_GCT_GTT(Ala-Val)->GCT_G_GTT_beta0;HGVS=HBB:c.162_163insG;type=insertions
+chr11	5247963	HbVar.2973	AT	A	.	.	HbVar_num=HbVar.2973;Hb_name=Codon_52_(-A);HGVS=HBB:c.158delA;type=deletions
+chr11	5247966	HbVar.858	AG	A	.	.	HbVar_num=HbVar.858;Hb_name=Codon_51_(-C)_CCT(Pro)->-CT_beta0;HGVS=HBB:c.155delC;type=deletions
+chr11	5247975	HbVar.857	C	CAGAT	.	.	HbVar_num=HbVar.857;Hb_name=Codons_47/48_(+ATCT)_GAT_CTG(Asp_Leu)->GAT_CTATCTG_beta0;HGVS=HBB:c.146_147insATCT;type=insertions
+chr11	5247978	HbVar.856	A	AT	.	.	HbVar_num=HbVar.856;Hb_name=Codon_47_(+A)_GAT(Asp)->GAA(Glu)_T_beta0;HGVS=HBB:c.143_144insA;type=insertions
+chr11	5247983	HbVar.855	CA	C	.	.	HbVar_num=HbVar.855;Hb_name=Codon_45_(-T)_TTT(Phe)->-TT_beta0;HGVS=HBB:c.138delT;type=deletions
+chr11	5247986	HbVar.854	AG	A	.	.	HbVar_num=HbVar.854;Hb_name=Codon_44_(-C)_TCC(Ser)->TC-_beta0;HGVS=HBB:c.135delC;type=deletions
+chr11	5247991	HbVar.850	T	TC	.	.	HbVar_num=HbVar.850;Hb_name=Codons_42/43_(+G)_TTT_GAG(Phe_Glu)->TTT_G_GAG_beta0;HGVS=HBB:c.129_130insG;type=insertions
+chr11	5247992	HbVar.849	CAAAG	C	.	.	HbVar_num=HbVar.849;Hb_name=Codons_41/42_(-TTCT)_TTCTTT(Phe-Phe)->-_-_-_-TT_beta0;HGVS=HBB:c.126_129delCTTT;type=deletions
+chr11	5247992	HbVar.851	C	CA	.	.	HbVar_num=HbVar.851;Hb_name=Codons_42/43_(+T)_TTT_GAG(Phe_Glu)->TTT_TGA_G(Phe_stop_codon)_beta0;HGVS=HBB:c.129_130insT;type=insertions
+chr11	5247995	HbVar.848	AG	A	.	.	HbVar_num=HbVar.848;Hb_name=Codon_41_(-C)_TTC(Phe)->TT-_beta0;HGVS=HBB:c.126delC;type=deletions
+chr11	5247996	HbVar.847	G	GA	.	.	HbVar_num=HbVar.847;Hb_name=Codons_40/41_(+T)_AGG_TTC(Arg-Phe)->AGG_T_TTC_beta0;HGVS=HBB:c.123_124insT;type=insertions
+chr11	5247998	HbVar.846	AC	A	.	.	HbVar_num=HbVar.846;Hb_name=Codon_40_(-G)_AGG(Arg)->AG-_beta0;HGVS=HBB:c.123delG;type=deletions
+chr11	5248001	HbVar.842	TCTGGGTC	T	.	.	HbVar_num=HbVar.842;Hb_name=Codons_37/38/39_(-7_nts)_beta0;HGVS=HBB:c.114_120delGACCCAG;type=deletions
+chr11	5248002	HbVar.2808	CT	C	.	.	HbVar_num=HbVar.2808;Hb_name=Codon_39_(-A);HGVS=HBB:c.119delA;type=deletions
+chr11	5248003	HbVar.843	TG	T	.	.	HbVar_num=HbVar.843;Hb_name=Codons_38/39_(-C)_ACC_CAG(Thr_Gln)->ACC_-AG_beta0;HGVS=HBB:c.118delC;type=deletions
+chr11	5248003	HbVar.844	TGG	T	.	.	HbVar_num=HbVar.844;Hb_name=Codons_38/39_(-CC)_ACC_CAG(Thr-Glu)->A-_-_CAG_beta0;HGVS=HBB:c.117_118delCC;type=deletions
+chr11	5248009	HbVar.840	CA	C	.	.	HbVar_num=HbVar.840;Hb_name=Codons_36/37_(-T)_CCT_TGG(Pro-Trp)->CCT_-GG_beta0;HGVS=HBB:c.112delT;type=deletions
+chr11	5248011	HbVar.839	AG	A	.	.	HbVar_num=HbVar.839;Hb_name=Codon_35_(-C)_TAC(Tyr)->TA-_beta0;HGVS=HBB:c.110delC;type=deletions
+chr11	5248017	HbVar.837	GACC	G	.	.	HbVar_num=HbVar.837;Hb_name=Codons_33/34_(-GTG)_GTG_GTC(Val*Val)->GTC_-_-_-(Val)_beta0;HGVS=HBB:c.100_102delGTG;type=deletions
+chr11	5248026	HbVar.974	CAGCCTAAGGGTGGGAAAATAGACCA	C	.	.	HbVar_num=HbVar.974;Hb_name=25_bp_deletion_beta0;HGVS=HBB:c.93-22_95del;type=deletions
+chr11	5248027	HbVar.835	AG	A	.	.	HbVar_num=HbVar.835;Hb_name=Codon_31_(-C)_CTG->-TG_beta0;HGVS=HBB:c.94delC;type=deletions
+chr11	5248027	HbVar.836	A	AGCC	.	.	HbVar_num=HbVar.836;Hb_name=Codons_31/32_(+CGG)_beta0_(dominant_beta0-thal);HGVS=HBB:c.93_94insCGG;type=insertions
+chr11	5248029	HbVar.834	CCTAAGGGTGGGAAAATA	C	.	.	HbVar_num=HbVar.834;Hb_name=IVS-I,_3'_end_-17_bp_beta0;HGVS=HBB:c.93-17_93-1delTATTTTCCCACCCTTAG;type=deletions
+chr11	5248132	HbVar.975	AAACCTGTCTTGTAACCTTGATACCAACCTGCCCAGGGCCTCACC	A	.	.	HbVar_num=HbVar.975;Hb_name=44_bp_deletion_beta0;HGVS=HBB:c.76_92+27del;type=deletions
+chr11	5248162	HbVar.813	GC	G	.	.	HbVar_num=HbVar.813;Hb_name=Codons_28/29_(-G)_CTG_GGC(Leu_Gly)->CTG_-GC_beta0;HGVS=HBB:c.89delG;type=deletions
+chr11	5248166	HbVar.810	A	AG	.	.	HbVar_num=HbVar.810;Hb_name=Codons_27/28_(+C)_GCC_CTG(Ala_Ser)->GCC_C_CTG_beta0;HGVS=HBB:c.84_85insC;type=insertions
+chr11	5248166	HbVar.811	AG	A	.	.	HbVar_num=HbVar.811;Hb_name=Codon_28_(-C)_CTG(Leu)->-TG_beta0;HGVS=HBB:c.85delC;type=deletions
+chr11	5248172	HbVar.809	T	TA	.	.	HbVar_num=HbVar.809;Hb_name=Codon_26_(+T)_GAG(Glu)->GTAG_beta0;HGVS=HBB:c.79_80insT;type=insertions
+chr11	5248173	HbVar.807	C	CA	.	.	HbVar_num=HbVar.807;Hb_name=Codons_25/26_(+T)_GGT_GAG(Gly-Glu)->GGT_T_GAG(Gly-Term)_beta0;HGVS=HBB:c.78_79insT;type=insertions
+chr11	5248177	HbVar.803	ACCAACTT	A	.	.	HbVar_num=HbVar.803;Hb_name=Codons_22/23/24_(GAA_GTT_GGT_Glu_Val_Gly)_deletion_of_-AAGTTGG_beta0;HGVS=HBB:c.68_74delAAGTTGG;type=deletions
+chr11	5248178	HbVar.804	C	GTG	.	.	HbVar_num=HbVar.804;Hb_name=Codon_24_GGT(Gly)_(-G_+CAC)_beta0;HGVS=HBB:c.74delinsCAC;type=insertions,deletions
+chr11	5248178	HbVar.804	C	GTG	.	.	HbVar_num=HbVar.804;Hb_name=Codon_24_GGT(Gly)_(-G_+CAC)_beta0;HGVS=HBB:c.74delinsCAC;type=insertions,deletions
+chr11	5248200	HbVar.799	TG	T	.	.	HbVar_num=HbVar.799;Hb_name=Codon_16_(-C)_GGC(Gly)->GG-_beta0;HGVS=HBB:c.51delC;type=deletions
+chr11	5248205	HbVar.798	CA	C	.	.	HbVar_num=HbVar.798;Hb_name=Codon_15_(-T)_TGG(Trp)->-GG_beta0;HGVS=HBB:c.46delT;type=deletions
+chr11	5248206	HbVar.2870	ACAGGGCAGTAACGGCAGACTTCTCCT	A	.	.	HbVar_num=HbVar.2870;Hb_name=HBB:c.20_45del26;HGVS=HBB:c.20_45del;type=deletions
+chr11	5248206	HbVar.790	A	AC	.	.	HbVar_num=HbVar.790;Hb_name=Codons_14/15_(+G)_CTG_TGG(Leu_Trp)->CTG_G_TGG_beta0;HGVS=HBB:c.45_46insG;type=insertions
+chr11	5248215	HbVar.789	TA	T	.	.	HbVar_num=HbVar.789;Hb_name=Codon_11_(-T)_GTT(Val)->GT-_beta0;HGVS=HBB:c.36delT;type=deletions
+chr11	5248221	HbVar.787	C	CA	.	.	HbVar_num=HbVar.787;Hb_name=Codons_9/10_(+T)_TCT_GCC(Ser_Ala)->TCT_T_GCC_beta0;HGVS=HBB:c.30_31insT;type=insertions
+chr11	5248224	HbVar.786	A	AC	.	.	HbVar_num=HbVar.786;Hb_name=Codons_8/9_(+G)_AAG_TCT(Lys;Ser)->AAG_G_TCT_beta0;HGVS=HBB:c.27_28insG;type=insertions
+chr11	5248225	HbVar.785	CTT	C	.	.	HbVar_num=HbVar.785;Hb_name=Codon_8_(-AA)_AAG(Lys)->--G_beta0;HGVS=HBB:c.25_26delAA;type=deletions
+chr11	5248227	HbVar.2972	T	TC	.	.	HbVar_num=HbVar.2972;Hb_name=Codons_7/8_(+G)_GAG_AAG(Glu;Lys)->GAG_G_AAG_beta0;HGVS=HBB:c.24_25insG;type=insertions
+chr11	5248228	HbVar.2928	C	CTTCT	.	.	HbVar_num=HbVar.2928;Hb_name=Codons_8/9_(+AGAA);HGVS=HBB:c.23_26dup;type=insertions
+chr11	5248231	HbVar.784	CT	C	.	.	HbVar_num=HbVar.784;Hb_name=Codon_6_(-A)_GAG(Glu)->G-G_beta0;HGVS=HBB:c.20delA;type=deletions
+chr11	5248232	HbVar.2703	TCA	T	.	.	HbVar_num=HbVar.2703;Hb_name=Codon_5/6_(-TG);HGVS=HBB:c.18_19delTG;type=deletions
+chr11	5248233	HbVar.783	CAG	C	.	.	HbVar_num=HbVar.783;Hb_name=Codon_5_(-CT)_CCT(Pro)->C--_beta0;HGVS=HBB:c.17_18delCT;type=deletions
+chr11	5248237	HbVar.782	ATCAGAT	AACTTCTCCTCAGGCAGACTTCACCTCAG	.	.	HbVar_num=HbVar.782;Hb_name=Codons_2/3/4_(-9_bp_+31_bp)_beta0;HGVS=HBB:c.7_15delinsCCTGAGGTGAAGTCTGCCTGAGGAGAAGTCT;type=insertions,deletions
+chr11	5248243	HbVar.1135	A	AG	.	.	HbVar_num=HbVar.1135;Hb_name=Hb_Antalya;HGVS=HBB:c.[16delC;8_9insC];type=insertions,deletions
+chr11	5248243	HbVar.1135	A	AG	.	.	HbVar_num=HbVar.1135;Hb_name=Hb_Antalya;HGVS=HBB:c.[16delC;8_9insC];type=insertions,deletions
+chr11	5248247	HbVar.781	AC	A	.	.	HbVar_num=HbVar.781;Hb_name=Codon_1_(-G)_GTG(Val)->-TG_beta0;HGVS=HBB:c.4delG;type=deletions
+chr11	5248257	HbVar.774	CTGTT	C	.	.	HbVar_num=HbVar.774;Hb_name=5'UTR_+43_to_+40_(-AAAC)_beta+;HGVS=HBB:c.-11_-8delAAAC;type=deletions
+chr11	5248291	HbVar.771	GA	G	.	.	HbVar_num=HbVar.771;Hb_name=5'UTR_+10_(-T)_beta+_(silent);HGVS=HBB:c.-41delT;type=deletions
+chr11	5255265	HbVar.1000	C	CA	.	.	HbVar_num=HbVar.1000;Hb_name=Codon_91_(+T)_delta0;HGVS=HBD:c.270_271insT;type=insertions
+chr11	5255356	HbVar.999	CT	C	.	.	HbVar_num=HbVar.999;Hb_name=Codon_59_(-A)_AAG(Lys)->-AG_delta0;HGVS=HBD:c.179delA;type=deletions
+chr16	222912	HbVar.1062	AT	A	.	.	HbVar_num=HbVar.1062;Hb_name=Initiation_codon_(-T)_ATG->A-G_of_the_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.2delT;type=deletions
+chr16	222936	HbVar.2841	AC	A	.	.	HbVar_num=HbVar.2841;Hb_name=Hb_Codon_8_(-C)_ACC_(Thr)>AC-_Alpha0;HGVS=HBA2:c.27delC;type=deletions
+chr16	222965	HbVar.2516	CG	C	.	.	HbVar_num=HbVar.2516;Hb_name=Codon_19_(-G);HGVS=HBA2:c.56delG;type=deletions
+chr16	222970	HbVar.2889	CG	C	.	.	HbVar_num=HbVar.2889;Hb_name=HBA2:c.60delG;HGVS=HBA2:c.60delG;type=deletions
+chr16	222973	eqvtHbVar.2800	A	AT	.	.	HbVar_num=eqvtHbVar.2800;Hb_name=Hb_alpha1_codon20(+T);HGVS=HBA1:c.62_63insT;type=insertions
+chr16	222976	HbVar.2727	C	CT	.	.	HbVar_num=HbVar.2727;Hb_name=alpha2_Codon_21/22_(+T)_;HGVS=HBA2:c.66_67insT;type=insertions
+chr16	223000	HbVar.2776	TGGA	T	.	.	HbVar_num=HbVar.2776;Hb_name=Alpha2_Codon_30_del_GAG;HGVS=HBA2:c.91_93delGAG;type=deletions
+chr16	223001	HbVar.2871	GGA	G	.	.	HbVar_num=HbVar.2871;Hb_name=Alpha-3.7KbAllele:c.94_95delAG;HGVS=HBA2:c.94_95delAG_(or_HBA1);type=deleitons
+chr16	223003	HbVar.1065	AGAGGT	A	.	.	HbVar_num=HbVar.1065;Hb_name=IVS-I_donor_site_(GAG_GTG_AGG->GAG_G-_-_-_-_-)_alpha2-globin_gene;HGVS=HBA2:c.95+2_95+6delTGAGG;type=deletions
+chr16	223132	eqvtHbVar.905	CCCC	C	.	.	HbVar_num=eqvtHbVar.905;Hb_name=Hb_Heraklion;HGVS=HBA1:c.112_114delCCC;type=deletions
+chr16	223138	HbVar.2726	TC	T	.	.	HbVar_num=HbVar.2726;Hb_name=alpha2_Codon_37_(-C)_;HGVS=HBA2:c.114delC;type=deletions
+chr16	223145	HbVar.3178	C	CA	.	.	HbVar_num=HbVar.3178;Hb_name=alpha2_39(+A);HGVS=HBA2:c.118_119insA;type=insertions
+chr16	223157	HbVar.2854	CT	C	.	.	HbVar_num=HbVar.2854;Hb_name=Codon_43_(-T);HGVS=HBA2:c.131delT;type=deletions
+chr16	223159	eqvtHbVar.2902	T	TC	.	.	HbVar_num=eqvtHbVar.2902;Hb_name=Codon_44_(+C)_(Alpha_1);HGVS=HBA1:c.134_135insC;type=insertions
+chr16	223168	HbVar.3180	TCGACCTGAGCCACGGCTCTG	T	.	.	HbVar_num=HbVar.3180;Hb_name=alpha2_47(-C);HGVS=HBA2:c.142_161delGACCTGAGCCACGGCTCTGC;type=deletions
+chr16	223170	HbVar.2728	GA	G	.	.	HbVar_num=HbVar.2728;Hb_name=alpha2_Codon_47_(-A);HGVS=HBA2:c.143delA;type=deletions
+chr16	223176	HbVar.2575	AGC	A	.	.	HbVar_num=HbVar.2575;Hb_name=Codon_49_(-GC);HGVS=HBA2:c.149_150delGC;type=deletions
+chr16	223182	eqvtHbVar.1068	GGCTCTGCCCAGGT	G	.	.	HbVar_num=eqvtHbVar.1068;Hb_name=Deletion_of_13_nts_from_codons_51-55_of_the_alpha1_gene_alpha-Thal-2;HGVS=HBA1:c.155_167delGCTCTGCCCAGGT;type=deletions
+chr16	223184	HbVar.2729	C	CG	.	.	HbVar_num=HbVar.2729;Hb_name=alpha2_Codon_51/52_(+G);HGVS=HBA2:c.156_157insG;type=insertions
+chr16	223208	eqvtHbVar.936	CAAG	C	.	.	HbVar_num=eqvtHbVar.936;Hb_name=Hb_Clinic;HGVS=HBA1:c.184_186delAAG;type=deletions
+chr16	223213	eqvtHbVar.906	AGGT	A	.	.	HbVar_num=eqvtHbVar.906;Hb_name=Hb_Aghia_Sophia;HGVS=HBA1:c.187_189delGTG;type=deletions
+chr16	223215	HbVar.2730	GTGGCCGACGCGCTGACCAACGCCGTGGCGCACGTGGACGACA	G	.	.	HbVar_num=HbVar.2730;Hb_name=alpha2_Codon_63-76_(-42bp);HGVS=HBA2:c.190_231del;type=deletions
+chr16	223216	eqvtHbVar.2736	TG	T	.	.	HbVar_num=eqvtHbVar.2736;Hb_name=Codon_62_(-G);HGVS=HBA1:c.189delG;type=deletions
+chr16	223229	eqvtHbVar.3150	GA	G	.	.	HbVar_num=eqvtHbVar.3150;Hb_name=alpha1_Codon_67_(-A);HGVS=HBA1:c.202delA;type=deletions
+chr16	223273	eqvtHbVar.2504	CCGCCCTGAG	C	.	.	HbVar_num=eqvtHbVar.2504;Hb_name=Codons_82/83/84_del_5bp_insertion;HGVS=HBA1:c.247_255delGCCCTGAGC;type=deletions
+chr16	223495	eqvtHbVar.2724	AC	A	.	.	HbVar_num=eqvtHbVar.2724;Hb_name=alpha1_Codon_108_(-C)_;HGVS=HBA1:c.328delC;type=deletions
+chr16	223501	eqvtHbVar.2725	GCCGCCCACCTCCC	G	.	.	HbVar_num=eqvtHbVar.2725;Hb_name=alpha1_Codon_124-128_(-13bp);HGVS=HBA1:c.333_345delCGCCCACCTCCCC;type=deletions
+chr16	223509	HbVar.937	CCTCCCCGCCGAG	C	.	.	HbVar_num=HbVar.937;Hb_name=Hb_Lleida;HGVS=HBA2:c.[339C>G;340_351delCTCCCCGCCGAG];type=substitution,deletions
+chr16	223509	HbVar.937	CCTCCCCGCCGAG	C	.	.	HbVar_num=HbVar.937;Hb_name=Hb_Lleida;HGVS=HBA2:c.[339C>G;340_351delCTCCCCGCCGAG];type=substitution,deletions
+chr16	223511	HbVar.2939	T	TCC	.	.	HbVar_num=HbVar.2939;Hb_name=alpha2_Codon_115_(+CC);HGVS=HBA2:c.343_344insCC;type=insertions
+chr16	223511	HbVar.3055	TC	T	.	.	HbVar_num=HbVar.3055;Hb_name=HBA2:c.345delC;HGVS=HBA2:c.345delC;type=deletions
+chr16	223516	HbVar.2867	GCCGAGTTCACC	G	.	.	HbVar_num=HbVar.2867;Hb_name=HBA2:c.349_359delGAGTTCACCCC;HGVS=HBA2:c.349_359delGAGTTCACCCC;type=deletions
+chr16	223565	eqvtHbVar.1142	C	CT	.	.	HbVar_num=eqvtHbVar.1142;Hb_name=Hb_Pak_Num_Po;HGVS=HBA1:c.396_397insT;type=insertions
+chr16	223672	HbVar.1073	CCCTTCCTGGTCTTTGA	C	.	.	HbVar_num=HbVar.1073;Hb_name=3'UTR_(-16_bp)_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.*74_*89delCCTTCCTGGTCTTTGA;type=deletions
+chr16	223690	HbVar.1072	TAA	T	.	.	HbVar_num=HbVar.1072;Hb_name=Poly_A_AATAAA->AATA-_-_of_the_alpha2_gene_alpha-thal-2;HGVS=HBA2:c.*93_*94delAA;type=deletions
+chr16	226716	eqvtHbVar.1062	AT	A	.	.	HbVar_num=eqvtHbVar.1062;Hb_name=Initiation_codon_(-T);HGVS=HBA2:c.2delT;type=deletions
+chr16	226740	eqvtHbVar.2841	AC	A	.	.	HbVar_num=eqvtHbVar.2841;Hb_name=Hb_Codon_8_(-C)_ACC_(Thr)>AC-_Alpha0;HGVS=HBA2:c.27delC;type=deletions
+chr16	226769	eqvtHbVar.2516	CG	C	.	.	HbVar_num=eqvtHbVar.2516;Hb_name=Codon_19_(-G);HGVS=HBA2:c.56delG;type=deletions
+chr16	226774	eqvtHbVar.2889	CG	C	.	.	HbVar_num=eqvtHbVar.2889;Hb_name=HBA2:c.60delG;HGVS=HBA2:c.60delG;type=deletions
+chr16	226777	HbVar.2800	A	AT	.	.	HbVar_num=HbVar.2800;Hb_name=Hb_alpha1_codon20(+T);HGVS=HBA1:c.62_63insT;type=insertions
+chr16	226780	eqvtHbVar.2727	C	CT	.	.	HbVar_num=eqvtHbVar.2727;Hb_name=alpha2_Codon_21/22_(+T)_;HGVS=HBA2:c.66_67insT;type=insertions
+chr16	226804	eqvtHbVar.2776	TGGA	T	.	.	HbVar_num=eqvtHbVar.2776;Hb_name=Alpha2_Codon_30_del_GAG;HGVS=HBA2:c.91_93delGAG;type=deletions
+chr16	226805	HbVar.2871	GGA	G	.	.	HbVar_num=HbVar.2871;Hb_name=Alpha-3.7KbAllele:c.94_95delAG;HGVS=HBA2:c.94_95delAG_(or_HBA1);type=deleitons
+chr16	226807	eqvtHbVar.1065	AGAGGT	A	.	.	HbVar_num=eqvtHbVar.1065;Hb_name=IVS-I_donor_site_(GAG_GTG_AGG->GAG_G-_-_-_-_-);HGVS=HBA2:c.95+2_95+6delTGAGG;type=deletions
+chr16	226942	HbVar.905	TCCC	T	.	.	HbVar_num=HbVar.905;Hb_name=Hb_Heraklion;HGVS=HBA1:c.112_114delCCC;type=deletions
+chr16	226942	eqvtHbVar.2726	TC	T	.	.	HbVar_num=eqvtHbVar.2726;Hb_name=alpha2_Codon_37_(-C)_;HGVS=HBA2:c.114delC;type=deletions
+chr16	226949	eqvtHbVar.3178	C	CA	.	.	HbVar_num=eqvtHbVar.3178;Hb_name=alpha2_39(+A);HGVS=HBA2:c.118_119insA;type=insertions
+chr16	226961	eqvtHbVar.2854	CT	C	.	.	HbVar_num=eqvtHbVar.2854;Hb_name=Codon_43_(-T);HGVS=HBA2:c.131delT;type=deletions
+chr16	226963	HbVar.2902	T	TC	.	.	HbVar_num=HbVar.2902;Hb_name=Codon_44_(+C)_(Alpha_1);HGVS=HBA1:c.134_135insC;type=insertions
+chr16	226972	eqvtHbVar.3180	TCGACCTGAGCCACGGCTCTG	T	.	.	HbVar_num=eqvtHbVar.3180;Hb_name=alpha2_47(-C);HGVS=HBA2:c.142_161delGACCTGAGCCACGGCTCTGC;type=deletions
+chr16	226974	eqvtHbVar.2728	GA	G	.	.	HbVar_num=eqvtHbVar.2728;Hb_name=alpha2_Codon_47_(-A);HGVS=HBA2:c.143delA;type=deletions
+chr16	226980	eqvtHbVar.2575	AGC	A	.	.	HbVar_num=eqvtHbVar.2575;Hb_name=Codon_49_(-GC);HGVS=HBA2:c.149_150delGC;type=deletions
+chr16	226986	HbVar.1068	GGCTCTGCCCAGGT	G	.	.	HbVar_num=HbVar.1068;Hb_name=Deletion_of_13_nts_from_codons_51-55_of_the_alpha1_gene;HGVS=HBA1:c.155_167delGCTCTGCCCAGGT;type=deletions
+chr16	226988	eqvtHbVar.2729	C	CG	.	.	HbVar_num=eqvtHbVar.2729;Hb_name=alpha2_Codon_51/52_(+G);HGVS=HBA2:c.156_157insG;type=insertions
+chr16	227012	HbVar.936	CAAG	C	.	.	HbVar_num=HbVar.936;Hb_name=Hb_Clinic;HGVS=HBA1:c.184_186delAAG;type=deletions
+chr16	227017	HbVar.906	AGGT	A	.	.	HbVar_num=HbVar.906;Hb_name=Hb_Aghia_Sophia;HGVS=HBA1:c.187_189delGTG;type=deletions
+chr16	227019	eqvtHbVar.2730	GTGGCCGACGCGCTGACCAACGCCGTGGCGCACGTGGACGACA	G	.	.	HbVar_num=HbVar.2730;Hb_name=alpha2_Codon_63-76_(-42bp);HGVS=HBA2:c.190_231del;type=deletions
+chr16	227020	HbVar.2736	TG	T	.	.	HbVar_num=HbVar.2736;Hb_name=Codon_62_(-G);HGVS=HBA1:c.189delG;type=deletions
+chr16	227033	HbVar.3150	GA	G	.	.	HbVar_num=HbVar.3150;Hb_name=alpha1_Codon_67_(-A);HGVS=HBA1:c.202delA;type=deletions
+chr16	227077	HbVar.2504	CCGCCCTGAG	C	.	.	HbVar_num=HbVar.2504;Hb_name=Codons_82/83/84_del_5bp_insertion;HGVS=HBA1:c.247_255delGCCCTGAGC;type=deletions
+chr16	227306	HbVar.2724	AC	A	.	.	HbVar_num=HbVar.2724;Hb_name=alpha1_Codon_108_(-C)_;HGVS=HBA1:c.328delC;type=deletions
+chr16	227312	HbVar.2725	GCCGCCCACCTCCC	G	.	.	HbVar_num=HbVar.2725;Hb_name=alpha1_Codon_124-128_(-13bp);HGVS=HBA1:c.333_345delCGCCCACCTCCCC;type=deletions
+chr16	227322	eqvtHbVar.2939	T	TCC	.	.	HbVar_num=eqvtHbVar.2939;Hb_name=alpha2_Codon_115_(+CC);HGVS=HBA2:c.343_344insCC;type=insertions
+chr16	227327	eqvtHbVar.2867	GCCGAGTTCACC	G	.	.	HbVar_num=eqvtHbVar.2867;Hb_name=HBA2:c.349_359delGAGTTCACCCC;HGVS=HBA2:c.349_359delGAGTTCACCCC;type=deletions
+chr16	227351	eqvtHbVar.3055	GC	G	.	.	HbVar_num=eqvtHbVar.3055;Hb_name=HBA2:c.345delC;HGVS=HBA2:c.345delC;type=deletions
+chr16	227376	HbVar.1142	C	CT	.	.	HbVar_num=HbVar.1142;Hb_name=Hb_Pak_Num_Po;HGVS=HBA1:c.396_397insT;type=insertions

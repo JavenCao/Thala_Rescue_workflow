@@ -1,0 +1,89 @@
+#!/bin/bash
+#PBS -N Find_Thal_causal
+#PBS -l mem=40g,nodes=1:ppn=10,walltime=18:00:00
+#PBS -q queue_name_here
+#PBS -m abe -M youremail_address_here
+#PBS -o Thal_Causal.out
+#PBS -e Thal_Causal.err
+#PBS -V
+
+wkd=/home/data/thala_project/Rescue_Phase
+vcff=$wkd/VCF_file
+
+VCFTOOLS=/path/to/vcftools_path
+
+cd $vcff/Joint
+
+# merge two pass vcfs and get the High_quality_variants.vcf
+awk '{if(/#/){} else{print}}'  PASS_INDEL.recode.vcf > pass_indel
+cat PASS_SNP.recode.vcf pass_indel | awk '$1 ~ /^#/ {print $0;next} {print $0 | "sort -k1,1 -k2,2n"}' > High_quality_variants.vcf
+
+$VCFTOOLS norm -m -"both" --fasta-ref /paedwy/disk1/yjcao/software/varsim/ThalaSimuSource/chr11_16.fa High_quality_variants.vcf -o normed_High_quality_variants.vcf
+
+#############Causal point mutation################
+$VCFTOOLS --vcf normed_High_quality_variants.vcf \
+          --diff sorted_Causal_SNV_Thala_with_equivalent.vcf \
+          --diff-site \
+          --not-chr chr2 \
+          --not-chr chr6 \
+          --not-chr chrX \
+          --not-chr chr19
+
+awk '{if($2==$3){print $1,$2}}' out.diff.sites_in_files > Both_SNP_position.list
+
+$VCFTOOLS --vcf normed_High_quality_variants.vcf --positions Both_SNP_position.list --out Candidate_SNP --recode --recode-INFO-all
+
+python Create_pseudo_vcf.py --enquiry Candidate_SNP.recode.vcf --out Pseudo_Candidate_SNP.recode.vcf
+
+mkdir ind_vcf
+python split_pseudovcf_by_sample.py -vcf Pseudo_Candidate_SNP.recode.vcf -of "/paedwy/disk1/yjcao/datacenter/150MAQ30/Rescue_VCF_file/Joint/ind_vcf"
+
+# find causal
+cd ./ind_vcf
+Known_causal_SNP_file="../sorted_Causal_SNV_Thala_with_equivalent.vcf"
+
+for i in simu_{1..1030}
+do
+python ../match_causal.py -samplefile "$i".txt -known $Known_causal_SNP_file -of "pre."$i
+done
+
+cat pre* > Thalassaemia.SNP.PRE
+
+mkdir Precessing_data
+mv ./*txt ./Precessing_data
+mv ./pre* ./Precessing_data
+
+
+
+#############Causal point mutation################
+################################################################
+
+vcftools --vcf normed_High_quality_variants.vcf \
+         --keep-only-indels \
+         --recode \
+         --recode-INFO-all \
+         --out indel_normed_High_quality_variants
+
+awk 'NR==FNR{if(/#/){}else {a[$1"_"$2]=$3}} NR>FNR{if(/#/){}else{if(a[$1"_"$2]){print $1, $2}}}' sorted_normed_Causal_Indel_Thala_with_equivalent.vcf indel_normed_High_quality_variants.recode.vcf > Both_indel_position.list
+vcftools --vcf normed_High_quality_variants.vcf --positions Both_indel_position.list --out Candidate_INDEL --recode --recode-INFO-all
+
+python Create_pseudo_vcf.py --enquiry Candidate_INDEL.recode.vcf --out Pseudo_Candidate_INDEL.recode.vcf
+
+mkdir ind_vcf_indel
+python split_pseudovcf_by_sample.py -vcf Pseudo_Candidate_INDEL.recode.vcf -of "/paedwy/disk1/yjcao/datacenter/150MAQ30/Rescue_VCF_file/Joint/ind_vcf_indel"
+
+# find causal
+cd ./ind_vcf_indel
+Known_causal_INDEL_file="../sorted_normed_Causal_Indel_Thala_with_equivalent.vcf"
+
+for i in simu_{1..1030}
+do
+python ../match_causal.py -samplefile "$i".txt -known $Known_causal_INDEL_file -of "pre."$i
+done
+
+cat pre* > Thalassaemia.INDEL.PRE
+
+mkdir Precessing_data
+mv ./*txt ./Precessing_data
+mv ./pre* ./Precessing_data
+

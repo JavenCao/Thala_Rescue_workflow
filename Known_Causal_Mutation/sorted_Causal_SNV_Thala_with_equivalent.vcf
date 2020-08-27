@@ -1,0 +1,367 @@
+##fileformat=VCFv4.2
+##INFO=<ID=HbVar_num,Number=1,Type=String,Description="HbVar_database_entry_ID">
+##INFO=<ID=Hb_name,Number=1,Type=String,Description="Hb_names_for_this_mutation">
+##INFO=<ID=HGVS_name,Number=1,Type=String,Description="HGVS_name">
+##INFO=<ID=type,Number=1,Type=String,Description="mutation_types">
+##contig=<ID=chrM,length=16571,assembly=hg19>
+##contig=<ID=chr1,length=249250621,assembly=hg19>
+##contig=<ID=chr2,length=243199373,assembly=hg19>
+##contig=<ID=chr3,length=198022430,assembly=hg19>
+##contig=<ID=chr4,length=191154276,assembly=hg19>
+##contig=<ID=chr5,length=180915260,assembly=hg19>
+##contig=<ID=chr6,length=171115067,assembly=hg19>
+##contig=<ID=chr7,length=159138663,assembly=hg19>
+##contig=<ID=chr8,length=146364022,assembly=hg19>
+##contig=<ID=chr9,length=141213431,assembly=hg19>
+##contig=<ID=chr10,length=135534747,assembly=hg19>
+##contig=<ID=chr11,length=135006516,assembly=hg19>
+##contig=<ID=chr12,length=133851895,assembly=hg19>
+##contig=<ID=chr13,length=115169878,assembly=hg19>
+##contig=<ID=chr14,length=107349540,assembly=hg19>
+##contig=<ID=chr15,length=102531392,assembly=hg19>
+##contig=<ID=chr16,length=90354753,assembly=hg19>
+##contig=<ID=chr17,length=81195210,assembly=hg19>
+##contig=<ID=chr18,length=78077248,assembly=hg19>
+##contig=<ID=chr19,length=59128983,assembly=hg19>
+##contig=<ID=chr20,length=63025520,assembly=hg19>
+##contig=<ID=chr21,length=48129895,assembly=hg19>
+##contig=<ID=chr22,length=51304566,assembly=hg19>
+##contig=<ID=chrX,length=155270560,assembly=hg19>
+##contig=<ID=chrY,length=59373566,assembly=hg19>
+##contig=<ID=chr1_gl000191_random,length=106433,assembly=hg19>
+##contig=<ID=chr1_gl000192_random,length=547496,assembly=hg19>
+##contig=<ID=chr4_ctg9_hap1,length=590426,assembly=hg19>
+##contig=<ID=chr4_gl000193_random,length=189789,assembly=hg19>
+##contig=<ID=chr4_gl000194_random,length=191469,assembly=hg19>
+##contig=<ID=chr6_apd_hap1,length=4622290,assembly=hg19>
+##contig=<ID=chr6_cox_hap2,length=4795371,assembly=hg19>
+##contig=<ID=chr6_dbb_hap3,length=4610396,assembly=hg19>
+##contig=<ID=chr6_mann_hap4,length=4683263,assembly=hg19>
+##contig=<ID=chr6_mcf_hap5,length=4833398,assembly=hg19>
+##contig=<ID=chr6_qbl_hap6,length=4611984,assembly=hg19>
+##contig=<ID=chr6_ssto_hap7,length=4928567,assembly=hg19>
+##contig=<ID=chr7_gl000195_random,length=182896,assembly=hg19>
+##contig=<ID=chr8_gl000196_random,length=38914,assembly=hg19>
+##contig=<ID=chr8_gl000197_random,length=37175,assembly=hg19>
+##contig=<ID=chr9_gl000198_random,length=90085,assembly=hg19>
+##contig=<ID=chr9_gl000199_random,length=169874,assembly=hg19>
+##contig=<ID=chr9_gl000200_random,length=187035,assembly=hg19>
+##contig=<ID=chr9_gl000201_random,length=36148,assembly=hg19>
+##contig=<ID=chr11_gl000202_random,length=40103,assembly=hg19>
+##contig=<ID=chr17_ctg5_hap1,length=1680828,assembly=hg19>
+##contig=<ID=chr17_gl000203_random,length=37498,assembly=hg19>
+##contig=<ID=chr17_gl000204_random,length=81310,assembly=hg19>
+##contig=<ID=chr17_gl000205_random,length=174588,assembly=hg19>
+##contig=<ID=chr17_gl000206_random,length=41001,assembly=hg19>
+##contig=<ID=chr18_gl000207_random,length=4262,assembly=hg19>
+##contig=<ID=chr19_gl000208_random,length=92689,assembly=hg19>
+##contig=<ID=chr19_gl000209_random,length=159169,assembly=hg19>
+##contig=<ID=chr21_gl000210_random,length=27682,assembly=hg19>
+##contig=<ID=chrUn_gl000211,length=166566,assembly=hg19>
+##contig=<ID=chrUn_gl000212,length=186858,assembly=hg19>
+##contig=<ID=chrUn_gl000213,length=164239,assembly=hg19>
+##contig=<ID=chrUn_gl000214,length=137718,assembly=hg19>
+##contig=<ID=chrUn_gl000215,length=172545,assembly=hg19>
+##contig=<ID=chrUn_gl000216,length=172294,assembly=hg19>
+##contig=<ID=chrUn_gl000217,length=172149,assembly=hg19>
+##contig=<ID=chrUn_gl000218,length=161147,assembly=hg19>
+##contig=<ID=chrUn_gl000219,length=179198,assembly=hg19>
+##contig=<ID=chrUn_gl000220,length=161802,assembly=hg19>
+##contig=<ID=chrUn_gl000221,length=155397,assembly=hg19>
+##contig=<ID=chrUn_gl000222,length=186861,assembly=hg19>
+##contig=<ID=chrUn_gl000223,length=180455,assembly=hg19>
+##contig=<ID=chrUn_gl000224,length=179693,assembly=hg19>
+##contig=<ID=chrUn_gl000225,length=211173,assembly=hg19>
+##contig=<ID=chrUn_gl000226,length=15008,assembly=hg19>
+##contig=<ID=chrUn_gl000227,length=128374,assembly=hg19>
+##contig=<ID=chrUn_gl000228,length=129120,assembly=hg19>
+##contig=<ID=chrUn_gl000229,length=19913,assembly=hg19>
+##contig=<ID=chrUn_gl000230,length=43691,assembly=hg19>
+##contig=<ID=chrUn_gl000231,length=27386,assembly=hg19>
+##contig=<ID=chrUn_gl000232,length=40652,assembly=hg19>
+##contig=<ID=chrUn_gl000233,length=45941,assembly=hg19>
+##contig=<ID=chrUn_gl000234,length=40531,assembly=hg19>
+##contig=<ID=chrUn_gl000235,length=34474,assembly=hg19>
+##contig=<ID=chrUn_gl000236,length=41934,assembly=hg19>
+##contig=<ID=chrUn_gl000237,length=45867,assembly=hg19>
+##contig=<ID=chrUn_gl000238,length=39939,assembly=hg19>
+##contig=<ID=chrUn_gl000239,length=33824,assembly=hg19>
+##contig=<ID=chrUn_gl000240,length=41933,assembly=hg19>
+##contig=<ID=chrUn_gl000241,length=42152,assembly=hg19>
+##contig=<ID=chrUn_gl000242,length=43523,assembly=hg19>
+##contig=<ID=chrUn_gl000243,length=43341,assembly=hg19>
+##contig=<ID=chrUn_gl000244,length=39929,assembly=hg19>
+##contig=<ID=chrUn_gl000245,length=36651,assembly=hg19>
+##contig=<ID=chrUn_gl000246,length=38154,assembly=hg19>
+##contig=<ID=chrUn_gl000247,length=36422,assembly=hg19>
+##contig=<ID=chrUn_gl000248,length=39786,assembly=hg19>
+##contig=<ID=chrUn_gl000249,length=38502,assembly=hg19>
+##reference=file:ucsc.hg19.fasta
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr11	5246715	HbVar.971	T	C	.	.	HbVar_num=HbVar.971;Hb_name=Poly_A_(A->G);_AATAAA->AATAAG_beta+;HGVS=HBB:c.*113A>G;type=substitution
+chr11	5246716	HbVar.2720	T	A	.	.	HbVar_num=HbVar.2720;Hb_name=Poly_A_(A&#8594;T)_AATAAA>AATATA;HGVS=HBB:c.*112A>T;type=substitution
+chr11	5246716	HbVar.970	T	C	.	.	HbVar_num=HbVar.970;Hb_name=Poly_A_(A->G);_AATAAA->AATAGA_beta+;HGVS=HBB:c.*112A>G;type=substitution
+chr11	5246717	HbVar.969	T	C	.	.	HbVar_num=HbVar.969;Hb_name=Poly_A_(A->G);_AATAAA->AATGAA_beta+;HGVS=HBB:c.*111A>G;type=substitution
+chr11	5246718	HbVar.968	A	G	.	.	HbVar_num=HbVar.968;Hb_name=Poly_A_(T->C);_AATAAA->AACAAA_beta+;HGVS=HBB:c.*110T>C;type=substitution
+chr11	5246822	HbVar.965	G	C	.	.	HbVar_num=HbVar.965;Hb_name=+1480_(C->G);_beta+_(silent;_only_expressed_in_compound_heterozygotes);HGVS=HBB:c.*6C>G;type=substitution
+chr11	5246838	HbVar.3164	T	C	.	.	HbVar_num=HbVar.3164;Hb_name=Hb_Heze;HGVS=HBB:c.434A>G;type=substitution
+chr11	5246875	HbVar.2548	T	A	.	.	HbVar_num=HbVar.2548;Hb_name=Cd132A>T;HGVS=HBB:c.397A>T;type=substitution
+chr11	5246879	HbVar.2717	A	T	.	.	HbVar_num=HbVar.2717;Hb_name=Codon_130_(TAT&#8594;TAA);HGVS=HBB:c.393T>A;type=substitution
+chr11	5246889	HbVar.959	T	G	.	.	HbVar_num=HbVar.959;Hb_name=Codon_127_(A->C);_CAG(Gln)->CCG(Pro)_Dominant_inclusion_body_beta-thal_trait;HGVS=HBB:c.383A>C;type=substitution
+chr11	5246889	HbVar.960	T	C	.	.	HbVar_num=HbVar.960;Hb_name=Codon_127_(A->G);_CAG(Gln)->CGG(Arg)_Dominant_inclusion_body_beta-thal_trait;HGVS=HBB:c.383A>G;type=substitution
+chr11	5246890	HbVar.961	G	A	.	.	HbVar_num=HbVar.961;Hb_name=Codon_127_(C->T);_CAG(Gln)->TAG(stop_codon)_beta0_(dominant,_inclusion_body,_beta-thal_trait);HGVS=HBB:c.382C>T;type=substitution
+chr11	5246908	HbVar.951	C	A	.	.	HbVar_num=HbVar.951;Hb_name=Codon_121_(G->T);_GAA(Glu)->TAA(stop_codon)_beta0_(dominant_beta-thal_trait);HGVS=HBB:c.364G>T;type=substitution
+chr11	5246925	HbVar.495	G	T	.	.	HbVar_num=HbVar.495;Hb_name=Hb_Hradec_Kralove_(or_Hb_HK);HGVS=HBB:c.347C>A;type=substitution
+chr11	5246928	HbVar.493	A	G	.	.	HbVar_num=HbVar.493;Hb_name=Hb_Durham-N.C.;HGVS=HBB:c.344T>C;type=substitution
+chr11	5246933	HbVar.948	A	T	.	.	HbVar_num=HbVar.948;Hb_name=Codon_112_(T->A);_TGT(Cys)->TGA(stop_codon)_beta0;HGVS=HBB:c.339T>A;type=substitution
+chr11	5246940	HbVar.485	A	G	.	.	HbVar_num=HbVar.485;Hb_name=Hb_Showa-Yakushiji;HGVS=HBB:c.332T>C;type=substitution
+chr11	5246957	HbVar.942	C	T	.	.	HbVar_num=HbVar.942;Hb_name=IVS-II-850_(G->A);_beta0;HGVS=HBB:c.316-1G>A;type=substitution
+chr11	5246957	HbVar.943	C	G	.	.	HbVar_num=HbVar.943;Hb_name=IVS-II-850_(G->C);_beta0;HGVS=HBB:c.316-1G>C;type=substitution
+chr11	5246957	HbVar.944	C	A	.	.	HbVar_num=HbVar.944;Hb_name=IVS-II-850_(G->T);_beta0;HGVS=HBB:c.316-1G>T;type=substitution
+chr11	5246958	HbVar.939	T	G	.	.	HbVar_num=HbVar.939;Hb_name=IVS-II-849_(A->C);_beta0;HGVS=HBB:c.316-2A>C;type=substitution
+chr11	5246958	HbVar.940	T	C	.	.	HbVar_num=HbVar.940;Hb_name=IVS-II-849_(A->G);_beta0;HGVS=HBB:c.316-2A>G;type=substitution
+chr11	5246959	HbVar.901	G	T	.	.	HbVar_num=HbVar.901;Hb_name=IVS-II-848_(C->A);_beta+;HGVS=HBB:c.316-3C>A;type=substitution
+chr11	5246959	HbVar.938	G	C	.	.	HbVar_num=HbVar.938;Hb_name=IVS-II-848_(C->G);_beta+;HGVS=HBB:c.316-3C>G;type=substitution
+chr11	5246963	HbVar.898	G	C	.	.	HbVar_num=HbVar.898;Hb_name=IVS-II-844_(C->G);_beta+;HGVS=HBB:c.316-7C>G;type=substitution
+chr11	5246964	HbVar.897	A	C	.	.	HbVar_num=HbVar.897;Hb_name=IVS-II-843_(T->G);_beta+;HGVS=HBB:c.316-8T>G;type=substitution
+chr11	5246970	HbVar.895	A	C	.	.	HbVar_num=HbVar.895;Hb_name=IVS-II-837_(T->G);_beta+_or_beta0;HGVS=HBB:c.316-14T>G;type=substitution
+chr11	5247026	HbVar.2707	G	C	.	.	HbVar_num=HbVar.2707;Hb_name=IVS2-781_C>G;HGVS=HBB:c.316-70C>G;type=substitution
+chr11	5247046	HbVar.2508	T	C	.	.	HbVar_num=HbVar.2508;Hb_name=IVS_II-761_A>G;HGVS=HBB:c.316-90A>G;type=substitution
+chr11	5247062	HbVar.891	G	C	.	.	HbVar_num=HbVar.891;Hb_name=IVS-II-745_(C->G);_CAGCTACCAT->CAG^GTACCAT_beta+;HGVS=HBB:c.316-106C>G;type=substitution
+chr11	5247102	HbVar.890	A	C	.	.	HbVar_num=HbVar.890;Hb_name=IVS-II-705_(T->G);_GATGTAAGA->GAG^GTAAGA_beta+;HGVS=HBB:c.316-146T>G;type=substitution
+chr11	5247153	HbVar.889	G	A	.	.	HbVar_num=HbVar.889;Hb_name=IVS-II-654_(C->T);_AAGGCAATA->AAG^GTAATA_beta+_(severe);HGVS=HBB:c.316-197C>T;type=substitution
+chr11	5247802	HbVar.888	C	G	.	.	HbVar_num=HbVar.888;Hb_name=IVS-II-5_(G->C)_beta+_(severe);HGVS=HBB:c.315+5G>C;type=substitution
+chr11	5247805	HbVar.2534	A	T	.	.	HbVar_num=HbVar.2534;Hb_name=IVS-II-2_(T>A);HGVS=HBB:c.315+2T>A;type=substitution
+chr11	5247805	HbVar.2573	A	G	.	.	HbVar_num=HbVar.2573;Hb_name=IVS_II-2_(T>C);HGVS=HBB:c.315+2T>C;type=substitution
+chr11	5247806	HbVar.2602	C	A	.	.	HbVar_num=HbVar.2602;Hb_name=IVS_II-1_(G>T);HGVS=HBB:c.315+1G>T;type=substitution
+chr11	5247806	HbVar.884	C	T	.	.	HbVar_num=HbVar.884;Hb_name=IVS-II-1_(G->A);_beta0;HGVS=HBB:c.315+1G>A;type=substitution
+chr11	5247806	HbVar.885	C	G	.	.	HbVar_num=HbVar.885;Hb_name=IVS-II-1_(G->C);_beta0;HGVS=HBB:c.315+1G>C;type=substitution
+chr11	5247809	HbVar.3207	T	C	.	.	HbVar_num=HbVar.3207;Hb_name=Hb_E-Gurdaspur;HGVS=HBB:c.[79G>A_;313A>G];type=substitution
+chr11	5247827	HbVar.698	A	T	.	.	HbVar_num=HbVar.698;Hb_name=Hb_Medicine_Lake;HGVS=HBB:c.[295G>A;98T>A];type=substitution
+chr11	5247851	HbVar.880	C	A	.	.	HbVar_num=HbVar.880;Hb_name=Codon_90_(G->T);_GAG(Glu)->TAG(stop_codon)_beta0;HGVS=HBB:c.271G>T;type=substitution
+chr11	5247938	HbVar.866	T	A	.	.	HbVar_num=HbVar.866;Hb_name=Codon_61_(A->T);_AAG(Lys)->TAG(stop_codon)_beta0;HGVS=HBB:c.184A>T;type=substitution
+chr11	5247940	HbVar.352	A	T	.	.	HbVar_num=HbVar.352;Hb_name=Hb_Cagliari;HGVS=HBB:c.182T>A;type=substitution
+chr11	5247944	HbVar.2528	T	A	.	.	HbVar_num=HbVar.2528;Hb_name=Cd59_(AAG>TAG);HGVS=HBB:c.178A>T;type=substitution
+chr11	5247992	HbVar.853	C	A	.	.	HbVar_num=HbVar.853;Hb_name=Codon_43_(G->T);_GAG(Glu)->TAG_(stop_codon)_beta0;HGVS=HBB:c.130G>T;type=substitution
+chr11	5248004	HbVar.845	G	A	.	.	HbVar_num=HbVar.845;Hb_name=Codon_39_(C->T);_CAG(Gln)->TAG(stop_codon)_beta0;HGVS=HBB:c.118C>T;type=substitution
+chr11	5248008	HbVar.841	C	T	.	.	HbVar_num=HbVar.841;Hb_name=Codon_37_(G->A);_TGG(Trp)->TGA(stop_codon)_beta0;HGVS=HBB:c.114G>A;type=substitution
+chr11	5248009	HbVar.2529	C	T	.	.	HbVar_num=HbVar.2529;Hb_name=Cd37_(TGG>TAG);HGVS=HBB:c.113G>A;type=substitution
+chr11	5248014	HbVar.838	G	T	.	.	HbVar_num=HbVar.838;Hb_name=Codon_35_(C->A);_TAC->TAA_(Tyr->Term_codon)_beta0;HGVS=HBB:c.108C>A;type=substitution
+chr11	5248024	HbVar.698	A	T	.	.	HbVar_num=HbVar.698;Hb_name=Hb_Medicine_Lake;HGVS=HBB:c.[295G>A;98T>A];type=substitution
+chr11	5248029	HbVar.833	C	G	.	.	HbVar_num=HbVar.833;Hb_name=Codon_30_(AGG->AGC)_[IVS-I-130_(+1)]_beta0;HGVS=HBB:c.93G>C;type=substitution
+chr11	5248030	HbVar.830	C	T	.	.	HbVar_num=HbVar.830;Hb_name=IVS-I-130_(G->A);_TTAG^GCTG->TTAA_GCTG_beta0;HGVS=HBB:c.93-1G>A;type=substitution
+chr11	5248030	HbVar.831	C	G	.	.	HbVar_num=HbVar.831;Hb_name=IVS-I-130_(G->C);_TTAG^GCTG->TTAC_GCTG_beta0;HGVS=HBB:c.93-1G>C;type=substitution
+chr11	5248031	HbVar.2527	T	C	.	.	HbVar_num=HbVar.2527;Hb_name=IVS-I-129_(A>G);HGVS=HBB:c.93-2A>G;type=substitution
+chr11	5248031	HbVar.2946	T	G	.	.	HbVar_num=HbVar.2946;Hb_name=IVSI-129_(A>C);HGVS=HBB:c.93-2A>C;type=substitution
+chr11	5248032	HbVar.829	A	C	.	.	HbVar_num=HbVar.829;Hb_name=IVS-I-128_(T->G);_TTAG^GCTG->TGAG^GCTG_beta+;HGVS=HBB:c.93-3T>G;type=substitution
+chr11	5248044	HbVar.828	A	C	.	.	HbVar_num=HbVar.828;Hb_name=IVS-I-116_(T->G)_beta0;_normal_mRNA_estimated_at_less_than_1.0%;HGVS=HBB:c.93-15T>G;type=substitution
+chr11	5248050	HbVar.827	C	T	.	.	HbVar_num=HbVar.827;Hb_name=IVS-I-110_(G->A)_beta+;_the_mutation_is_21_nucleotides_5'_to_the_acceptor_splice_site_AG^GC;HGVS=HBB:c.93-21G>A;type=substitution
+chr11	5248153	HbVar.2572	T	A	.	.	HbVar_num=HbVar.2572;Hb_name=IVS_I-7_(A>T);HGVS=HBB:c.92+7A>T;type=substitution
+chr11	5248154	HbVar.826	A	G	.	.	HbVar_num=HbVar.826;Hb_name=IVS-I-6_(T->C);_the_Portuguese_type_beta+;HGVS=HBB:c.92+6T>C;type=substitution
+chr11	5248155	HbVar.822	C	T	.	.	HbVar_num=HbVar.822;Hb_name=IVS-I-5_(G->A)_beta+_(severe);HGVS=HBB:c.92+5G>A;type=substitution
+chr11	5248155	HbVar.823	C	T	.	.	HbVar_num=HbVar.823;Hb_name=IVS-I-5_(G->A)_plus_the_Corfu_deletion_(deltabeta-thal)_beta+;HGVS=HBB:c.92+5G>A;type=substitution
+chr11	5248155	HbVar.824	C	G	.	.	HbVar_num=HbVar.824;Hb_name=IVS-I-5_(G->C)_beta+_(severe);HGVS=HBB:c.92+5G>C;type=substitution
+chr11	5248155	HbVar.825	C	A	.	.	HbVar_num=HbVar.825;Hb_name=IVS-I-5_(G->T)_beta+_(severe);HGVS=HBB:c.92+5G>T;type=substitution
+chr11	5248158	HbVar.819	A	T	.	.	HbVar_num=HbVar.819;Hb_name=IVS-I-2_(T->A);_AG^GTTGGT->AGGATGGT_beta0;HGVS=HBB:c.92+2T>A;type=substitution
+chr11	5248158	HbVar.820	A	G	.	.	HbVar_num=HbVar.820;Hb_name=IVS-I-2_(T->C);_AG^GTTGGT->AGACTGGT_beta0;HGVS=HBB:c.92+2T>C;type=substitution
+chr11	5248158	HbVar.821	A	C	.	.	HbVar_num=HbVar.821;Hb_name=IVS-I-2_(T->G);_AG^GTTGGT->AGGGTGGT_beta0;HGVS=HBB:c.92+2T>G;type=substitution
+chr11	5248159	HbVar.817	C	T	.	.	HbVar_num=HbVar.817;Hb_name=IVS-I-1_(G->A);_AG^GTTGGT->AGATTGGT_beta0;HGVS=HBB:c.92+1G>A;type=substitution
+chr11	5248159	HbVar.818	C	A	.	.	HbVar_num=HbVar.818;Hb_name=IVS-I-1_(G->T);_AG^GTTGGT->AGTTTGGT_beta0;HGVS=HBB:c.92+1G>T;type=substitution
+chr11	5248160	HbVar.290	C	G	.	.	HbVar_num=HbVar.290;Hb_name=Hb_Monroe;HGVS=HBB:c.92G>C;type=substitution
+chr11	5248160	HbVar.816	C	T	.	.	HbVar_num=HbVar.816;Hb_name=IVS-I_(-1)_or_codon_30_(G->A)_AG^GTTGGT->AA^GTTGGT_beta0;HGVS=HBB:c.92G>A;type=substitution
+chr11	5248161	HbVar.2733	T	G	.	.	HbVar_num=HbVar.2733;Hb_name=Codon_30_A>C_[IVSI_(-2);HGVS=HBB:c.91A>C;type=substitution
+chr11	5248161	HbVar.815	T	C	.	.	HbVar_num=HbVar.815;Hb_name=IVS-I_(-2)_or_codon_30_(A->G);_AG^GTTGGT->GG^GTTGGT_Probably_beta0;HGVS=HBB:c.91A>G;type=substitution
+chr11	5248162	HbVar.814	G	A	.	.	HbVar_num=HbVar.814;Hb_name=IVS-I_(-3)_or_codon_29_(C->T);_GGC(Gly)->GGT(Gly)_beta+;HGVS=HBB:c.90C>T;type=substitution
+chr11	5248166	HbVar.286	A	C	.	.	HbVar_num=HbVar.286;Hb_name=Hb_Chesterfield;HGVS=HBB:c.86T>G;type=substitution
+chr11	5248170	HbVar.281	C	A	.	.	HbVar_num=HbVar.281;Hb_name=Hb_Knossos;HGVS=HBB:c.82G>T;type=substitution
+chr11	5248173	HbVar.3207	C	T	.	.	HbVar_num=HbVar.3207;Hb_name=Hb_E-Gurdaspur;HGVS=HBB:c.[79G>A_;313A>G];type=substitution
+chr11	5248173	HbVar.808	C	A	.	.	HbVar_num=HbVar.808;Hb_name=Codon_26_(G->T);_GAG(Glu)->TAG(stop_codon)_beta0;HGVS=HBB:c.79G>T;type=substitution
+chr11	5248177	HbVar.805	A	T	.	.	HbVar_num=HbVar.805;Hb_name=Codon_24_(T->A);_GGT(Gly)->GGA(Gly)_beta+;HGVS=HBB:c.75T>A;type=substitution
+chr11	5248185	HbVar.802	C	A	.	.	HbVar_num=HbVar.802;Hb_name=Codon_22_(G->T);_GAA(Glu)->TAA(stop_codon)_beta0;HGVS=HBB:c.67G>T;type=substitution
+chr11	5248193	HbVar.256	T	C	.	.	HbVar_num=HbVar.256;Hb_name=Hb_Malay;HGVS=HBB:c.59A>G;type=substitution
+chr11	5248200	HbVar.800	T	A	.	.	HbVar_num=HbVar.800;Hb_name=Codon_17_(A->T);_AAG(Lys)->TAG(stop_codon)_beta0;HGVS=HBB:c.52A>T;type=substitution
+chr11	5248204	HbVar.793	C	T	.	.	HbVar_num=HbVar.793;Hb_name=Codon_15_(G->A);_TGG(Trp)->TGA(stop_codon)_beta0;HGVS=HBB:c.48G>A;type=substitution
+chr11	5248205	HbVar.791	C	T	.	.	HbVar_num=HbVar.791;Hb_name=Codon_15_(G->A);_TGG(Trp)->TAG(stop_codon)_beta0;HGVS=HBB:c.47G>A;type=substitution
+chr11	5248219	HbVar.788	G	T	.	.	HbVar_num=HbVar.788;Hb_name=Codon_10_(C->A);_GCC(Ala)->GCA(Ala)_beta+;HGVS=HBB:c.33C>A;type=substitution
+chr11	5248249	HbVar.778	C	T	.	.	HbVar_num=HbVar.778;Hb_name=Initiation_codon_ATG->ATA_beta0;HGVS=HBB:c.3G>A;type=substitution
+chr11	5248249	HbVar.779	C	G	.	.	HbVar_num=HbVar.779;Hb_name=Initiation_codon_ATG->ATC_beta0;HGVS=HBB:c.3G>C;type=substitution
+chr11	5248249	HbVar.780	C	A	.	.	HbVar_num=HbVar.780;Hb_name=Initiation_codon_ATG->ATT_beta0;HGVS=HBB:c.3G>T;type=substitution
+chr11	5248250	HbVar.2530	A	T	.	.	HbVar_num=HbVar.2530;Hb_name=Initiation_codon_T>A;HGVS=HBB:c.2T>A;type=substitution
+chr11	5248250	HbVar.776	A	G	.	.	HbVar_num=HbVar.776;Hb_name=Initiation_codon_ATG->ACG_beta0;HGVS=HBB:c.2T>C;type=substitution
+chr11	5248250	HbVar.777	A	C	.	.	HbVar_num=HbVar.777;Hb_name=Initiation_codon_ATG->AGG_beta0;HGVS=HBB:c.2T>G;type=substitution
+chr11	5248251	HbVar.775	T	C	.	.	HbVar_num=HbVar.775;Hb_name=Initiation_codon_ATG->GTG_beta0;HGVS=HBB:c.1A>G;type=substitution
+chr11	5248269	HbVar.773	G	C	.	.	HbVar_num=HbVar.773;Hb_name=5'UTR;_+33_(C->G)_beta+_(silent);HGVS=HBB:c.-18C>G;type=substitution
+chr11	5248280	HbVar.772	C	T	.	.	HbVar_num=HbVar.772;Hb_name=5'UTR;_+22_(G->A)_beta+;HGVS=HBB:c.-29G>A;type=substitution
+chr11	5248301	HbVar.770	T	G	.	.	HbVar_num=HbVar.770;Hb_name=CAP_+1_(A->C)_silent;HGVS=HBB:c.-50A>C;type=substitution
+chr11	5248326	HbVar.2535	C	G	.	.	HbVar_num=HbVar.2535;Hb_name=-25_(G>C);HGVS=HBB:c.-75G>C;type=substitution
+chr11	5248327	HbVar.2711	T	G	.	.	HbVar_num=HbVar.2711;Hb_name=-26_A>C;HGVS=HBB:c.-76A>C;type=substitution
+chr11	5248329	HbVar.768	T	G	.	.	HbVar_num=HbVar.768;Hb_name=-28_(A->C)_beta+;HGVS=HBB:c.-78A>C;type=substitution
+chr11	5248329	HbVar.769	T	C	.	.	HbVar_num=HbVar.769;Hb_name=-28_(A->G)_beta+;HGVS=HBB:c.-78A>G;type=substitution
+chr11	5248330	HbVar.767	T	C	.	.	HbVar_num=HbVar.767;Hb_name=-29_(A->G)_beta+;HGVS=HBB:c.-79A>G;type=substitution
+chr11	5248331	HbVar.2702	A	C	.	.	HbVar_num=HbVar.2702;Hb_name=-30_T>G;HGVS=HBB:c.-80T>G;type=substitution
+chr11	5248331	HbVar.765	A	T	.	.	HbVar_num=HbVar.765;Hb_name=-30_(T->A)_beta+;HGVS=HBB:c.-80T>A;type=substitution
+chr11	5248331	HbVar.766	A	G	.	.	HbVar_num=HbVar.766;Hb_name=-30_(T->C)_beta_(0_or_+_unclear);HGVS=HBB:c.-80T>C;type=substitution
+chr11	5248332	HbVar.763	T	G	.	.	HbVar_num=HbVar.763;Hb_name=-31_(A->C)_beta+;HGVS=HBB:c.-81A>C;type=substitution
+chr11	5248332	HbVar.764	T	C	.	.	HbVar_num=HbVar.764;Hb_name=-31_(A->G)_beta+;HGVS=HBB:c.-81A>G;type=substitution
+chr11	5248333	HbVar.2536	G	A	.	.	HbVar_num=HbVar.2536;Hb_name=-32_(C>T);HGVS=HBB:c.-82C>T;type=substitution
+chr11	5248333	HbVar.762	G	T	.	.	HbVar_num=HbVar.762;Hb_name=-32_(C->A)_beta+;HGVS=HBB:c.-82C>A;type=substitution
+chr11	5248351	HbVar.2710	C	T	.	.	HbVar_num=HbVar.2710;Hb_name=-50_G>A;HGVS=HBB:c.-100G>A;type=substitution
+chr11	5248372	HbVar.2701	G	A	.	.	HbVar_num=HbVar.2701;Hb_name=-71_(C>T);HGVS=HBB:c.-121C>T;type=substitution
+chr11	5248377	HbVar.3168	G	T	.	.	HbVar_num=HbVar.3168;Hb_name=beta_nt_-76_C>A;HGVS=HBB:c.-126C>A;type=substitution
+chr11	5248378	HbVar.3082	C	G	.	.	HbVar_num=HbVar.3082;Hb_name=beta_nt_-77_G>C;HGVS=HBB:c.-127G>C;type=substitution
+chr11	5248387	HbVar.760	G	T	.	.	HbVar_num=HbVar.760;Hb_name=-86_(C->A)_beta+;HGVS=HBB:c.-136C>A;type=substitution
+chr11	5248387	HbVar.761	G	C	.	.	HbVar_num=HbVar.761;Hb_name=-86_(C->G)_beta+;HGVS=HBB:c.-136C>G;type=substitution
+chr11	5248388	HbVar.757	G	T	.	.	HbVar_num=HbVar.757;Hb_name=-87_(C->A)_beta+;HGVS=HBB:c.-137C>A;type=substitution
+chr11	5248388	HbVar.758	G	C	.	.	HbVar_num=HbVar.758;Hb_name=-87_(C->G)_beta+;HGVS=HBB:c.-137C>G;type=substitution
+chr11	5248388	HbVar.759	G	A	.	.	HbVar_num=HbVar.759;Hb_name=-87_(C->T)_beta+;HGVS=HBB:c.-137C>T;type=substitution
+chr11	5248389	HbVar.2700	G	C	.	.	HbVar_num=HbVar.2700;Hb_name=-88_(C>G);HGVS=HBB:c.-138C>G;type=substitution
+chr11	5248389	HbVar.755	G	T	.	.	HbVar_num=HbVar.755;Hb_name=-88_(C->A)_beta+;HGVS=HBB:c.-138C>A;type=substitution
+chr11	5248389	HbVar.756	G	A	.	.	HbVar_num=HbVar.756;Hb_name=-88_(C->T)_beta+;HGVS=HBB:c.-138C>T;type=substitution
+chr11	5248391	HbVar.754	G	A	.	.	HbVar_num=HbVar.754;Hb_name=-90_(C->T)_beta+;HGVS=HBB:c.-140C>T;type=substitution
+chr11	5248393	HbVar.752	G	A	.	.	HbVar_num=HbVar.752;Hb_name=-92_(C->T)_beta+_(mild);HGVS=HBB:c.-142C>T;type=substitution
+chr11	5248394	HbVar.2517	G	C	.	.	HbVar_num=HbVar.2517;Hb_name=-93_C>G;HGVS=HBB:c.-143C>G;type=substitution
+chr11	5248402	HbVar.649	G	A	.	.	HbVar_num=HbVar.649;Hb_name=-101_(C->T)_beta+_(silent);HGVS=HBB:c.-151C>T;type=substitution
+chr11	5248524	HbVar.3060	A	G	.	.	HbVar_num=HbVar.3060;Hb_name=beta_nt_-223_T>C;HGVS=HBB:c.-273T>C;type=substitution
+chr11	5253995	HbVar.1004	C	T	.	.	HbVar_num=HbVar.1004;Hb_name=Poly_A_+69_(G->A)_delta;HGVS=HBD:c.*199G>A;type=substitution
+chr11	5254213	HbVar.1003	A	G	.	.	HbVar_num=HbVar.1003;Hb_name=Codon_141_(CTG->CCG)_delta_(0_or_+_unclear);HGVS=HBD:c.425T>C;type=substitution
+chr11	5254289	HbVar.1002	G	A	.	.	HbVar_num=HbVar.1002;Hb_name=Codon_116_(CGC->TGC)_delta+;HGVS=HBD:c.349C>T;type=substitution
+chr11	5254324	HbVar.1001	T	G	.	.	HbVar_num=HbVar.1001;Hb_name=IVS-II-897,_A->C;_AG^CT->CGCT_delta0;HGVS=HBD:c.316-2A>C;type=substitution
+chr11	5254324	HbVar.2919	T	C	.	.	HbVar_num=HbVar.2919;Hb_name=IVS-II-897_A>G_;_delta0;HGVS=HBD:c.316-2A>G;type=substitution
+chr11	5254327	HbVar.1196	G	A	.	.	HbVar_num=HbVar.1196;Hb_name=IVS_II-894_(C->T);_delta+;HGVS=HBD:c.316-5C>T;type=substitution
+chr11	5255215	HbVar.1180	A	T	.	.	HbVar_num=HbVar.1180;Hb_name=delta_IVSII-6_T->A;HGVS=HBD:c.315+6T>A;type=substitution
+chr11	5255241	HbVar.672	C	T	.	.	HbVar_num=HbVar.672;Hb_name=Hb_A<sub>2</sub>-Wrens;HGVS=HBD:c.295G>A;type=substitution
+chr11	5255289	HbVar.2777	T	A	.	.	HbVar_num=HbVar.2777;Hb_name=Codon_82_(AAG->TAG)_delta0;HGVS=HBD:c.247A>T;type=substitution
+chr11	5255423	HbVar.998	C	T	.	.	HbVar_num=HbVar.998;Hb_name=Codon_37_(TGG->TAG)_delta0;HGVS=HBD:c.113G>A;type=substitution
+chr11	5255444	HbVar.1197	C	G	.	.	HbVar_num=HbVar.1197;Hb_name=IVS-I_3'_AG->AC;_delta0;HGVS=HBD:c.93-1G>C;type=substitution
+chr11	5255570	HbVar.997	A	G	.	.	HbVar_num=HbVar.997;Hb_name=IVS-I-2_(T->C)_delta0;HGVS=HBD:c.92+2T>C;type=substitution
+chr11	5255572	HbVar.996	C	G	.	.	HbVar_num=HbVar.996;Hb_name=Codon_30_(AGG->ACG)_delta0;HGVS=HBD:c.92G>C;type=substitution
+chr11	5255582	HbVar.660	C	A	.	.	HbVar_num=HbVar.660;Hb_name=Hb_A<sub>2</sub>-Yialousa;HGVS=HBD:c.82G>T;type=substitution
+chr11	5255650	HbVar.995	G	A	.	.	HbVar_num=HbVar.995;Hb_name=Codon_4_(ACT->ATT)_delta+;HGVS=HBD:c.14C>T;type=substitution
+chr11	5255661	HbVar.2659	C	T	.	.	HbVar_num=HbVar.2659;Hb_name=HBD_c.1_G>A_;HGVS=HBD:c.3G>A;type=substitution
+chr11	5255743	HbVar.1194	A	G	.	.	HbVar_num=HbVar.1194;Hb_name=-30_(T->C);_delta+;HGVS=HBD:c.-80T>C;type=substitution
+chr11	5255744	HbVar.1186	T	C	.	.	HbVar_num=HbVar.1186;Hb_name=-31_(A->G)_delta+;HGVS=HBD:c.-81A>G;type=substitution
+chr11	5255749	HbVar.994	G	T	.	.	HbVar_num=HbVar.994;Hb_name=-36_(C->A);_probably_delta+;HGVS=HBD:c.-86C>A;type=substitution
+chr11	5255768	HbVar.993	A	G	.	.	HbVar_num=HbVar.993;Hb_name=-55_(T->C)_delta+;HGVS=HBD:c.-105T>C;type=substitution
+chr11	5255778	HbVar.992	T	C	.	.	HbVar_num=HbVar.992;Hb_name=-65_(A->G)_delta+;HGVS=HBD:c.-115A>G;type=substitution
+chr11	5255789	HbVar.1179	T	A	.	.	HbVar_num=HbVar.1179;Hb_name=-76_(A->T)_delta0;HGVS=HBD:c.-126A>T;type=substitution
+chr11	5255790	HbVar.991	A	G	.	.	HbVar_num=HbVar.991;Hb_name=-77_(T->C)_delta_(0_or_+_unclear);HGVS=HBD:c.-127T>C;type=substitution
+chr11	5271201	HbVar.1018	G	A	.	.	HbVar_num=HbVar.1018;Hb_name=-114_(C->T)_<sup>A</sup>gamma;_the_Georgia_nd-HPFH;HGVS=HBG1:c.-167C>T;type=substitution
+chr11	5271204	HbVar.1014	C	T	.	.	HbVar_num=HbVar.1014;Hb_name=-117_(G->A)_<sup>A</sup>gamma;_the_Greek-Italian_nd-HPFH;HGVS=HBG1:c.-170G>A;type=substitution
+chr11	5271204	HbVar.1015	C	T	.	.	HbVar_num=HbVar.1015;Hb_name=-117_(G->A)_<sup>A</sup>gamma;_the_Black-Greek_nd-HPFH;HGVS=HBG1:c.-170G>A;type=substitution
+chr11	5271245	HbVar.2512	G	A	.	.	HbVar_num=HbVar.2512;Hb_name=Cretan_HPFH;HGVS=HBG1:c.-211C>T;type=substitution
+chr11	5271262	HbVar.1013	A	G	.	.	HbVar_num=HbVar.1013;Hb_name=-175_(T->C)_<sup>A</sup>gamma;_the_Black_nd-HPFH;HGVS=HBG1:c.-228T>C;type=substitution
+chr11	5271282	HbVar.1011	G	C	.	.	HbVar_num=HbVar.1011;Hb_name=-195_(C->G)_<sup>A</sup>gamma;_the_Brazilian_nd-HPFH;HGVS=HBG1:c.-248C>G;type=substitution
+chr11	5271283	HbVar.1010	G	A	.	.	HbVar_num=HbVar.1010;Hb_name=-196_(C->T)_<sup>A</sup>gamma;_the_Italian_nd-HPFH;HGVS=HBG1:c.-249C>T;type=substitution
+chr11	5271284	HbVar.2708	G	A	.	.	HbVar_num=HbVar.2708;Hb_name=A_Gamma_-197_C>T;HGVS=HBG1:c.-250C>T;type=substitution
+chr11	5271285	HbVar.1009	A	G	.	.	HbVar_num=HbVar.1009;Hb_name=-198_(T->C)_<sup>A</sup>gamma;_the_British_nd-HPFH;HGVS=HBG1:c.-251T>C;type=substitution
+chr11	5271289	HbVar.1007	G	A	.	.	HbVar_num=HbVar.1007;Hb_name=-202_(C->T)_<sup>A</sup>gamma;_nd-HPFH;HGVS=HBG1:c.-255C>T;type=substitution
+chr11	5271298	HbVar.2513	G	A	.	.	HbVar_num=HbVar.2513;Hb_name=Venezuelan_nd-HPFH;HGVS=HBG1:c.-264C>T;type=substitution
+chr11	5276121	HbVar.1019	T	G	.	.	HbVar_num=HbVar.1019;Hb_name=-110_(A->C)_<sup>G</sup>gamma;_the_Czech_nd-HPFH;HGVS=HBG2:c.-163A>C;type=substitution
+chr11	5276125	HbVar.1016	G	C	.	.	HbVar_num=HbVar.1016;Hb_name=-114_(C->G)_<sup>G</sup>gamma;_the_Australian_nd-HPFH;HGVS=HBG2:c.-167C>G;type=substitution
+chr11	5276125	HbVar.1017	G	A	.	.	HbVar_num=HbVar.1017;Hb_name=-114_(C->T)_<sup>G</sup>gamma;_the_Japanese_nd-HPFH;HGVS=HBG2:c.-167C>T;type=substitution
+chr11	5276125	HbVar.1163	G	T	.	.	HbVar_num=HbVar.1163;Hb_name=-114(C->A)Ggamma;_the_Algerian_nd-HPFH;HGVS=HBG2:c.-167C>A;type=substitution
+chr11	5276186	HbVar.1012	A	G	.	.	HbVar_num=HbVar.1012;Hb_name=-175_(T->C)_<sup>G</sup>gamma;_nd-HPFH;HGVS=HBG2:c.-228T>C;type=substitution
+chr11	5276208	HbVar.2709	G	A	.	.	HbVar_num=HbVar.2709;Hb_name=G_Gamma_-197_C>T;HGVS=HBG2:c.-250C>T;type=substitution
+chr11	5276213	HbVar.1006	G	C	.	.	HbVar_num=HbVar.1006;Hb_name=-202_(C->G)_<sup>G</sup>gamma;_nd-HPFH;HGVS=HBG2:c.-255C>G;type=substitution
+chr16	222896	eqvtHbVar.1178	T	C	.	.	HbVar_num=eqvtHbVar.1178;Hb_name=alpha1_+22_T->C;HGVS=HBA1:c.-16T>C;type=substitution
+chr16	222912	HbVar.1059	A	G	.	.	HbVar_num=HbVar.1059;Hb_name=Initiation_codon_(A->G);_of_an_alpha2alpha1_hybrid_gene_-alpha(-3.7_kb)_alpha-Thal-1;HGVS=HBA2:c.1A>G;type=substitution
+chr16	222912	HbVar.1175	A	G	.	.	HbVar_num=HbVar.1175;Hb_name=alpha2_ATG->GTG;HGVS=HBA2:c.1A>G;type=substitution
+chr16	222912	eqvtHbVar.1063	A	G	.	.	HbVar_num=eqvtHbVar.1063;Hb_name=Initiation_codon_(A->G);_ATG->GTG_of_the_alpha1_gene_alpha-Thal-2;HGVS=HBA1:c.1A>G;type=substitution
+chr16	222913	HbVar.1061	T	C	.	.	HbVar_num=HbVar.1061;Hb_name=Initiation_codon_(T->C);_ATG->ACG_of_the_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.2T>C;type=substitution
+chr16	222913	HbVar.2866	T	G	.	.	HbVar_num=HbVar.2866;Hb_name=alpha2_ATG>AGG;HGVS=HBA2:c.2T>G;type=substitution
+chr16	222913	eqvtHbVar.3083	T	A	.	.	HbVar_num=eqvtHbVar.3083;Hb_name=Alpha1_Initiation_codon_ATG>AAG;HGVS=HBA1:c.2T>A;type=substitution
+chr16	222933	HbVar.2903	A	T	.	.	HbVar_num=HbVar.2903;Hb_name=Codon_7_Lys>Stop_(Alpha_2);HGVS=HBA2:c.22A>T;type=substitution
+chr16	222954	HbVar.16	T	C	.	.	HbVar_num=HbVar.16;Hb_name=Hb_Evanston;HGVS=HBA2:c.[43T>A_(or_HBA1)_or_43T>C_(or_HBA1)];type=substitution
+chr16	222955	eqvtHbVar.2515	G	A	.	.	HbVar_num=eqvtHbVar.2515;Hb_name=Codon_14_G>A;HGVS=HBA1:c.44G>A;type=substitution
+chr16	222956	HbVar.2934	G	A	.	.	HbVar_num=HbVar.2934;Hb_name=Alpha-2_codon_14_G>A_(Trp>Stop);HGVS=HBA2:c.45G>A;type=substitution
+chr16	222980	HbVar.2514	C	T	.	.	HbVar_num=HbVar.2514;Hb_name=Codon_22_C>T;HGVS=HBA2:c.69C>T;type=substitution
+chr16	222981	HbVar.2531	G	T	.	.	HbVar_num=HbVar.2531;Hb_name=Cd23_(GAG>TAG);HGVS=HBA2:c.70G>T;type=substitution
+chr16	222981	eqvtHbVar.1176	G	T	.	.	HbVar_num=eqvtHbVar.1176;Hb_name=alpha1_cd23_GAG->TAG;HGVS=HBA1:c.70G>T;type=substitution
+chr16	222986	HbVar.2750	T	G	.	.	HbVar_num=HbVar.2750;Hb_name=Codon_24_(T>G);HGVS=HBA2:c.75T>G;type=substitution
+chr16	223006	HbVar.2734	G	A	.	.	HbVar_num=HbVar.2734;Hb_name=&#945;2_Codon_31_(AGG>AAG);HGVS=HBA2:c.95G>A;type=substitution
+chr16	223007	HbVar.2597	G	T	.	.	HbVar_num=HbVar.2597;Hb_name=IVS_I-1_(G>T);HGVS=HBA2:c.95+1G>T;type=substitution
+chr16	223010	eqvtHbVar.2900	A	G	.	.	HbVar_num=eqvtHbVar.2900;Hb_name=IVSI-4_A>G_(alpha_1);HGVS=HBA1:c.95+4A>G;type=substitution
+chr16	223011	HbVar.2598	G	A	.	.	HbVar_num=HbVar.2598;Hb_name=IVS_I-5_(G>A);HGVS=HBA2:c.95+5G>A;type=substitution
+chr16	223011	eqvtHbVar.2614	G	A	.	.	HbVar_num=eqvtHbVar.2614;Hb_name=IVS_I-5_G>A;HGVS=HBA1:c.95+5G>A;type=substitution
+chr16	223051	eqvtHbVar.2778	G	C	.	.	HbVar_num=eqvtHbVar.2778;Hb_name=IVS_I-45_G>C;HGVS=HBA1:c.95+45G>C;type=substitution
+chr16	223061	HbVar.2600	G	A	.	.	HbVar_num=HbVar.2600;Hb_name=IVS_I-55_G>A;HGVS=HBA2:c.95+55G>A;type=substitution
+chr16	223122	HbVar.1066	A	G	.	.	HbVar_num=HbVar.1066;Hb_name=IVS-I-116_(A->G)_alpha2_gene;_alpha-Thal-2;HGVS=HBA2:c.96-2A>G;type=substitution
+chr16	223122	eqvtHbVar.2899	A	G	.	.	HbVar_num=eqvtHbVar.2899;Hb_name=IVSI-116_A>G_(alpha_1);HGVS=HBA1:c.96-2A>G;type=substitution
+chr16	223123	HbVar.2970	G	A	.	.	HbVar_num=HbVar.2970;Hb_name=IVS-I-117_G>A_-_Alpha2;HGVS=HBA2:c.96-1G>A;type=substitution
+chr16	223123	eqvtHbVar.1067	G	A	.	.	HbVar_num=eqvtHbVar.1067;Hb_name=IVS-I-117_(G->A)_alpha1_gene;_alpha-Thal-2;HGVS=HBA1:c.96-1G>A;type=substitution
+chr16	223127	HbVar.1235	G	A	.	.	HbVar_num=HbVar.1235;Hb_name=Hb_Amsterdam;HGVS=HBA2:c.99G>A;type=substitution
+chr16	223207	HbVar.87	G	A	.	.	HbVar_num=HbVar.87;Hb_name=Hb_Adana;HGVS=HBA2:c.179G>A_(or_HBA1);type=substitution
+chr16	223216	eqvtHbVar.2908	T	C	.	.	HbVar_num=eqvtHbVar.2908;Hb_name=Codon_62_(GTG>GCG,_Val>Ala)_(alpha1);HGVS=HBA1:c.188T>C;type=substitution
+chr16	223299	HbVar.2532	A	T	.	.	HbVar_num=HbVar.2532;Hb_name=Cd90_(AAG>TAG);HGVS=HBA2:c.271A>T;type=substitution
+chr16	223326	eqvtHbVar.2901	A	T	.	.	HbVar_num=eqvtHbVar.2901;Hb_name=Codon_99_Lys>Stop_(alpha_1);HGVS=HBA1:c.298A>T;type=substitution
+chr16	223327	HbVar.2869	A	T	.	.	HbVar_num=HbVar.2869;Hb_name=HBA1:c.301-2A>T;HGVS=HBA1:c.299A>T;type=substitution
+chr16	223330	HbVar.2522	T	A	.	.	HbVar_num=HbVar.2522;Hb_name=IVS_II-2_(T>A);HGVS=HBA2:c.300+2T>A;type=substitution
+chr16	223484	HbVar.167	G	A	.	.	HbVar_num=HbVar.167;Hb_name=Hb_Sallanches;HGVS=HBA2:c.314G>A;type=substitution
+chr16	223485	eqvtHbVar.2723	C	G	.	.	HbVar_num=eqvtHbVar.2723;Hb_name=&#945;1_Codon_104_(TGC>TGG)_[Cys>Trp];HGVS=HBA1:c.315C>G;type=substitution
+chr16	223499	HbVar.168	T	G	.	.	HbVar_num=HbVar.168;Hb_name=Hb_Suan-Dok;HGVS=HBA2:c.329T>G;type=substitution
+chr16	223502	HbVar.169	C	A	.	.	HbVar_num=HbVar.169;Hb_name=Hb_Petah_Tikva;HGVS=HBA2:c.332C>A_(or_HBA1);type=substitution
+chr16	223519	HbVar.1069	G	T	.	.	HbVar_num=HbVar.1069;Hb_name=Codon_116_(G->T)_of_the_alpha2_gene;_GAG->TAG_alpha-Thal-2;HGVS=HBA2:c.349G>T;type=substitution
+chr16	223540	HbVar.2609	G	C	.	.	HbVar_num=HbVar.2609;Hb_name=Hb_Voreppe;HGVS=HBA1:c.370G>C;type=substitution
+chr16	223547	HbVar.187	T	C	.	.	HbVar_num=HbVar.187;Hb_name=Hb_Quong_Sze;HGVS=HBA2:c.377T>C;type=substitution
+chr16	223547	eqvtHbVar.2853	T	C	.	.	HbVar_num=eqvtHbVar.2853;Hb_name=Hb_Quong_Sze_II;HGVS=HBA1:c.377T>C;type=substitution
+chr16	223559	HbVar.196	T	C	.	.	HbVar_num=HbVar.196;Hb_name=Hb_Utrecht;HGVS=HBA2:c.389T>C;type=substitution
+chr16	223561	HbVar.197	G	C	.	.	HbVar_num=HbVar.197;Hb_name=Hb_Sun_Prairie;HGVS=HBA2:c.391G>C;type=substitution
+chr16	223564	HbVar.199	T	C	.	.	HbVar_num=HbVar.199;Hb_name=Hb_Questembert;HGVS=HBA2:c.394T>C_(or_HBA1);type=substitution
+chr16	223597	HbVar.703	T	C	.	.	HbVar_num=HbVar.703;Hb_name=Hb_Constant_Spring_(Hb_CS);HGVS=HBA2:c.427T>C;type=substitution
+chr16	223597	HbVar.704	T	A	.	.	HbVar_num=HbVar.704;Hb_name=Hb_Icaria;HGVS=HBA2:c.427T>A;type=substitution
+chr16	223597	HbVar.706	T	G	.	.	HbVar_num=HbVar.706;Hb_name=Hb_Seal_Rock;HGVS=HBA2:c.427T>G;type=substitution
+chr16	223598	HbVar.705	A	C	.	.	HbVar_num=HbVar.705;Hb_name=Hb_Koya_Dora;HGVS=HBA2:c.428A>C;type=substitution
+chr16	223599	HbVar.707	A	T	.	.	HbVar_num=HbVar.707;Hb_name=Hb_Paks&eacute;HGVS=HBA2:c.429A>T;type=substitution
+chr16	223691	HbVar.1071	A	G	.	.	HbVar_num=HbVar.1071;Hb_name=Poly_A_(A->G);_AATAAA->AATGAA_of_the_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.*92A>G;type=substitution
+chr16	223693	HbVar.1070	A	G	.	.	HbVar_num=HbVar.1070;Hb_name=Poly_A_(A->G);_AATAAA->AATAAG_of_the_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.*94A>G;type=substitution
+chr16	223693	HbVar.1192	A	C	.	.	HbVar_num=HbVar.1192;Hb_name=Poly_A_(A->C);_AATAAA->AATAAC;HGVS=HBA2:c.*94A>C;type=substitution
+chr16	226700	HbVar.1178	T	C	.	.	HbVar_num=HbVar.1178;Hb_name=alpha1_+22_T->C;HGVS=HBA1:c.-16T>C;type=substitution
+chr16	226716	HbVar.1063	A	G	.	.	HbVar_num=HbVar.1063;Hb_name=Initiation_codon_(A->G);_ATG->GTG_of_the_alpha1_gene_alpha-Thal-2;HGVS=HBA1:c.1A>G;type=substitution
+chr16	226716	eqvtHbVar.1059	A	G	.	.	HbVar_num=eqvtHbVar.1059;Hb_name=Initiation_codon_(A->G);_of_an_alpha2alpha1_hybrid_gene_-alpha(-3.7_kb)_alpha-Thal-1;HGVS=HBA2:c.1A>G;type=substitution
+chr16	226716	eqvtHbVar.1175	A	G	.	.	HbVar_num=eqvtHbVar.1175;Hb_name=alpha2_ATG->GTG;HGVS=HBA2:c.1A>G;type=substitution
+chr16	226717	HbVar.3083	T	A	.	.	HbVar_num=HbVar.3083;Hb_name=Alpha1_Initiation_codon_ATG>AAG;HGVS=HBA1:c.2T>A;type=substitution
+chr16	226717	eqvtHbVar.1061	T	C	.	.	HbVar_num=eqvtHbVar.1061;Hb_name=Initiation_codon_(T->C);_ATG->ACG_of_the_alpha2_gene_alpha-Thal-2;HGVS=HBA2:c.2T>C;type=substitution
+chr16	226717	eqvtHbVar.2866	T	G	.	.	HbVar_num=eqvtHbVar.2866;Hb_name=alpha2_ATG>AGG;HGVS=HBA2:c.2T>G;type=substitution
+chr16	226737	eqvtHbVar.2903	A	T	.	.	HbVar_num=eqvtHbVar.2903;Hb_name=Codon_7_Lys>Stop_(Alpha_2);HGVS=HBA2:c.22A>T;type=substitution
+chr16	226758	HbVar.16	T	C	.	.	HbVar_num=HbVar.16;Hb_name=Hb_Evanston;HGVS=HBA2:c.[43T>A_(or_HBA1)_or_43T>C_(or_HBA1)];type=substitution
+chr16	226759	HbVar.2515	G	A	.	.	HbVar_num=HbVar.2515;Hb_name=Codon_14_G>A;HGVS=HBA1:c.44G>A;type=substitution
+chr16	226760	eqvtHbVar.2934	G	A	.	.	HbVar_num=eqvtHbVar.2934;Hb_name=Alpha-2_codon_14_G>A_(Trp>Stop);HGVS=HBA2:c.45G>A;type=substitution
+chr16	226784	eqvtHbVar.2514	C	T	.	.	HbVar_num=eqvtHbVar.2514;Hb_name=Codon_22_C>T;HGVS=HBA2:c.69C>T;type=substitution
+chr16	226785	HbVar.1176	G	T	.	.	HbVar_num=HbVar.1176;Hb_name=alpha1_cd23_GAG->TAG;HGVS=HBA1:c.70G>T;type=substitution
+chr16	226785	eqvtHbVar.2531	G	T	.	.	HbVar_num=eqvtHbVar.2531;Hb_name=Cd23_(GAG>TAG);HGVS=HBA2:c.70G>T;type=substitution
+chr16	226790	eqvtHbVar.2750	T	G	.	.	HbVar_num=eqvtHbVar.2750;Hb_name=Codon_24_(T>G);HGVS=HBA2:c.75T>G;type=substitution
+chr16	226810	eqvtHbVar.2734	G	A	.	.	HbVar_num=eqvtHbVar.2734;Hb_name=&#945;2_Codon_31_(AGG>AAG);HGVS=HBA2:c.95G>A;type=substitution
+chr16	226811	eqvtHbVar.2597	G	T	.	.	HbVar_num=eqvtHbVar.2597;Hb_name=IVS_I-1_(G>T);HGVS=HBA2:c.95+1G>T;type=substitution
+chr16	226814	HbVar.2900	A	G	.	.	HbVar_num=HbVar.2900;Hb_name=IVSI-4_A>G_(alpha_1);HGVS=HBA1:c.95+4A>G;type=substitution
+chr16	226815	HbVar.2614	G	A	.	.	HbVar_num=HbVar.2614;Hb_name=IVS_I-5_G>A;HGVS=HBA1:c.95+5G>A;type=substitution
+chr16	226815	eqvtHbVar.2598	G	A	.	.	HbVar_num=eqvtHbVar.2598;Hb_name=IVS_I-5_(G>A);HGVS=HBA2:c.95+5G>A;type=substitution
+chr16	226855	HbVar.2778	G	C	.	.	HbVar_num=HbVar.2778;Hb_name=IVS_I-45_G>C;HGVS=HBA1:c.95+45G>C;type=substitution
+chr16	226865	eqvtHbVar.2600	G	A	.	.	HbVar_num=eqvtHbVar.2600;Hb_name=IVS_I-55_G>A;HGVS=HBA2:c.95+55G>A;type=substitution
+chr16	226926	HbVar.2899	A	G	.	.	HbVar_num=HbVar.2899;Hb_name=IVSI-116_A>G_(alpha_1);HGVS=HBA1:c.96-2A>G;type=substitution
+chr16	226926	eqvtHbVar.1066	A	G	.	.	HbVar_num=eqvtHbVar.1066;Hb_name=IVS-I-116_(A->G)_alpha2_gene;_alpha-Thal-2;HGVS=HBA2:c.96-2A>G;type=substitution
+chr16	226927	HbVar.1067	G	A	.	.	HbVar_num=HbVar.1067;Hb_name=IVS-I-117_(G->A)_alpha1_gene;_alpha-Thal-2;HGVS=HBA1:c.96-1G>A;type=substitution
+chr16	226927	HbVar.2970	G	A	.	.	HbVar_num=HbVar.2970;Hb_name=IVS-I-117_G>A_-_Alpha2;HGVS=HBA2:c.96-1G>A;type=substitution
+chr16	226931	eqvtHbVar.1235	G	A	.	.	HbVar_num=eqvtHbVar.1235;Hb_name=Hb_Amsterdam;HGVS=HBA2:c.99G>A;type=substitution
+chr16	227011	HbVar.87	G	A	.	.	HbVar_num=HbVar.87;Hb_name=Hb_Adana;HGVS=HBA2:c.179G>A_(or_HBA1);type=substitution
+chr16	227020	HbVar.2908	T	C	.	.	HbVar_num=HbVar.2908;Hb_name=Codon_62_(GTG>GCG,_Val>Ala)_(alpha1);HGVS=HBA1:c.188T>C;type=substitution
+chr16	227103	eqvtHbVar.2532	A	T	.	.	HbVar_num=eqvtHbVar.2532;Hb_name=Cd90_(AAG>TAG);HGVS=HBA2:c.271A>T;type=substitution
+chr16	227130	HbVar.2901	A	T	.	.	HbVar_num=HbVar.2901;Hb_name=Codon_99_Lys>Stop_(alpha_1);HGVS=HBA1:c.298A>T;type=substitution
+chr16	227131	HbVar.2869	A	T	.	.	HbVar_num=HbVar.2869;Hb_name=HBA1:c.301-2A>T;HGVS=HBA1:c.299A>T;type=substitution
+chr16	227134	eqvtHbVar.2522	T	A	.	.	HbVar_num=eqvtHbVar.2522;Hb_name=IVS_II-2_(T>A);HGVS=HBA2:c.300+2T>A;type=substitution
+chr16	227295	eqvtHbVar.167	G	A	.	.	HbVar_num=eqvtHbVar.167;Hb_name=Hb_Sallanches;HGVS=HBA2:c.314G>A;type=substitution
+chr16	227296	HbVar.2723	C	G	.	.	HbVar_num=HbVar.2723;Hb_name=&#945;1_Codon_104_(TGC>TGG)_[Cys>Trp];HGVS=HBA1:c.315C>G;type=substitution
+chr16	227310	eqvtHbVar.168	T	G	.	.	HbVar_num=eqvtHbVar.168;Hb_name=Hb_Suan-Dok;HGVS=HBA2:c.329T>G;type=substitution
+chr16	227313	HbVar.169	C	A	.	.	HbVar_num=HbVar.169;Hb_name=Hb_Petah_Tikva;HGVS=HBA2:c.332C>A_(or_HBA1);type=substitution
+chr16	227330	eqvtHbVar.1069	G	T	.	.	HbVar_num=eqvtHbVar.1069;Hb_name=Codon_116_(G->T)_of_the_alpha2_gene;_GAG->TAG_alpha-Thal-2;HGVS=HBA2:c.349G>T;type=substitution
+chr16	227351	HbVar.2609	G	C	.	.	HbVar_num=HbVar.2609;Hb_name=Hb_Voreppe;HGVS=HBA1:c.370G>C;type=substitution
+chr16	227358	HbVar.2853	T	C	.	.	HbVar_num=HbVar.2853;Hb_name=Hb_Quong_Sze_II;HGVS=HBA1:c.377T>C;type=substitution
+chr16	227358	eqvtHbVar.187	T	C	.	.	HbVar_num=eqvtHbVar.187;Hb_name=Hb_Quong_Sze;HGVS=HBA2:c.377T>C;type=substitution
+chr16	227372	HbVar.197	G	C	.	.	HbVar_num=HbVar.197;Hb_name=Hb_Sun_Prairie;HGVS=HBA2:c.391G>C;type=substitution
+chr16	227375	HbVar.199	T	C	.	.	HbVar_num=HbVar.199;Hb_name=Hb_Questembert;HGVS=HBA2:c.394T>C_(or_HBA1);type=substitution
+chr16	227408	eqvtHbVar.703	T	C	.	.	HbVar_num=eqvtHbVar.703;Hb_name=Hb_Constant_Spring_(Hb_CS);HGVS=HBA2:c.427T>C;type=substitution
+chr16	227408	eqvtHbVar.704	T	A	.	.	HbVar_num=eqvtHbVar.704;Hb_name=Hb_Icaria;HGVS=HBA2:c.427T>A;type=substitution
+chr16	227408	eqvtHbVar.706	T	G	.	.	HbVar_num=eqvtHbVar.706;Hb_name=Hb_Seal_Rock;HGVS=HBA2:c.427T>G;type=substitution
+chr16	227409	eqvtHbVar.705	A	C	.	.	HbVar_num=eqvtHbVar.705;Hb_name=Hb_Koya_Dora;HGVS=HBA2:c.428A>C;type=substitution
+chr16	227410	eqvtHbVar.196	T	C	.	.	HbVar_num=eqvtHbVar.196;Hb_name=Hb_Utrecht;HGVS=HBA2:c.389T>C;type=substitution
+chr16	227410	eqvtHbVar.707	A	T	.	.	HbVar_num=eqvtHbVar.707;Hb_name=Hb_Paks&eacute;HGVS=HBA2:c.429A>T;type=substitution
+chr16	227506	HbVar.2722	G	A	.	.	HbVar_num=HbVar.2722;Hb_name=&#945;1_Poly_A__(AATAAAG&#8594;AATAAAA);HGVS=HBA1:c.*96G>A;type=substitution
