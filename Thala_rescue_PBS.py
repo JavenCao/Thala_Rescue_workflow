@@ -44,6 +44,10 @@ ModifyAndCreate_v2(phase2_HardF_model_file, Path_dict, Joint_folder,
 
 #-------------------------------------end GATK process----------------------------------------
 
+Find_Causal_model_file = PBSModel_folder + '/' + Path_dict.get('PBSfile5')
+ModifyAndCreate_v2(Find_Causal_model_file, Path_dict, Joint_folder,
+                   SampleList, 'Thala_Find_Causal')
+
 
 # create submit.sh file under project folder for submit tasks to CGS clusers
 submitFile = wkd + '/submit.sh'
