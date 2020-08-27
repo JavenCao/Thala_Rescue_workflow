@@ -50,29 +50,12 @@ now you should have the follwing structure:
 
     | -- /home/data/Thalaproject/
     |    | -- Rescue_Phase
-    |    |    | -- Thala_Rescue_workflow
-    |    |    |    | -- Thala_rescue_PBS.py
-    |    |    |    | -- Thala_rescue_configuration.txt
-    |    |    |    | -- supportingFun.py
-    |    |    |    |    | -- PBSModels
-    |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
-    |    |    |    |    |    | -- Select_Annotation.pbs
-    |    |    |    |    |    | -- plot.R
-    |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
-    |    |    |    |    |    | -- Find_causal.py
-    |    |    |    |-- Poor_reads_rescue
-    |    |    |    |    | -- Thalassemia.py
-    |    |    |    |    | -- BamOPR.py
-    |    |    |    |    | -- README.md
-    |    |    |    |-- Known_Causal_Mutation
-    |    |    |    |    | -- Known_InDel.vcf
-    |    |    |    |    | -- Known_substitution.vcf
+    |    |    | -- Thala_Rescue_workflow(Folders)
+    |    |    |
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
 
+      cd Thala_Rescue_workflow
       vi Thala_rescue_configuration.txt
 
 * Step4: run the following commands in bash:
@@ -84,25 +67,14 @@ And after that you should have the following structure:
     | -- /home/data/Thalaproject/
     |    | -- Rescue_Phase
     |    |    | -- Thala_Rescue_workflow
-    |    |    |    | -- Thala_rescue_PBS.py
-    |    |    |    | -- Thala_rescue_configuration.txt
-    |    |    |    | -- supportingFun.py
-    |    |    |    |    | -- PBSModels
-    |    |    |    |    |    | -- Thala_Rescue_Bam_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step2_GTing_model.pbs
-    |    |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering_model.pbs
-    |    |    |    |    |    | -- Select_Annotation.pbs
-    |    |    |    |    |    | -- plot.R
-    |    |    |    |    |    | -- Thala_Find_Causal_model.pbs
-    |    |    |    |    |    | -- Find_causal.py
-    |    |    |    |-- Poor_reads_rescue
-    |    |    |    |    | -- Thalassemia.py
-    |    |    |    |    | -- BamOPR.py
-    |    |    |    |    | -- README.md
-    |    |    |    |-- Known_Causal_Mutation
-    |    |    |    |    | -- Known_InDel.vcf
-    |    |    |    |    | -- Known_substitution.vcf
+    |    |    |
+    |    |    |       .......
+    |    |    |       .......
+    |    |    |       Backstage Scripts(you can just ignore them)
+    |    |    |       .......
+    |    |    |       .......
+    |    |    |       .......
+    |    |    |
     --------------------------------------------------------------------------
     |    |    | -- Bam_file                                                  |
     |    |    |    | -- Sample1                                              |
