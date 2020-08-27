@@ -15,25 +15,27 @@ VCFTOOLS=/path/to/vcftools_path
 cd $vcff/Joint
 
 # merge two pass vcfs and get the High_quality_variants.vcf
-awk '{if(/#/){} else{print}}'  PASS_INDEL.recode.vcf > pass_indel
-cat PASS_SNP.recode.vcf pass_indel | awk '$1 ~ /^#/ {print $0;next} {print $0 | "sort -k1,1 -k2,2n"}' > High_quality_variants.vcf
+awk '{if(/#/){} else{print}}'  $vcff/Joint/PASS_INDEL.recode.vcf > $vcff/Joint/pass_indel
 
-$VCFTOOLS norm -m -"both" --fasta-ref /paedwy/disk1/yjcao/software/varsim/ThalaSimuSource/chr11_16.fa High_quality_variants.vcf -o normed_High_quality_variants.vcf
+cat $vcff/Joint/PASS_SNP.recode.vcf $vcff/Joint/pass_indel | awk '$1 ~ /^#/ {print $0;next} {print $0 | "sort -k1,1 -k2,2n"}' > $vcff/Joint/High_quality_variants.vcf
+
+$VCFTOOLS norm -m -"both" --fasta-ref $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/chr11_16.fa $vcff/Joint/High_quality_variants.vcf -o $vcff/Joint/normed_High_quality_variants.vcf
 
 #############Causal point mutation################
-$VCFTOOLS --vcf normed_High_quality_variants.vcf \
-          --diff sorted_Causal_SNV_Thala_with_equivalent.vcf \
+
+$VCFTOOLS --vcf $vcff/Joint/normed_High_quality_variants.vcf \
+          --diff $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/sorted_Causal_SNV_Thala_with_equivalent.vcf \
           --diff-site \
           --not-chr chr2 \
           --not-chr chr6 \
           --not-chr chrX \
           --not-chr chr19
 
-awk '{if($2==$3){print $1,$2}}' out.diff.sites_in_files > Both_SNP_position.list
+awk '{if($2==$3){print $1,$2}}' $vcff/Joint/out.diff.sites_in_files > $vcff/Joint/Both_SNP_position.list
 
-$VCFTOOLS --vcf normed_High_quality_variants.vcf --positions Both_SNP_position.list --out Candidate_SNP --recode --recode-INFO-all
+$VCFTOOLS --vcf $vcff/Joint/normed_High_quality_variants.vcf --positions $vcff/Joint/Both_SNP_position.list --out $vcff/Joint/Candidate_SNP --recode --recode-INFO-all
 
-python Create_pseudo_vcf.py --enquiry Candidate_SNP.recode.vcf --out Pseudo_Candidate_SNP.recode.vcf
+python $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/Create_pseudo_vcf.py --enquiry $vcff/Joint/Candidate_SNP.recode.vcf --out $vcff/Joint/Pseudo_Candidate_SNP.recode.vcf
 
 mkdir ind_vcf
 python split_pseudovcf_by_sample.py -vcf Pseudo_Candidate_SNP.recode.vcf -of "/paedwy/disk1/yjcao/datacenter/150MAQ30/Rescue_VCF_file/Joint/ind_vcf"
@@ -56,7 +58,6 @@ mv ./pre* ./Precessing_data
 
 
 #############Causal point mutation################
-################################################################
 
 vcftools --vcf normed_High_quality_variants.vcf \
          --keep-only-indels \
