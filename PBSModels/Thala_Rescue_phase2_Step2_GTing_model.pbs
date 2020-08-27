@@ -7,9 +7,6 @@
 #PBS -e GATK_GT.err
 #PBS -V
 
-#sample name
-i=1
-
 wkd=/home/data/thala_project/Rescue_Phase
 bamf=$wkd/Bam_file
 GATK_Bundle=/home/datacenter/reference/GATKbundle/hg19
