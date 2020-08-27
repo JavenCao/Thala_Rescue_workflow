@@ -50,7 +50,7 @@ now you should have the follwing structure:
 
     | -- /home/data/Thalaproject/
     |    | -- Rescue_Phase
-    |    |    | -- Thala_Rescue_workflow(Folders)
+    |    |    | -- Thala_Rescue_workflow(Folder)
     |    |    |
 
 * Step3: go into the Thala_Rescue_workflow folder, and set parameters in the follwing file. The parameters are self-explainable.
@@ -111,18 +111,7 @@ After get gVCF for each sample, go to the VCF_file folder, and do Joint Genotypi
     cd ./Joint
     qsub Thala_Rescue_phase2_Step3_HardFiltering.pbs
 
-For the **Hard filtering steps**, we suggest to set cut-offs based on the emprical distribution of each annotation.
-Here, we provide scripts to select and plot the emprical distribution for each annotation.
-
-    Select_Annotation.pbs
-    plot.R
-
-To increase sensitivity, the default cut-offs are as follows:
-
-      SNP:"QD<2.0 || FS>60 || MQ<40 || MQRankSum<-12.5 || ReadPosRankSum<-8.0"
-      INDEL:"QD < 2.0 || FS > 200 || ReadPosRankSum < -20 || SOR > 10.0"
-
-After Step5, in Joint folder, you should get SNP and INDEL vcf files for further process.
+After Step5, in Joint folder, you should get PASS_SNP.recode.vcf and PASS_INDEL.recode.vcf files for further process.
 
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutations out.
 
