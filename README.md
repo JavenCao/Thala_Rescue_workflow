@@ -92,10 +92,7 @@ And after that you should have the following structure:
     |    |    |    |    | -- Thala_Rescue_phase2_Step1_RunHC_Sample3.pbs     |
     |    |    |    | -- Joint                                                |
     |    |    |    |    | -- Thala_Rescue_phase2_Step3_HardFiltering.pbs     |
-    |    |    |    |    | -- Select_Annotation.pbs                           |
-    |    |    |    |    | -- plot.R                                          |
-    |    |    |    |    | -- Find_Causal.pbs                                 |
-    |    |    |    |    | -- Find_causal.py                                  |
+    |    |    |    |    | -- Thala_Find_Causal.pbs                           |
     |    |    | -- Thala_Rescue_phase2_Step2_GTing.pbs                       |
     |    | -- submit.sh                                                      |
 ------------------------------------------------------------------------------
@@ -117,9 +114,12 @@ After Step5, in Joint folder, you should get PASS_SNP.recode.vcf and PASS_INDEL.
 
       (download chr11_16.fa [here]() and put this file into the folder of /Thala_Rescue_workflow/Known_Causal_Mutation/)
       cd ./VCF_file/Joint/
-      qsub Find_Causal.pbs (or sh Find_causal.pbs for non-PBS servers)
+      qsub Thala_Find_Causal.pbs (or sh Thala_Find_Causal.pbs for non-PBS servers)
 
-After this, you will find a newly generated folder named **Prediction**, only Positive samples are reported with mutation details.
+After this, you will find two newly generated folders named **ind_vcf_SNP** and **ind_vcf_INDEL**, and the results are in the following files:
+
+  Thalassaemia.SNP.PRE
+  Thalassaemia.INDEL.PRE
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
