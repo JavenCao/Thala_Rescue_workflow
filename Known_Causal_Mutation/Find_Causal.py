@@ -8,6 +8,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-input", "--inputvcf")
 parser.add_argument("-output", "--outputtxt")
+parser.add_argument("-mutation", "--mutationtype")
 args = parser.parse_args()
 
 
@@ -140,43 +141,46 @@ def F_match_causal(samplefile, knowncausal, outputfile):
 
 
 if __name__ == "__main__":
-    # SNP
+    MutationType = args.mutationtype
     code_F = os.getcwd()
     inputvcf = args.inputvcf
     wkd = code_F.replace("VCF_file/Joint", "")
 
-    pseudo_vcf_file = wkd + "VCF_file/Joint/Pseudo_Candidate_SNP.recode.vcf"
-    F_Create_pseudo_vcf(inputvcf=inputvcf, outputvcf=pseudo_vcf_file)
-    Causal_SNV_F = wkd + "VCF_file/Joint/ind_vcf_SNP"
-    os.mkdir(Causal_SNV_F)
-    samplenamelists = []
-    samplecount = []
-    samplenamelists, samplecount = F_split_pseudovcf_by_sample(
-        vcffile=pseudo_vcf_file, outputfolder=Causal_SNV_F)
+    if MutationType == "SNP":
+        # SNP
+        pseudo_vcf_file = wkd + "VCF_file/Joint/Pseudo_Candidate_SNP.recode.vcf"
+        F_Create_pseudo_vcf(inputvcf=inputvcf, outputvcf=pseudo_vcf_file)
+        Causal_SNV_F = wkd + "VCF_file/Joint/ind_vcf_SNP"
+        os.mkdir(Causal_SNV_F)
+        samplenamelists = []
+        samplecount = []
+        samplenamelists, samplecount = F_split_pseudovcf_by_sample(
+            vcffile=pseudo_vcf_file, outputfolder=Causal_SNV_F)
 
-    knowncausalSNV = wkd + \
-        "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_Causal_SNV_Thala_with_equivalent.vcf"
-    for i in samplenamelists:
-        samplefile = Causal_SNV_F + "/" + i + ".txt"
-        outputfile = Causal_SNV_F + "/" + "pre." + i
-        F_match_causal(samplefile=samplefile,
-                       knowncausal=knowncausalSNV, outputfile=outputfile)
-# indel
-    pseudo_vcf_file = wkd + "VCF_file/Joint/Pseudo_Candidate_INDEL.recode.vcf"
-    F_Create_pseudo_vcf(inputvcf=inputvcf, outputvcf=pseudo_vcf_file)
-    Causal_INDEL_F = wkd + "VCF_file/Joint/ind_vcf_INDEL"
-    os.mkdir(Causal_INDEL_F)
-    samplenamelists = []
-    samplecount = []
-    samplenamelists, samplecount = F_split_pseudovcf_by_sample(
-        vcffile=pseudo_vcf_file, outputfolder=Causal_INDEL_F)
+        knowncausalSNV = wkd + \
+            "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_Causal_SNV_Thala_with_equivalent.vcf"
+        for i in samplenamelists:
+            samplefile = Causal_SNV_F + "/" + i + ".txt"
+            outputfile = Causal_SNV_F + "/" + "pre." + i
+            F_match_causal(samplefile=samplefile,
+                           knowncausal=knowncausalSNV, outputfile=outputfile)
+    if MutationType == "InDel":
+        # indel
+        pseudo_vcf_file = wkd + "VCF_file/Joint/Pseudo_Candidate_INDEL.recode.vcf"
+        F_Create_pseudo_vcf(inputvcf=inputvcf, outputvcf=pseudo_vcf_file)
+        Causal_INDEL_F = wkd + "VCF_file/Joint/ind_vcf_INDEL"
+        os.mkdir(Causal_INDEL_F)
+        samplenamelists = []
+        samplecount = []
+        samplenamelists, samplecount = F_split_pseudovcf_by_sample(
+            vcffile=pseudo_vcf_file, outputfolder=Causal_INDEL_F)
 
-    knowncausalINDEL = wkd + \
-        "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_normed_Causal_Indel_Thala_with_equivalent.vcf"
-    for i in samplenamelists:
-        samplefile = Causal_INDEL_F + "/" + i + ".txt"
-        outputfile = Causal_INDEL_F + "/" + "pre." + i
-        F_match_causal(samplefile=samplefile,
-                       knowncausal=knowncausalINDEL, outputfile=outputfile)
+        knowncausalINDEL = wkd + \
+            "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_normed_Causal_Indel_Thala_with_equivalent.vcf"
+        for i in samplenamelists:
+            samplefile = Causal_INDEL_F + "/" + i + ".txt"
+            outputfile = Causal_INDEL_F + "/" + "pre." + i
+            F_match_causal(samplefile=samplefile,
+                           knowncausal=knowncausalINDEL, outputfile=outputfile)
 else:
     pass

@@ -36,9 +36,9 @@ awk '{if($2==$3){print $1,$2}}' $vcff/Joint/out.diff.sites_in_files > $vcff/Join
 
 $VCFTOOLS --vcf $vcff/Joint/normed_High_quality_variants.vcf --positions $vcff/Joint/Both_SNP_position.list --out $vcff/Joint/Candidate_SNP --recode --recode-INFO-all
 
-python $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/Find_Causal.py -input $vcff/Joint/Candidate_SNP.recode.vcf
+python $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/Find_Causal.py -input $vcff/Joint/Candidate_SNP.recode.vcf -mutation "SNP"
 
-cd $vcff/VCF_file/Joint/ind_vcf_SNP
+cd $vcff/Joint/ind_vcf_SNP
 
 cat pre* > Thalassaemia.SNP.PRE
 
@@ -48,7 +48,7 @@ mv ./pre* ./Precessing_data
 
 ############
 ######################Causal InDels####################
-
+cd $vcff/Joint/
 $VCFTOOLS --vcf $vcff/Joint/normed_High_quality_variants.vcf \
          --keep-only-indels \
          --recode \
@@ -60,9 +60,9 @@ awk 'NR==FNR{if(/#/){}else {a[$1"_"$2]=$3}} NR>FNR{if(/#/){}else{if(a[$1"_"$2]){
 
 $VCFTOOLS --vcf $vcff/Joint/normed_High_quality_variants.vcf --positions $vcff/Joint/Both_indel_position.list --out $vcff/Joint/Candidate_INDEL --recode --recode-INFO-all
 
-python $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/Find_Causal.py -input $vcff/Joint/Candidate_INDEL.recode.vcf
+python $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/Find_Causal.py -input $vcff/Joint/Candidate_INDEL.recode.vcf -mutation "InDel"
 
-cd $vcff/VCF_file/Joint/ind_vcf_INDEL
+cd $vcff/Joint/ind_vcf_INDEL
 
 cat pre* > Thalassaemia.INDEL.PRE
 
