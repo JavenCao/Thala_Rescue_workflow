@@ -11,6 +11,7 @@ wkd=/home/data/thala_project/Rescue_Phase
 vcff=$wkd/VCF_file
 
 VCFTOOLS=/path/to/vcftools_path
+BCFTOOLS=/path/to/bcftools_path
 
 cd $vcff/Joint
 
