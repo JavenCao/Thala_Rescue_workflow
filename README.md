@@ -113,6 +113,7 @@ After Step5, in Joint folder, you should get PASS_SNP.recode.vcf and PASS_INDEL.
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutations out.
 
 (download chr11_16.fa [here](http://wyanglab.org/NGS4THAL_file/chr11_16.fa) and put this file into the folder of /Thala_Rescue_workflow/Known_Causal_Mutation/, please double check the file name to be chr11_16.fa)
+
       cd ./VCF_file/Joint/
       qsub Thala_Find_Causal.pbs (or sh Thala_Find_Causal.pbs for non-PBS servers)
 
