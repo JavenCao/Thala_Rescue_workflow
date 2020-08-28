@@ -140,11 +140,11 @@ def F_match_causal(samplefile, knowncausal, outputfile):
 
 
 if __name__ == "__main__":
-# SNP
+    # SNP
     code_F = os.getcwd()
     inputvcf = args.inputvcf
-    # /home/data/thala_project/Rescue_Phase
-    wkd = code_F.rstrip("Thala_Rescue_workflow/Known_Causal_Mutation")
+    wkd = code_F.replace("VCF_file/Joint", "")
+
     pseudo_vcf_file = wkd + "VCF_file/Joint/Pseudo_Candidate_SNP.recode.vcf"
     F_Create_pseudo_vcf(inputvcf=inputvcf, outputvcf=pseudo_vcf_file)
     Causal_SNV_F = wkd + "VCF_file/Joint/ind_vcf_SNP"
