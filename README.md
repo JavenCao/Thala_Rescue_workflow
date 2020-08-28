@@ -118,8 +118,8 @@ After Step5, in Joint folder, you should get PASS_SNP.recode.vcf and PASS_INDEL.
 
 After this, you will find two newly generated folders named **ind_vcf_SNP** and **ind_vcf_INDEL**, and the results are in the following files:
 
-  Thalassaemia.SNP.PRE
-  Thalassaemia.INDEL.PRE
+      Thalassaemia.SNP.PRE
+      Thalassaemia.INDEL.PRE
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
