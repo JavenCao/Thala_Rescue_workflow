@@ -14,6 +14,7 @@ picard_path=/home/software/picard.jar
 GATK_path=/home/software/GenomeAnalysisTK.jar
 GATK_bundle_path=/home/reference/GATKbundle/hg19
 vcftools_path=/home/software/vcftools
+bcftools_path=/home/software/bcftools
 
 
 ##PBS system parameters(if your server is PBS-free, please just ignore this part)##########
