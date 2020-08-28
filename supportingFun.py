@@ -140,7 +140,7 @@ def ModifyAndCreate_v2(modelfile, Path_dict, TargetFolder, SampleList, prefix):
                 l[i] = "ANNO=" + Path_dict.get("ANNO_path") + '\n'
 
             elif(l[i].startswith("VCFTOOLS=")):
-                l[i] = "VCFTOOLS=" + Path_dict.get('vcftools_path')
+                l[i] = "VCFTOOLS=" + Path_dict.get('vcftools_path') + '\n'
 
             elif(l[i].startswith("BCFTOOLS=")):
                 l[i] = "BCFTOOLS=" + Path_dict.get('bcftools_path')
