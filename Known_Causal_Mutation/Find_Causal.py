@@ -154,7 +154,8 @@ if __name__ == "__main__":
     samplenamelists, samplecount = F_split_pseudovcf_by_sample(
         vcffile=pseudo_vcf_file, outputfolder=Causal_SNV_F)
 
-    knowncausalSNV = code_F + "/sorted_Causal_SNV_Thala_with_equivalent.vcf"
+    knowncausalSNV = wkd + \
+        "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_Causal_SNV_Thala_with_equivalent.vcf"
     for i in samplenamelists:
         samplefile = Causal_SNV_F + "/" + i + ".txt"
         outputfile = Causal_SNV_F + "/" + "pre." + i
@@ -170,7 +171,8 @@ if __name__ == "__main__":
     samplenamelists, samplecount = F_split_pseudovcf_by_sample(
         vcffile=pseudo_vcf_file, outputfolder=Causal_INDEL_F)
 
-    knowncausalINDEL = code_F + "/sorted_normed_Causal_Indel_Thala_with_equivalent.vcf"
+    knowncausalINDEL = wkd + \
+        "Thala_Rescue_workflow/Known_Causal_Mutation/sorted_normed_Causal_Indel_Thala_with_equivalent.vcf"
     for i in samplenamelists:
         samplefile = Causal_INDEL_F + "/" + i + ".txt"
         outputfile = Causal_INDEL_F + "/" + "pre." + i
