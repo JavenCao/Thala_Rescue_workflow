@@ -112,14 +112,14 @@ After Step5, in Joint folder, you should get PASS_SNP.recode.vcf and PASS_INDEL.
 
 * Step6: Find current known thalassaemia causal mutations based on [HbVar](http://globin.cse.psu.edu/hbvar/menu.html) and [ITHANET](https://www.ithanet.eu/). We have created collections from these databases, and you just running the follwing commands to pick these mutations out.
 
-      (download chr11_16.fa [here]() and put this file into the folder of /Thala_Rescue_workflow/Known_Causal_Mutation/)
-      cd ./VCF_file/Joint/
-      qsub Thala_Find_Causal.pbs (or sh Thala_Find_Causal.pbs for non-PBS servers)
+    (download chr11_16.fa [here]() and put this file into the folder of /Thala_Rescue_workflow/Known_Causal_Mutation/)
+    cd ./VCF_file/Joint/
+    qsub Thala_Find_Causal.pbs (or sh Thala_Find_Causal.pbs for non-PBS servers)
 
 After this, you will find two newly generated folders named **ind_vcf_SNP** and **ind_vcf_INDEL**, and the results are in the following files:
 
-      Thalassaemia.SNP.PRE
-      Thalassaemia.INDEL.PRE
+    Thalassaemia.SNP.PRE
+    Thalassaemia.INDEL.PRE
 
 This workflow is designed for clusters managed by PBS, for PBS-free servers, users can still run these scripts in bash(sh) like:
 
