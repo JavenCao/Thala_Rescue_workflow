@@ -20,7 +20,7 @@ awk '{if(/#/){} else{print}}'  $vcff/Joint/PASS_INDEL.recode.vcf > $vcff/Joint/p
 
 cat $vcff/Joint/PASS_SNP.recode.vcf $vcff/Joint/pass_indel | awk '$1 ~ /^#/ {print $0;next} {print $0 | "sort -k1,1 -k2,2n"}' > $vcff/Joint/High_quality_variants.vcf
 
-$VCFTOOLS norm -m -"both" --fasta-ref $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/chr11_16.fa $vcff/Joint/High_quality_variants.vcf -o $vcff/Joint/normed_High_quality_variants.vcf
+$BCFTOOLS norm -m -"both" --fasta-ref $wkd/Thala_Rescue_workflow/Known_Causal_Mutation/chr11_16.fa $vcff/Joint/High_quality_variants.vcf -o $vcff/Joint/normed_High_quality_variants.vcf
 
 #############Causal point mutation################
 
